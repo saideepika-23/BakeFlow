@@ -39,5 +39,5 @@ def art(kind):
 
 out=Path('/mnt/data/BakeFlow/images/menu')
 for slug,title,kind in items:
-    (out/f'{slug}.svg').write_text(common(title, art(kind)), encoding='utf-8')
+    (out/f"{slug}.svg").write_text(common(title, art(kind)), encoding='utf-8')
 print('created', len(items))
