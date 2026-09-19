@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="650" viewBox="0 0 900 650">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff7f2"/><stop offset="1" stop-color="#f4e0d6"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="16" stdDeviation="18" flood-opacity=".12"/></filter></defs>
+<rect width="900" height="650" rx="36" fill="url(#g)"/><circle cx="105" cy="100" r="70" fill="#fff" opacity=".45"/><circle cx="790" cy="535" r="90" fill="#fff" opacity=".4"/>
+<text x="55" y="82" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#6b4037" opacity=".8">BAKEFLOW • BAKERY FAVOURITE</text>
+<g filter="url(#s)"><path d="M275 390c-15-95 25-175 175-175s190 80 175 175c-80 40-270 40-350 0z" fill="#7d4d39"/><path d="M335 250l35 55M420 225l25 60M505 245l20 55" stroke="#d7a16e" stroke-width="17" stroke-linecap="round"/><path d="M315 385h270" stroke="#5c372c" stroke-width="12" opacity=".5"/></g>
+<text x="55" y="595" font-family="Arial, sans-serif" font-size="38" font-weight="800" fill="#3b2927">Plum Cake</text>
+<text x="55" y="625" font-family="Arial, sans-serif" font-size="18" fill="#6b4037" opacity=".72">Illustrative menu image • confirm current availability with bakery</text>
+</svg>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BakeFlow | Your Cake, Your Way</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="brand">
+      <div class="logo">🍰</div>
+      <div>
+        <h1>BakeFlow</h1>
+        <p>Your Cake, Your Way</p>
+      </div>
+    </div>
+    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Open menu">☰</button>
+    <nav id="mainNav">
+      <a href="#home">Home</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#cakes">Cakes</a>
+      <a href="#bakery">Bakery</a>
+      <a href="#order">Order</a>
+      <button class="chat-open" onclick="toggleChat()">Ask BakeFlow 🤖</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <span class="pill">My Home Bakery • Kakinada</span>
+        <h2>Your Cake,<br><span>Your Way.</span></h2>
+        <p>Explore cakes, flavours and bakery items from My Home Bakery. Customize your order and send an order request easily.</p>
+        <div class="hero-buttons">
+          <a class="btn primary" href="#cakes">Explore Cakes</a>
+          <a class="btn secondary" href="#order">Order Now</a>
+        </div>
+        <div class="quick-info">
+          <span>🚚 Home delivery up to 20 km</span>
+          <span>🕘 9:00 AM – 10:00 PM</span>
+          <span>💵 Cash on delivery</span>
+        </div>
+      </div>
+      <div class="hero-photo hero-cake-photo">
+        <img src="images/cake_1.jpg" alt="My Home Bakery cake design">
+        <div class="hero-photo-badge">✨ Freshly designed cakes</div>
+      </div>
+    </section>
+
+    <section id="dashboard" class="section dashboard-section">
+      <div class="dashboard-top">
+        <div>
+          <p class="eyebrow">BAKEFLOW DASHBOARD</p>
+          <h2>A smarter bakery experience</h2>
+          <p class="dashboard-lead">A clean customer-facing dashboard that brings cakes, flavours, customization, ordering and the smart assistant together in one place.</p>
+        </div>
+        <div class="dashboard-badge"><span class="live-dot"></span> Ready for customer enquiries</div>
+      </div>
+
+      <div class="dash-stats">
+        <div class="stat-card"><span>🍰</span><div><strong id="cakeTypeCount">0</strong><small>listed cake types</small></div><em>+ custom option</em></div>
+        <div class="stat-card"><span>🍓</span><div><strong id="flavourCount">0</strong><small>listed flavours</small></div><em>+ custom option</em></div>
+        <div class="stat-card"><span>📸</span><div><strong>44</strong><small>real cake designs</small></div><em>from bakery</em></div>
+        <div class="stat-card"><span>🥐</span><div><strong>14</strong><small>bakery items</small></div><em>orderable online</em></div>
+        <div class="stat-card"><span>🚚</span><div><strong>20 km</strong><small>home delivery</small></div><em>around Kakinada</em></div>
+      </div>
+
+      <div class="dashboard-main-grid">
+        <div class="dash-panel catalogue-panel">
+          <div class="panel-title">
+            <div><span class="panel-kicker">QUICK ORDER BUILDER</span><h3>Pick an option or type your own</h3></div>
+            <span class="soft-tag">Flexible</span>
+          </div>
+          <div class="quick-builder">
+            <label>Cake type<select id="dashCakeType" onchange="syncDashboardChoice()"></select></label>
+            <label>Flavour<select id="dashFlavour" onchange="syncDashboardChoice()"></select></label>
+          </div>
+          <div id="dashboardCustomHint" class="dashboard-custom-hint">✨ Don't see what you want? Select <b>Other / Custom</b> and type it in the order form.</div>
+          <div class="option-preview">
+            <div><span class="option-icon">🎂</span><div><b>Cake type</b><p>Listed options + custom cake type</p></div></div>
+            <div><span class="option-icon">🍫</span><div><b>Flavour</b><p>Listed flavours + custom flavour</p></div></div>
+            <div><span class="option-icon">🎨</span><div><b>Customization</b><p>Add your design, message or other request</p></div></div>
+          </div>
+          <a class="dashboard-action" href="#order">Continue to order form <span>→</span></a>
+        </div>
+
+        <div class="dash-panel assistant-card">
+          <div class="assistant-icon">🤖</div>
+          <span class="panel-kicker">SMART ASSISTANT</span>
+          <h3>Ask BakeFlow</h3>
+          <p>Get answers about cake types, flavours, sizes, customization, delivery, timings, payment and bakery items.</p>
+          <div class="assistant-tags"><span>Real bakery data</span><span>No guessing</span></div>
+          <button class="btn primary" onclick="toggleChat()">Open Chatbot</button>
+        </div>
+      </div>
+
+      <div class="dash-panel workflow-panel">
+        <div class="panel-title"><div><span class="panel-kicker">ORDER FLOW</span><h3>From idea to order request</h3></div><a href="#order">Order form →</a></div>
+        <div class="workflow">
+          <div><b>01</b><span>Choose a cake type</span></div>
+          <i>→</i>
+          <div><b>02</b><span>Select or type a flavour</span></div>
+          <i>→</i>
+          <div><b>03</b><span>Add size &amp; customization</span></div>
+          <i>→</i>
+          <div><b>04</b><span>Send request on WhatsApp</span></div>
+        </div>
+      </div>
+
+      <div class="business-strip">
+        <div><span>🕘</span><b>9 AM – 10 PM</b><small>Timings depend on area</small></div>
+        <div><span>🎨</span><b>Customization available</b><small>Big/custom cakes: order 2 days before</small></div>
+        <div><span>💵</span><b>Cash on delivery</b><small>Price depends on flavour &amp; size</small></div>
+      </div>
+    </section>
+
+    <section class="section intro">
+      <div>
+        <p class="eyebrow">ABOUT THE BAKERY</p>
+        <h2>Fresh cakes & bakery favourites</h2>
+      </div>
+      <p>My Home Bakery offers different cake types, flavours and bakery products. Customization is available, and delivery is available around Kakinada within 20 km, depending on the area.</p>
+    </section>
+
+    <section id="cakes" class="section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">CAKES</p>
+          <h2>Choose your cake</h2>
+        </div>
+        <p>All sizes are available. Price depends on flavour and size.</p>
+      </div>
+      <div id="cakeTypeGrid" class="grid">
+        <article class="card"><img class="card-photo" src="images/cake_1.jpg" alt="My Home Bakery cake design 1"><h3>Birthday Cakes</h3><p>Birthday cakes with your preferred flavour and size.</p><button class="mini-order cake-order-btn" onclick="orderCake('Birthday Cake')">Order this cake →</button></article>
+        <article class="card"><img class="card-photo" src="images/cake_3.jpg" alt="My Home Bakery cake design 3"><h3>Photo Cakes</h3><p>Add your own photo to create a personalized cake.</p><button class="mini-order cake-order-btn" onclick="orderCake('Photo Cake')">Order this cake →</button></article>
+        <article class="card"><img class="card-photo" src="images/cake_10.jpg" alt="My Home Bakery cake design 10"><h3>Designer Cakes</h3><p>Customized designer cakes for special occasions.</p><button class="mini-order cake-order-btn" onclick="orderCake('Designer Cake')">Order this cake →</button></article>
+        <article class="card"><img class="card-photo" src="images/cake_12.jpg" alt="My Home Bakery cake design 12"><h3>Heart Shape Cake</h3><p>Heart-shaped cakes for special celebrations.</p><button class="mini-order cake-order-btn" onclick="orderCake('Heart Shape Cake')">Order this cake →</button></article>
+        <article class="card"><img class="card-photo" src="images/cake_17.jpg" alt="My Home Bakery cake design 17"><h3>Steps Cake</h3><p>Step-style cakes with customization available.</p><button class="mini-order cake-order-btn" onclick="orderCake('Steps Cake')">Order this cake →</button></article>
+        <article class="card"><img class="card-photo" src="images/cake_27.jpg" alt="My Home Bakery cake design 27"><h3>Cool Cakes</h3><p>Cool cake designs for different occasions.</p><button class="mini-order cake-order-btn" onclick="orderCake('Cool Cake')">Order this cake →</button></article>
+        <article class="card"><img class="card-photo" src="images/cake_40.jpg" alt="My Home Bakery cake design 40"><h3>Veg &amp; Non-Veg</h3><p>Available according to the bakery's options.</p><button class="mini-order cake-order-btn" onclick="orderCake('Veg and Non-Veg')">Order this cake →</button></article>
+      </div>
+      <h3 class="subheading">Cake flavours</h3>
+      <div class="chips">
+        <span>Milky Vanilla</span><span>Butterscotch</span><span>Strawberry</span><span>Blueberry</span>
+        <span>Roseberry</span><span>Black Currant</span><span>Pineapple</span><span>Red Velvet</span>
+        <span>Milky Butterscotch</span><span>Milky Badam</span><span>Honey Almond</span><span>Pista</span>
+        <span>Chocolate</span><span>Choco Chips</span><span>Roast Cause Chocolate</span><span>Double Chocolate</span>
+        <span>Caramel Nuts</span><span>Oreo Chocolate</span>
+      </div>
+      <div class="custom-flavour-note">
+        <span>🍓</span><div><strong>Can't find your flavour?</strong><p>Choose <b>Other / Custom Flavour</b> in the order form and type the flavour you want.</p></div>
+      </div>
+    </section>
+
+    <section class="section gallery-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">REAL CAKE GALLERY</p>
+          <h2>Made by My Home Bakery</h2>
+        </div>
+        <p>These photos were supplied for the project and are shown as real bakery work.</p>
+      </div>
+      <div class="photo-grid">
+        <figure class="gallery-item"><img src="images/cake_1.jpg" alt="My Home Bakery cake design 1" loading="lazy"><figcaption>Cake Design 01</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_2.jpg" alt="My Home Bakery cake design 2" loading="lazy"><figcaption>Cake Design 02</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_3.jpg" alt="My Home Bakery cake design 3" loading="lazy"><figcaption>Cake Design 03</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_4.jpg" alt="My Home Bakery cake design 4" loading="lazy"><figcaption>Cake Design 04</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_5.jpg" alt="My Home Bakery cake design 5" loading="lazy"><figcaption>Cake Design 05</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_6.jpg" alt="My Home Bakery cake design 6" loading="lazy"><figcaption>Cake Design 06</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_7.jpg" alt="My Home Bakery cake design 7" loading="lazy"><figcaption>Cake Design 07</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_8.jpg" alt="My Home Bakery cake design 8" loading="lazy"><figcaption>Cake Design 08</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_9.jpg" alt="My Home Bakery cake design 9" loading="lazy"><figcaption>Cake Design 09</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_10.jpg" alt="My Home Bakery cake design 10" loading="lazy"><figcaption>Cake Design 10</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_11.jpg" alt="My Home Bakery cake design 11" loading="lazy"><figcaption>Cake Design 11</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_12.jpg" alt="My Home Bakery cake design 12" loading="lazy"><figcaption>Cake Design 12</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_13.jpg" alt="My Home Bakery cake design 13" loading="lazy"><figcaption>Cake Design 13</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_14.jpg" alt="My Home Bakery cake design 14" loading="lazy"><figcaption>Cake Design 14</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_15.jpg" alt="My Home Bakery cake design 15" loading="lazy"><figcaption>Cake Design 15</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_16.jpg" alt="My Home Bakery cake design 16" loading="lazy"><figcaption>Cake Design 16</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_17.jpg" alt="My Home Bakery cake design 17" loading="lazy"><figcaption>Cake Design 17</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_18.jpg" alt="My Home Bakery cake design 18" loading="lazy"><figcaption>Cake Design 18</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_19.jpg" alt="My Home Bakery cake design 19" loading="lazy"><figcaption>Cake Design 19</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_20.jpg" alt="My Home Bakery cake design 20" loading="lazy"><figcaption>Cake Design 20</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_21.jpg" alt="My Home Bakery cake design 21" loading="lazy"><figcaption>Cake Design 21</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_22.jpg" alt="My Home Bakery cake design 22" loading="lazy"><figcaption>Cake Design 22</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_23.jpg" alt="My Home Bakery cake design 23" loading="lazy"><figcaption>Cake Design 23</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_24.jpg" alt="My Home Bakery cake design 24" loading="lazy"><figcaption>Cake Design 24</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_25.jpg" alt="My Home Bakery cake design 25" loading="lazy"><figcaption>Cake Design 25</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_26.jpg" alt="My Home Bakery cake design 26" loading="lazy"><figcaption>Cake Design 26</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_27.jpg" alt="My Home Bakery cake design 27" loading="lazy"><figcaption>Cake Design 27</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_28.jpg" alt="My Home Bakery cake design 28" loading="lazy"><figcaption>Cake Design 28</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_29.jpg" alt="My Home Bakery cake design 29" loading="lazy"><figcaption>Cake Design 29</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_30.jpg" alt="My Home Bakery cake design 30" loading="lazy"><figcaption>Cake Design 30</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_31.jpg" alt="My Home Bakery cake design 31" loading="lazy"><figcaption>Cake Design 31</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_32.jpg" alt="My Home Bakery cake design 32" loading="lazy"><figcaption>Cake Design 32</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_33.jpg" alt="My Home Bakery cake design 33" loading="lazy"><figcaption>Cake Design 33</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_34.jpg" alt="My Home Bakery cake design 34" loading="lazy"><figcaption>Cake Design 34</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_35.jpg" alt="My Home Bakery cake design 35" loading="lazy"><figcaption>Cake Design 35</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_36.jpg" alt="My Home Bakery cake design 36" loading="lazy"><figcaption>Cake Design 36</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_37.jpg" alt="My Home Bakery cake design 37" loading="lazy"><figcaption>Cake Design 37</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_38.jpg" alt="My Home Bakery cake design 38" loading="lazy"><figcaption>Cake Design 38</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_39.jpg" alt="My Home Bakery cake design 39" loading="lazy"><figcaption>Cake Design 39</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_40.jpg" alt="My Home Bakery cake design 40" loading="lazy"><figcaption>Cake Design 40</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_41.jpg" alt="My Home Bakery cake design 41" loading="lazy"><figcaption>Cake Design 41</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_42.jpg" alt="My Home Bakery cake design 42" loading="lazy"><figcaption>Cake Design 42</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_43.jpg" alt="My Home Bakery cake design 43" loading="lazy"><figcaption>Cake Design 43</figcaption></figure>
+        <figure class="gallery-item"><img src="images/cake_44.jpg" alt="My Home Bakery cake design 44" loading="lazy"><figcaption>Cake Design 44</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="bakery" class="section bakery-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">BAKERY MENU</p>
+          <h2>More from My Home Bakery</h2>
+        </div>
+        <p>Choose an item and send an order request directly from any device.</p>
+      </div>
+      <div class="menu-note"><span>ℹ️</span><p>Menu images below are <b>illustrative website visuals</b>, added where the bakery did not provide photos. Availability and price are confirmed by the bakery.</p></div>
+      <div class="grid bakery-grid">
+        <article class="mini-card menu-card"><img src="images/menu/brownie.svg" alt="Illustrative brownie image"><div class="menu-card-body"><h3>Brownie</h3><p>Bakery favourite</p><button class="mini-order" onclick="orderBakeryItem('Brownie')">Order this item →</button></div></article>
+        <article class="mini-card menu-card"><img src="images/menu/chocolava.svg" alt="Illustrative chocolava image"><div class="menu-card-body"><h3>Chocolava</h3><p>Bakery favourite</p><button class="mini-order" onclick="orderBakeryItem('Chocolava')">Order this item →</button></div></article>
+        <article class="mini-card menu-card"><img src="images/menu/donuts.svg" alt="Illustrative donuts image"><div class="menu-card-body"><h3>Donuts</h3><p>Bakery favourite</p><button class="mini-order" onclick="orderBakeryItem('Donuts')">Order this item →</button></div></article>
+        <article class="mini-card menu-card"><img src="images/menu/dryfruit-butter-biscuits.svg" alt="Illustrative dry fruit butter biscuits image"><div class="menu-card-body"><h3>Dry Fruit Butter Biscuits</h3><p>Bakery favourite</p><button class="mini-order" onclick="orderBakeryItem('Dry Fruit Butter Biscuits')">Order this item →</button></div></article>
+        <article class="mini-card menu-card"><img src="images/menu/butter-salt-biscuits.svg" alt="Illustrative butter salt biscuits image"><div class="menu-card-body"><h3>Butter Salt Biscuits</h3><p>Bakery favourite</p><button class="mini-order" onclick="orderBakeryItem('Butter Salt Biscuits')">Order this item →</button></div></article>
+        <article class="mini-card menu-card"><img src="images/menu/milk-cake.svg" alt="Illustrative milk cake image"><div class="menu-card-body"><h3>Milk Cake</h3><p>Bakery favourite</p><button class="mini-order" onclick="orderBakeryItem('Milk Cake')">Order this item →</button></div></article>
+        <article class="mini-card menu-card"><img src="images/menu/plum-cake.svg" alt="Illustrative plum cake image"><div class="menu-card-body"><h3>Plum Cake</h3><p>Bakery favourite</p><button class="mini-order" onclick="orderBakeryItem('Plum Cake')">Order this item →</button></div></article>
+        <article class="mini-card menu-card"><img src="images/menu/sponge-cake.svg" alt="Illustrative sponge cake image"><div class="menu-card-body"><h3>Sponge Cake</h3><p>Bakery favourite</p><button class="mini-order" onclick="orderBakeryItem('Sponge Cake')">Order this item →</button></div></article>
+        <article class="mini-card menu-card"><img src="images/menu/cup-cakes.svg" alt="Illustrative cup cakes image"><div class="menu-card-body"><h3>Cup Cakes</h3><p>Bakery favourite</p><button class="mini-order" onclick="orderBakeryItem('Cup Cakes')">Order this item →</button></div></article>
+        <article class="mini-card menu-card"><img src="images/menu/bread.svg" alt="Illustrative bread image"><div class="menu-card-body"><h3>Bread</h3><p>Bakery favourite</p><button class="mini-order" onclick="orderBakeryItem('Bread')">Order this item →</button></div></article>
+        <article class="mini-card menu-card"><img src="images/menu/rusk-toast.svg" alt="Illustrative rusk toast image"><div class="menu-card-body"><h3>Rusk (Toast)</h3><p>Bakery favourite</p><button class="mini-order" onclick="orderBakeryItem('Rusk (Toast)')">Order this item →</button></div></article>
+        <article class="mini-card menu-card"><img src="images/menu/cream-buns.svg" alt="Illustrative cream buns image"><div class="menu-card-body"><h3>Cream Buns</h3><p>Bakery favourite</p><button class="mini-order" onclick="orderBakeryItem('Cream Buns')">Order this item →</button></div></article>
+        <article class="mini-card menu-card"><img src="images/menu/fruit-buns.svg" alt="Illustrative fruit buns image"><div class="menu-card-body"><h3>Fruit Buns</h3><p>Bakery favourite</p><button class="mini-order" onclick="orderBakeryItem('Fruit Buns')">Order this item →</button></div></article>
+        <article class="mini-card menu-card"><img src="images/menu/jam-buns.svg" alt="Illustrative jam buns image"><div class="menu-card-body"><h3>Jam Buns</h3><p>Bakery favourite</p><button class="mini-order" onclick="orderBakeryItem('Jam Buns')">Order this item →</button></div></article>
+      </div>
+    </section>
+
+    <section class="section how">
+      <div class="section-heading"><div><p class="eyebrow">HOW IT WORKS</p><h2>Simple ordering</h2></div></div>
+      <div class="steps">
+        <div><b>01</b><h3>Choose</h3><p>Select a cake type and flavour.</p></div>
+        <div><b>02</b><h3>Customize</h3><p>Tell us your preferred design, size and customization.</p></div>
+        <div><b>03</b><h3>Request</h3><p>Send your order details through the order form.</p></div>
+        <div><b>04</b><h3>Confirm</h3><p>The bakery can confirm availability and final price.</p></div>
+      </div>
+    </section>
+
+    <section id="order" class="section order-section">
+      <div class="order-copy">
+        <p class="eyebrow">ORDER REQUEST</p>
+        <h2>Tell us what you want.</h2>
+        <p>Pick an option from the list, or choose <b>Other / Custom</b> and type your own cake type or flavour. This keeps the form flexible even when the bakery adds new options.</p>
+        <div class="order-note"><span>💡</span><p><b>Tip:</b> For a big or customized cake, place the order at least 2 days before the required date.</p></div>
+      </div>
+      <form id="orderForm" class="order-form">
+        <div class="form-section-title full-field"><span>01</span><div><b>Customer details</b><small>How can the bakery contact you?</small></div></div>
+        <label>Your name<input id="name" required placeholder="Enter your name"></label>
+        <label>Phone number<input id="phone" required inputmode="tel" placeholder="Enter phone number"></label>
+
+        <div class="form-section-title full-field"><span>02</span><div><b>What would you like?</b><small>Choose cake or bakery item</small></div></div>
+        <label>Order category<select id="orderCategory" required onchange="toggleOrderCategory()">
+          <option value="">Select category</option><option value="cake">Cake</option><option value="bakery">Bakery Item</option>
+        </select></label>
+        <label>Quantity<input id="quantity" type="number" min="1" value="1" placeholder="1"></label>
+
+        <div id="cakeOrderFields" class="subform full-field" style="display:none">
+          <div class="subform-grid">
+            <label>Cake type<select id="cakeType" onchange="toggleCustomCakeType()">
+              <option value="">Select cake type</option>
+              <option>Birthday Cake</option><option>Photo Cake</option><option>Designer Cake</option>
+              <option>Heart Shape Cake</option><option>Steps Cake</option><option>Cool Cake</option>
+              <option>Veg and Non-Veg</option><option value="custom">Other / Custom Cake Type</option>
+            </select></label>
+            <label id="customCakeWrap" class="custom-field" style="display:none">Type your cake type<input id="customCakeType" placeholder="e.g. Anniversary Cake"></label>
+            <label>Flavour<select id="flavour" onchange="toggleCustomFlavour()">
+              <option value="">Select flavour</option>
+              <option>Milky Vanilla</option><option>Butterscotch</option><option>Strawberry</option>
+              <option>Blueberry</option><option>Roseberry</option><option>Black Currant</option>
+              <option>Pineapple</option><option>Red Velvet</option><option>Milky Butterscotch</option>
+              <option>Milky Badam</option><option>Honey Almond</option><option>Pista</option>
+              <option>Chocolate</option><option>Choco Chips</option><option>Roast Cause Chocolate</option>
+              <option>Double Chocolate</option><option>Caramel Nuts</option><option>Oreo Chocolate</option>
+              <option value="custom">Other / Custom Flavour</option>
+            </select></label>
+            <label id="customFlavourWrap" class="custom-field" style="display:none">Type your flavour<input id="customFlavour" placeholder="e.g. Mango, Coffee, etc."></label>
+            <label>Size<input id="size" placeholder="e.g. 1 kg, 2 kg"></label>
+          </div>
+        </div>
+
+        <div id="bakeryOrderFields" class="subform full-field" style="display:none">
+          <label>Bakery item<select id="bakeryItem"><option value="">Select bakery item</option></select></label>
+        </div>
+
+        <div class="form-section-title full-field"><span>03</span><div><b>Delivery & customization</b><small>Give the bakery the details needed to confirm your request</small></div></div>
+        <label>Required date<input id="date" type="date"></label>
+        <label>Delivery area<input id="area" placeholder="Area / locality in Kakinada"></label>
+        <label class="full-field">Customization / message<textarea id="custom" rows="4" placeholder="Design idea, cake message, photo request, special instructions or any other details..."></textarea></label>
+        <div class="form-bottom-note full-field"><span>🚚</span><p><b>Delivery:</b> around 20 km depending on area &nbsp;•&nbsp; <b>Payment:</b> Cash on delivery</p></div>
+        <button class="btn primary full-field" type="submit">Send Order Request on WhatsApp ↗</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong>BakeFlow</strong> — Your Cake, Your Way</div>
+    <div>My Home Bakery • Kakinada</div>
+  </footer>
+
+  <div id="chat" class="chat">
+    <div class="chat-head"><strong>BakeFlow Assistant</strong><button onclick="toggleChat()">×</button></div>
+    <div id="messages" class="messages">
+      <div class="bot msg">Hi! 👋 I’m the BakeFlow assistant for My Home Bakery. Ask me about cakes, flavours, sizes, customization, delivery, timings or ordering.</div>
+    </div>
+    <div class="quick-questions">
+      <button onclick="ask('What cake types are available?')">Cake types</button>
+      <button onclick="ask('What flavours are available?')">Flavours</button>
+      <button onclick="ask('Do you deliver?')">Delivery</button>
+      <button onclick="ask('What are your timings?')">Timings</button>
+    </div>
+    <div class="chat-input">
+      <input id="chatInput" onkeydown="if(event.key==='Enter') sendChat()" placeholder="Ask a question...">
+      <button onclick="sendChat()">Send</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
