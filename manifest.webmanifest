@@ -1,0 +1,9 @@
+{
+  "name": "BakeFlow – My Home Bakery",
+  "short_name": "BakeFlow",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fffaf8",
+  "theme_color": "#2b2020",
+  "description": "Cake and bakery item ordering experience for My Home Bakery, Kakinada."
+}

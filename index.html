@@ -1,0 +1,1525 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="BakeFlow - My Home Bakery for custom cakes, fresh bakery items, online ordering and home delivery.">
+<meta name="keywords" content="BakeFlow, My Home Bakery, cakes, bakery items, custom cakes, home delivery">
+
+<title>BakeFlow | Your Cake, Your Way</title>
+<link href="style.css" rel="stylesheet"/>
+<style>
+  .chat {
+  display: none;
+}
+
+.chat.open {
+  display: block;
+}
+/* ===== BakeFlow neat customer layout ===== */
+
+/* Cakes: compact cards instead of one long vertical list */
+.cake-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 18px !important;
+  align-items: stretch;
+}
+
+.cake-card {
+  width: 100% !important;
+  box-sizing: border-box;
+  padding: 12px !important;
+  border-radius: 14px !important;
+  overflow: hidden;
+}
+
+.cake-card > img {
+  width: 100% !important;
+  height: 170px !important;
+  object-fit: cover !important;
+  display: block;
+  border-radius: 10px !important;
+  margin: 0 0 10px !important;
+}
+
+.cake-card h3 {
+  margin: 4px 0 3px !important;
+  font-size: 16px !important;
+}
+
+.cake-card p {
+  margin: 0 0 7px !important;
+  font-size: 12px !important;
+}
+
+.cake-card select,
+.cake-card input {
+  width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box;
+  margin: 3px 0 7px !important;
+  font-size: 12px !important;
+}
+
+.cake-card label {
+  display: block !important;
+  margin: 2px 0 0 !important;
+  font-size: 11px !important;
+}
+
+.cake-card .mini-order {
+  width: 100% !important;
+  margin-top: 6px !important;
+  font-size: 11px !important;
+  padding: 9px 8px !important;
+}
+
+/* Bakery cards: keep the same clean grid style */
+.menu-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 18px !important;
+}
+
+.menu-card {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.menu-card img {
+  width: 100% !important;
+  height: 150px !important;
+  object-fit: cover !important;
+}
+
+/* Order: remove the large empty area beside the long form */
+.order-section {
+  display: block !important;
+}
+
+.order-copy {
+  max-width: 760px !important;
+  margin: 0 auto 20px !important;
+}
+
+.order-copy > p:not(.eyebrow) {
+  max-width: 680px;
+  margin-bottom: 12px !important;
+}
+
+.order-form {
+  width: min(100%, 820px) !important;
+  margin: 0 auto !important;
+}
+
+/* Delivery information: simple and clearly separated */
+.delivery-information {
+  width: min(100%, 1000px);
+  margin: 30px auto 0;
+}
+
+.delivery-information > h2 {
+  margin-bottom: 6px;
+}
+
+.delivery-information > p {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.delivery-information .delivery-info-card {
+  margin-bottom: 14px;
+}
+
+/* Phone */
+@media (max-width: 900px) {
+  .cake-grid,
+  .menu-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 14px !important;
+  }
+
+  .cake-card > img {
+    height: 150px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .cake-grid,
+  .menu-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+
+  .cake-card {
+    padding: 8px !important;
+    border-radius: 10px !important;
+  }
+
+  .cake-card > img {
+    height: 125px !important;
+    border-radius: 8px !important;
+  }
+
+  .cake-card h3 {
+    font-size: 13px !important;
+  }
+
+  .cake-card p,
+  .cake-card label,
+  .cake-card select,
+  .cake-card input {
+    font-size: 10px !important;
+  }
+
+  .cake-card select,
+  .cake-card input {
+    padding: 5px 4px !important;
+    margin-bottom: 5px !important;
+  }
+
+  .cake-card .mini-order {
+    font-size: 9px !important;
+    padding: 7px 4px !important;
+  }
+
+  .menu-card img {
+    height: 120px !important;
+  }
+
+  .order-copy {
+    margin-bottom: 14px !important;
+  }
+}
+
+/* ===== Compact cake + bakery grids ===== */
+.cake-grid,
+.bakery-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 18px !important;
+  align-items: start !important;
+}
+
+.cake-card,
+.menu-card {
+  width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.cake-card > img,
+.menu-card > img {
+  width: 100% !important;
+  height: 165px !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+.cake-card {
+  padding: 10px !important;
+  border-radius: 12px !important;
+}
+
+.cake-card h3, .menu-card h3 {
+  font-size: 15px !important;
+  margin: 6px 0 3px !important;
+}
+
+.cake-card p, .menu-card p {
+  font-size: 11px !important;
+  margin: 0 0 6px !important;
+}
+
+.cake-card label {
+  display: block !important;
+  font-size: 10px !important;
+  margin: 2px 0 1px !important;
+}
+
+.cake-card select,
+.cake-card input {
+  width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+  font-size: 11px !important;
+  padding: 5px 6px !important;
+  margin: 1px 0 5px !important;
+}
+
+.cake-card .mini-order,
+.menu-card .mini-order {
+  width: 100% !important;
+  font-size: 10px !important;
+  padding: 8px 6px !important;
+  margin-top: 4px !important;
+}
+
+.menu-card {
+  overflow: hidden !important;
+}
+
+.menu-card img {
+  height: 150px !important;
+}
+
+.bakery-grid {
+  margin-top: 18px !important;
+}
+
+@media (max-width: 1000px) {
+  .cake-grid, .bakery-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 14px !important;
+  }
+  .cake-card > img { height: 150px !important; }
+}
+
+@media (max-width: 650px) {
+  .cake-grid, .bakery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+  .cake-card { padding: 8px !important; }
+  .cake-card > img, .menu-card img { height: 125px !important; }
+  .cake-card h3, .menu-card h3 { font-size: 13px !important; }
+  .cake-card p, .menu-card p, .cake-card label, .cake-card select, .cake-card input { font-size: 9px !important; }
+  .cake-card select, .cake-card input { padding: 4px !important; margin-bottom: 4px !important; }
+  .cake-card .mini-order, .menu-card .mini-order { font-size: 9px !important; padding: 7px 4px !important; }
+}
+
+.menu-card-body .menu-price{margin:4px 0 8px;font-size:.88rem;color:#6b3f32;line-height:1.25}.menu-card-body .menu-price strong{font-size:1rem;color:#2b1b19}.menu-card-body .menu-price + .mini-order{margin-top:0}
+</style>
+</head>
+<body>
+<header class="navbar">
+<div class="brand">
+<div class="logo">
+<img alt="My Home Bakery Logo" src="images/my-home-bakery-logo.png.jpeg"/>
+</div>
+<div>
+<h1>BakeFlow - My Home Bakery</h1>
+<p>Your Cake, Your Way</p>
+</div>
+</div>
+<button aria-label="Open menu" class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+<nav id="mainNav">
+<a href="#home">Home</a>
+<a href="#dashboard">Dashboard</a>
+<a href="#cakes">Cakes</a>
+<a href="#bakery">Bakery</a>
+<a href="#order">Order</a>
+<a href="#my-orders">My Orders</a>
+<button class="chat-open" onclick="toggleChat()">Ask BakeFlow 🤖</button>
+</nav>
+</header>
+<main>
+<!-- CUSTOMER TRACK ORDER -->
+<section class="hero" id="home">
+<div class="hero-text">
+<span class="pill">My Home Bakery • Kakinada</span>
+<h2>Your Cake,<br/><span>Your Way.</span></h2>
+<p>Explore cakes, flavours and bakery items from My Home Bakery. Customize your order and send an order request easily.</p>
+<div class="hero-buttons">
+<a class="btn primary" href="#cakes">Explore Cakes</a>
+<a class="btn secondary" href="#order">Order Now</a>
+</div>
+<div class="quick-info">
+<span>🚚 Home delivery up to 20 km</span>
+<span>🕘 9:00 AM – 10:00 PM</span>
+<span>💵 Cash on delivery</span>
+</div>
+</div>
+<div class="hero-photo hero-cake-photo">
+<img alt="My Home Bakery cake design" src="images/cake_1.jpg"/>
+<div class="hero-photo-badge">✨ Freshly designed cakes</div>
+</div>
+</section><section class="section dashboard-section" id="dashboard">
+<div class="dashboard-top">
+<div>
+<p class="eyebrow">BAKEFLOW DASHBOARD</p>
+<h2>A smarter bakery experience</h2>
+<p class="dashboard-lead">A clean customer-facing dashboard that brings cakes, flavours, customization, ordering and the smart assistant together in one place.</p>
+</div>
+<div class="dashboard-badge"><span class="live-dot"></span> Ready for customer enquiries</div>
+</div>
+<div class="dash-stats">
+<div class="stat-card"><span>🍰</span><div><strong id="cakeTypeCount">0</strong><small>listed cake types</small></div><em>+ custom option</em></div>
+<div class="stat-card"><span>🍓</span><div><strong id="flavourCount">0</strong><small>listed flavours</small></div><em>+ custom option</em></div>
+<div class="stat-card"><span>📸</span><div><strong>44</strong><small>real cake designs</small></div><em>from bakery</em></div>
+<div class="stat-card"><span>🥐</span><div><strong>14</strong><small>bakery items</small></div><em>orderable online</em></div>
+<div class="stat-card"><span>🚚</span><div><strong>20 km</strong><small>home delivery</small></div><em>around Kakinada</em></div>
+</div>
+<div class="dashboard-main-grid">
+<div class="dash-panel catalogue-panel">
+<div class="panel-title">
+<div><span class="panel-kicker">QUICK ORDER BUILDER</span><h3>Pick an option or type your own</h3></div>
+<span class="soft-tag">Flexible</span>
+</div>
+<div class="quick-builder">
+<label>Cake type=<select id="dashCakeType" onchange="syncDashboardChoice()"></select></label>
+<label>Flavour<select id="dashFlavour" onchange="syncDashboardChoice()"></select></label>
+</div>
+<div class="dashboard-custom-hint" id="dashboardCustomHint">✨ Don't see what you want? Select <b>Other / Custom</b> and type it in the order form.</div>
+<div class="option-preview">
+<div><span class="option-icon">🎂</span><div><b>Cake type</b><p>Listed options + custom cake type</p></div></div>
+<div><span class="option-icon">🍫</span><div><b>Flavour</b><p>Listed flavours + custom flavour</p></div></div>
+<div><span class="option-icon">🎨</span><div><b>Customization</b><p>Add your design, message or other request</p></div></div>
+</div>
+<a class="dashboard-action" href="#order">Continue to order form <span>→</span></a>
+</div>
+<div class="dash-panel assistant-card">
+<div class="assistant-icon">🤖</div>
+<span class="panel-kicker">SMART ASSISTANT</span>
+<h3>Ask BakeFlow</h3>
+<p>Get answers about cake types, flavours, sizes, customization, delivery, timings, payment and bakery items.</p>
+<div class="assistant-tags"><span>Real bakery data</span><span>No guessing</span></div>
+<button class="btn primary" onclick="toggleChat()">Open Chatbot</button>
+</div>
+</div>
+<div class="dash-panel workflow-panel">
+<div class="panel-title"><div><span class="panel-kicker">ORDER FLOW</span><h3>From idea to order request</h3></div><a href="#order">Order form →</a></div>
+<div class="workflow">
+<div><b>01</b><span>Choose a cake type</span></div>
+<i>→</i>
+<div><b>02</b><span>Select or type a flavour</span></div>
+<i>→</i>
+<div><b>03</b><span>Add size &amp; customization</span></div>
+<i>→</i>
+<div><b>04</b><span>Send request on WhatsApp</span></div>
+</div>
+</div>
+<div class="business-strip">
+<div><span>🕘</span><b>9 AM – 10 PM</b><small>Timings depend on area</small></div>
+<div><span>🎨</span><b>Customization available</b><small>Big/custom cakes: order 2 days before</small></div>
+<div><span>💵</span><b>Cash on delivery</b><small>Price depends on flavour &amp; size</small></div>
+</div>
+</section><section class="section intro">
+<div>
+<p class="eyebrow">ABOUT THE BAKERY</p>
+<h2>Fresh cakes &amp; bakery favourites</h2>
+</div>
+<p>My Home Bakery offers different cake types, flavours and bakery products. Customization is available, and delivery is available around Kakinada within 20 km, depending on the area.</p>
+</section><section class="section" id="cakes">
+<div class="section-heading">
+<div>
+<p class="eyebrow">CAKES</p>
+<h2>Choose your cake</h2>
+</div>
+<p>Choose your flavour, cake type and size.</p>
+</div>
+<div class="cake-grid">
+
+
+
+
+
+<article class="cake-card">
+<img alt="Milky Vanilla Cake" src="images/milky vanilla.jpeg"/>
+<h3>Milky Vanilla</h3>
+<p id="milkyVanillaPrice">Price: ₹300</p>
+<select id="milkyVanillaType">
+<option value="Cool">Cool</option>
+<option value="Normal">Normal</option>
+</select>
+<label for="milkyVanillaEgg">Cake Type</label>
+<select id="milkyVanillaEgg">
+<option value="Egg">Egg</option>
+<option value="Eggless">Eggless</option>
+</select>
+<label for="milkyVanillaSize">Cake Size</label>
+<input id="milkyVanillaSize" list="cakeSizes" min="0.5" name="milkyVanillaSize" placeholder="Enter size in kg" step="0.5" type="number"/>
+<datalist id="cakeSizes">
+<option label="500 grams" value="0.5"></option>
+<option label="1 kg" value="1"></option>
+<option label="1.5 kg" value="1.5"></option>
+<option label="2 kg" value="2"></option>
+<option label="2.5 kg" value="2.5"></option>
+<option label="3 kg" value="3"></option>
+<option label="4 kg" value="4"></option>
+<option label="5 kg" value="5"></option>
+<option label="6 kg" value="6"></option>
+<option label="7 kg" value="7"></option>
+<option label="8 kg" value="8"></option>
+<option label="9 kg" value="9"></option>
+<option label="10 kg" value="10"></option>
+</datalist>
+<button class="mini-order" onclick="selectFixedCakeForOrder(
+    'Milky Vanilla',
+    document.getElementById('milkyVanillaSize').value,
+    document.getElementById('milkyVanillaType').value,
+    document.getElementById('milkyVanillaEgg').value
+  )">
+  Order this cake →
+</button>
+</article><article class="cake-card">
+<img alt="Butterscotch Cake" src="images/butterscotch.jpeg"/>
+<h3>Butterscotch</h3>
+<p id="butterscotchPrice">Price: ₹350</p>
+<select id="butterscotchType">
+<option value="Cool">Cool</option>
+<option value="Normal">Normal</option>
+</select>
+<label for="butterscotchEgg">Egg or Eggless</label>
+<select id="butterscotchEgg">
+<option value="Egg">Egg</option>
+<option value="Eggless">Eggless</option>
+</select>
+<label for="butterscotchSize">Cake Size</label>
+<input id="butterscotchSize" list="cakeSizes" min="0.5" name="butterscotchSize" placeholder="Enter size in kg" step="0.5" type="number"/>
+<button class="mini-order" onclick="selectFixedCakeForOrder('Butterscotch', document.getElementById('butterscotchSize').value, document.getElementById('butterscotchType').value, document.getElementById('butterscotchEgg').value)">Order this cake →</button>
+</article><article class="cake-card">
+<img alt="Strawberry Cake" src="images/strawberry.jpeg"/>
+<h3>Strawberry</h3>
+<p id="strawberryPrice">Price: ₹350</p>
+<select id="strawberryType">
+<option value="Cool">Cool</option>
+<option value="Normal">Normal</option>
+</select>
+<label for="strawberryEgg">Cake Type</label>
+<select id="strawberryEgg">
+<option value="Egg">Egg</option>
+<option value="Eggless">Eggless</option>
+</select>
+<label for="strawberrySize">Cake Size</label>
+<input id="strawberrySize" list="cakeSizes" min="0.5" name="strawberrySize" placeholder="Enter size in kg" step="0.5" type="number"/>
+<button class="mini-order" onclick="selectFixedCakeForOrder('Strawberry', document.getElementById('strawberrySize').value, document.getElementById('strawberryType').value, document.getElementById('strawberryEgg').value)">Order this cake →</button>
+</article><article class="cake-card">
+<img alt="Blueberry Cake" src="images/blueberry.jpeg"/>
+<h3>Blueberry</h3>
+<p id="blueberryPrice">Price: ₹400</p>
+<select id="blueberryType">
+<option value="Cool">Cool</option>
+<option value="Normal">Normal</option>
+</select>
+<label for="blueberryEgg">Cake Type</label>
+<select id="blueberryEgg">
+<option value="Egg">Egg</option>
+<option value="Eggless">Eggless</option>
+</select>
+<label for="blueberrySize">Cake Size</label>
+<input id="blueberrySize" list="cakeSizes" min="0.5" name="blueberrySize" placeholder="Enter size in kg" step="0.5" type="number"/>
+<button class="mini-order" onclick="selectFixedCakeForOrder('Blueberry', document.getElementById('blueberrySize').value, document.getElementById('blueberryType').value, document.getElementById('blueberryEgg').value)">Order this cake →</button>
+</article><article class="cake-card">
+<img alt="Mango Cake" src="images/mango.jpeg"/>
+<h3>Mango</h3>
+<p id="mangoPrice">Price: ₹350</p>
+<select id="mangoType">
+<option value="Cool">Cool</option>
+<option value="Normal">Normal</option>
+</select>
+<label for="mangoEgg">Cake Type</label>
+<select id="mangoEgg">
+<option value="Egg">Egg</option>
+<option value="Eggless">Eggless</option>
+</select>
+<label for="mangoSize">Cake Size</label>
+<input id="mangoSize" list="cakeSizes" min="0.5" name="mangoSize" placeholder="Enter size in kg" step="0.5" type="number"/>
+<button class="mini-order" onclick="selectFixedCakeForOrder('Mango', document.getElementById('mangoSize').value, document.getElementById('mangoType').value, document.getElementById('mangoEgg').value)">Order this cake →</button>
+</article><article class="cake-card">
+<img alt="Red Velvet Cake" src="images/red velvet.jpeg"/>
+<h3>Red Velvet</h3>
+<p id="redVelvetPrice">Price: ₹300</p>
+<label for="redVelvetType">Cake Type</label>
+<select id="redVelvetType">
+<option value="Cool">Cool</option>
+<option value="Normal">Normal</option>
+</select>
+<label for="redVelvetEgg">Cake Type</label>
+<select id="redVelvetEgg">
+<option value="Egg">Egg</option>
+<option value="Eggless">Eggless</option>
+</select>
+<label for="redVelvetSize">Cake Size</label>
+<input id="redVelvetSize" list="cakeSizes" min="0.5" name="redVelvetSize" placeholder="Enter size in kg" step="0.5" type="number"/>
+<button class="mini-order" onclick="selectFixedCakeForOrder('Red Velvet', document.getElementById('redVelvetSize').value, document.getElementById('redVelvetType').value, document.getElementById('redVelvetEgg').value)">
+  Order this cake →
+</button>
+</article><article class="cake-card">
+<img alt="Pista Cake" src="images/pista.jpeg"/>
+<h3>Pista</h3>
+<p id="pistaPrice">Price: ₹300</p>
+<label for="pistaType">Cake Type</label>
+<select id="pistaType">
+<option value="Cool">Cool</option>
+<option value="Normal">Normal</option>
+</select>
+<label for="pistaEgg">Cake Type</label>
+<select id="pistaEgg">
+<option value="Egg">Egg</option>
+<option value="Eggless">Eggless</option>
+</select>
+<label for="pistaSize">Cake Size</label>
+<input id="pistaSize" list="cakeSizes" min="0.5" name="pistaSize" placeholder="Enter size in kg" step="0.5" type="number"/>
+<button class="mini-order" onclick="selectFixedCakeForOrder('Pista', document.getElementById('pistaSize').value, document.getElementById('pistaType').value, document.getElementById('pistaEgg').value)">
+  Order this cake →
+</button>
+</article><article class="cake-card">
+<img alt="Milky Badam Cake" src="images/milky badam.jpeg"/>
+<h3>Milky Badam</h3>
+<p id="milkyBadamPrice">Price: ₹300</p>
+<label for="milkyBadamType">Cake Type</label>
+<select id="milkyBadamType">
+<option value="Cool">Cool</option>
+<option value="Normal">Normal</option>
+</select>
+<label for="milkyBadamEgg">Cake Type</label>
+<select id="milkyBadamEgg">
+<option value="Egg">Egg</option>
+<option value="Eggless">Eggless</option>
+</select>
+<label for="milkyBadamSize">Cake Size</label>
+<input id="milkyBadamSize" list="cakeSizes" min="0.5" name="milkyBadamSize" placeholder="Enter size in kg" step="0.5" type="number"/>
+<button class="mini-order" onclick="selectFixedCakeForOrder('Milky Badam', document.getElementById('milkyBadamSize').value, document.getElementById('milkyBadamType').value, document.getElementById('milkyBadamEgg').value)">
+  Order this cake →
+</button>
+</article><article class="cake-card">
+<img alt="Milky Butterscotch Cake" src="images/milky butterscotch.jpeg"/>
+<h3>Milky Butterscotch</h3>
+<p id="milkyButterscotchPrice">Price: ₹300</p>
+<label for="milkyButterscotchType">Cake Type</label>
+<select id="milkyButterscotchType">
+<option value="Cool">Cool</option>
+<option value="Normal">Normal</option>
+</select>
+<label for="milkyButterscotchEgg">Cake Type</label>
+<select id="milkyButterscotchEgg">
+<option value="Egg">Egg</option>
+<option value="Eggless">Eggless</option>
+</select>
+<label for="milkyButterscotchSize">Cake Size</label>
+<input id="milkyButterscotchSize" list="cakeSizes" min="0.5" placeholder="Enter size in kg" step="0.5" type="number"/>
+<button class="mini-order" onclick="selectFixedCakeForOrder('Milky Butterscotch', document.getElementById('milkyButterscotchSize').value, document.getElementById('milkyButterscotchType').value, document.getElementById('milkyButterscotchEgg').value)">
+  Order this cake →
+</button>
+</article><article class="cake-card">
+<img alt="Honey Almond Cake" src="images/honey almond.jpeg"/>
+<h3>Honey Almond</h3>
+<p id="honeyAlmondPrice">Price: ₹500</p>
+<label for="honeyAlmondType">Cake Type</label>
+<select id="honeyAlmondType">
+<option value="Cool">Cool</option>
+<option value="Normal">Normal</option>
+</select>
+<label for="honeyAlmondEgg">Cake Type</label>
+<select id="honeyAlmondEgg">
+<option value="Egg">Egg</option>
+<option value="Eggless">Eggless</option>
+</select>
+<label for="honeyAlmondSize">Cake Size</label>
+<input id="honeyAlmondSize" list="cakeSizes" min="0.5" placeholder="Enter size in kg" step="0.5" type="number"/>
+<button class="mini-order" onclick="selectFixedCakeForOrder('Honey Almond', document.getElementById('honeyAlmondSize').value, document.getElementById('honeyAlmondType').value, document.getElementById('honeyAlmondEgg').value)">
+  Order this cake →
+</button>
+</article><article class="cake-card">
+<img alt="Caramel Nuts Cake" src="images/caramel nuts.jpeg"/>
+<h3>Caramel Nuts</h3>
+<p id="caramelNutsPrice">Price: ₹300</p>
+<label for="caramelNutsType">Cake Type</label>
+<select id="caramelNutsType">
+<option value="Cool">Cool</option>
+<option value="Normal">Normal</option>
+</select>
+<label for="caramelNutsEgg">Cake Type</label>
+<select id="caramelNutsEgg">
+<option value="Egg">Egg</option>
+<option value="Eggless">Eggless</option>
+</select>
+<label for="caramelNutsSize">Cake Size</label>
+<input id="caramelNutsSize" list="cakeSizes" min="0.5" placeholder="Enter size in kg" step="0.5" type="number"/>
+<button class="mini-order" onclick="selectFixedCakeForOrder('Caramel Nuts', document.getElementById('caramelNutsSize').value, document.getElementById('caramelNutsType').value, document.getElementById('caramelNutsEgg').value)">
+  Order this cake →
+</button>
+</article><article class="cake-card">
+<img alt="Oreo Cake" src="images/oreo.jpeg"/>
+<h3>Oreo</h3>
+<p id="oreoPrice">Price: ₹300 </p>
+<label for="oreoType">Cake Type</label>
+<select id="oreoType">
+<option value="Cool">Cool</option>
+<option value="Normal">Normal</option>
+</select>
+<label for="oreoEgg">Cake Type</label>
+<select id="oreoEgg">
+<option value="Egg">Egg</option>
+<option value="Eggless">Eggless</option>
+</select>
+<label for="oreoSize">Cake Size</label>
+<input id="oreoSize" list="cakeSizes" min="0.5" placeholder="Enter size in kg" step="0.5" type="number"/>
+<button class="mini-order" onclick="selectFixedCakeForOrder('Oreo', document.getElementById('oreoSize').value, document.getElementById('oreoType').value, document.getElementById('oreoEgg').value)">
+  Order this cake →
+</button>
+</article><article class="cake-card">
+<img alt="Chocolate Cake" src="images/chocolate.jpeg"/>
+<h3>Chocolate</h3>
+<p id="oreoPrice">Price:₹250</p>
+<label for="chocolateType">Cake Type</label>
+<select id="chocolateType">
+<option value="Cool">Cool</option>
+<option value="Normal">Normal</option>
+</select>
+<label for="chocolateEgg">Cake Type</label>
+<select id="chocolateEgg">
+<option value="Egg">Egg</option>
+<option value="Eggless">Eggless</option>
+</select>
+<label for="chocolateSize">Cake Size</label>
+<input id="chocolateSize" list="cakeSizes" min="0.5" placeholder="Enter size in kg" step="0.5" type="number"/>
+<button class="mini-order" onclick="selectFixedCakeForOrder('Chocolate', document.getElementById('chocolateSize').value, document.getElementById('chocolateType').value, document.getElementById('chocolateEgg').value)">
+  Order this cake →
+</button>
+</article><article class="cake-card">
+<img alt="Chocochips Cake" src="images/chocochips.jpeg"/>
+<h3>Chocochips</h3>
+<p id="chocochipsPrice">Price:₹300</p>
+<label for="chocochipsType">Cake Type</label>
+<select id="chocochipsType">
+<option value="Cool">Cool</option>
+<option value="Normal">Normal</option>
+</select>
+<label for="chocochipsEgg">Cake Type</label>
+<select id="chocochipsEgg">
+<option value="Egg">Egg</option>
+<option value="Eggless">Eggless</option>
+</select>
+<label for="chocochipsSize">Cake Size</label>
+<input id="chocochipsSize" list="cakeSizes" min="0.5" placeholder="Enter size in kg" step="0.5" type="number"/>
+<button class="mini-order" onclick="selectFixedCakeForOrder('Chocochips', document.getElementById('chocochipsSize').value, document.getElementById('chocochipsType').value, document.getElementById('chocochipsEgg').value)">
+  Order this cake →
+</button>
+</article><article class="cake-card">
+<img alt="Roast Cause Chocolate Cake" src="images/roast cause chocolate.jpeg"/>
+<h3>Roast Cause Chocolate</h3>
+<p id="roastCauseChocolatePrice">Price:₹300</p>
+<label for="roastCauseChocolateType">Cake Type</label>
+<select id="roastCauseChocolateType">
+<option value="Cool">Cool</option>
+<option value="Normal">Normal</option>
+</select>
+<label for="roastCauseChocolateEgg">Cake Type</label>
+<select id="roastCauseChocolateEgg">
+<option value="Egg">Egg</option>
+<option value="Eggless">Eggless</option>
+</select>
+<label for="roastCauseChocolateSize">Cake Size</label>
+<input id="roastCauseChocolateSize" list="cakeSizes" min="0.5" placeholder="Enter size in kg" step="0.5" type="number"/>
+<button class="mini-order" onclick="selectFixedCakeForOrder('Roast Cause Chocolate', document.getElementById('roastCauseChocolateSize').value, document.getElementById('roastCauseChocolateType').value, document.getElementById('roastCauseChocolateEgg').value)">
+  Order this cake →
+</button>
+</article><article class="cake-card">
+<img alt="Black Forest Cake" src="images/black forest.jpeg"/>
+<h3>Black Forest</h3>
+<p id="blackForestPrice">Price:₹250</p>
+<label for="blackForestType">Cake Type</label>
+<select id="blackForestType">
+<option value="Cool">Cool</option>
+<option value="Normal">Normal</option>
+</select>
+<label for="blackForestEgg">Cake Type</label>
+<select id="blackForestEgg">
+<option value="Egg">Egg</option>
+<option value="Eggless">Eggless</option>
+</select>
+<label for="blackForestSize">Cake Size</label>
+<input id="blackForestSize" list="cakeSizes" min="0.5" placeholder="Enter size in kg" step="0.5" type="number"/>
+<button class="mini-order" onclick="selectFixedCakeForOrder('Black Forest', document.getElementById('blackForestSize').value, document.getElementById('blackForestType').value, document.getElementById('blackForestEgg').value)">
+  Order this cake →
+</button>
+</article></div>
+<section class="section bakery-section" id="bakery">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">BAKERY MENU</p>
+      <h2>More from My Home Bakery</h2>
+    </div>
+    <p>Choose quantity or weight and see the price instantly.</p>
+  </div>
+
+  <div class="menu-note">
+    <span>ℹ️</span>
+    <p>Select the quantity/weight you need. The price updates automatically.</p>
+  </div>
+
+  <div class="grid bakery-grid">
+
+    <!-- Brownie -->
+    <article class="mini-card menu-card bakery-product-card" data-bakery="Brownie" data-kind="piece">
+      <img src="images/brownie.jpg" alt="Brownie">
+      <div class="menu-card-body">
+        <h3>Brownie</h3>
+        <div class="bakery-choice">
+          <label>Quantity
+            <select class="bakery-size" onchange="updateBakeryPrice(this)">
+              <option value="1">1 piece</option>
+              <option value="2">2 pieces</option>
+              <option value="3">3 pieces</option>
+              <option value="4">4 pieces</option>
+              <option value="5">5 pieces</option>
+              <option value="6">6 pieces</option>
+              <option value="10">10 pieces</option>
+              <option value="custom">Custom</option>
+            </select>
+          </label>
+          <label class="bakery-custom-wrap" style="display:none">Pieces
+            <input class="bakery-custom" type="number" min="1" value="1" oninput="updateBakeryPrice(this)">
+          </label>
+        </div>
+        <p class="menu-price bakery-live-price">Price: <strong>₹50</strong></p>
+        <button class="mini-order" onclick="orderBakeryItem('Brownie')">Order this item →</button>
+      </div>
+    </article>
+
+    <!-- Chocolava -->
+    <article class="mini-card menu-card bakery-product-card" data-bakery="Chocolava" data-kind="piece">
+      <img src="images/chocolava.jpg" alt="Chocolava">
+      <div class="menu-card-body">
+        <h3>Chocolava</h3>
+        <div class="bakery-choice">
+          <label>Quantity
+            <select class="bakery-size" onchange="updateBakeryPrice(this)">
+              <option value="1">1 piece</option>
+              <option value="2">2 pieces</option>
+              <option value="3">3 pieces</option>
+              <option value="4">4 pieces</option>
+              <option value="5">5 pieces</option>
+              <option value="6">6 pieces</option>
+              <option value="10">10 pieces</option>
+              <option value="custom">Custom</option>
+            </select>
+          </label>
+          <label class="bakery-custom-wrap" style="display:none">Pieces
+            <input class="bakery-custom" type="number" min="1" value="1" oninput="updateBakeryPrice(this)">
+          </label>
+        </div>
+        <p class="menu-price bakery-live-price">Price: <strong>₹50</strong></p>
+        <button class="mini-order" onclick="orderBakeryItem('Chocolava')">Order this item →</button>
+      </div>
+    </article>
+
+    <!-- Donuts -->
+    <article class="mini-card menu-card bakery-product-card" data-bakery="Donuts" data-kind="piece">
+      <img src="images/donuts.jpg" alt="Donuts">
+      <div class="menu-card-body">
+        <h3>Donuts</h3>
+        <div class="bakery-choice">
+          <label>Quantity
+            <select class="bakery-size" onchange="updateBakeryPrice(this)">
+              <option value="1">1 piece</option>
+              <option value="2">2 pieces</option>
+              <option value="3">3 pieces</option>
+              <option value="4">4 pieces</option>
+              <option value="5">5 pieces</option>
+              <option value="6">6 pieces</option>
+              <option value="10">10 pieces</option>
+              <option value="custom">Custom</option>
+            </select>
+          </label>
+          <label class="bakery-custom-wrap" style="display:none">Pieces
+            <input class="bakery-custom" type="number" min="1" value="1" oninput="updateBakeryPrice(this)">
+          </label>
+        </div>
+        <p class="menu-price bakery-live-price">Price: <strong>₹40</strong></p>
+        <button class="mini-order" onclick="orderBakeryItem('Donuts')">Order this item →</button>
+      </div>
+    </article>
+
+    <!-- Dry Fruit Butter Biscuits -->
+    <article class="mini-card menu-card bakery-product-card" data-bakery="Dry Fruit Butter Biscuits" data-kind="weight">
+      <img src="images/dryfruit_butter_biscuits.jpg" alt="Dry Fruit Butter Biscuits" onerror="this.onerror=null;this.src='images/butter_salt_biscuits.jpg';">
+      <div class="menu-card-body">
+        <h3>Dry Fruit Butter Biscuits</h3>
+        <div class="bakery-choice">
+          <label>Size / Weight
+            <select class="bakery-size" onchange="updateBakeryPrice(this)">
+              <option value="100">100 gms</option>
+              <option value="200" selected>200 gms</option>
+              <option value="250">250 gms</option>
+              <option value="320">320 gms</option>
+              <option value="500">500 gms</option>
+              <option value="750">750 gms</option>
+              <option value="1000">1000 gms</option>
+              <option value="1500">1500 gms</option>
+              <option value="2000">2000 gms</option>
+              <option value="custom">Custom weight</option>
+            </select>
+          </label>
+          <label class="bakery-custom-wrap" style="display:none">Weight (gms)
+            <input class="bakery-custom" type="number" min="1" value="250" oninput="updateBakeryPrice(this)">
+          </label>
+        </div>
+        <p class="menu-price bakery-live-price">Price: <strong>₹120</strong></p>
+        <button class="mini-order" onclick="orderBakeryItem('Dry Fruit Butter Biscuits')">Order this item →</button>
+      </div>
+    </article>
+
+    <!-- Butter Salt Biscuits -->
+    <article class="mini-card menu-card bakery-product-card" data-bakery="Butter Salt Biscuits" data-kind="weight">
+      <img src="images/butter_salt_biscuits.jpg" alt="Butter Salt Biscuits">
+      <div class="menu-card-body">
+        <h3>Butter Salt Biscuits</h3>
+        <div class="bakery-choice">
+          <label>Size / Weight
+            <select class="bakery-size" onchange="updateBakeryPrice(this)">
+              <option value="100">100 gms</option>
+              <option value="200" selected>200 gms</option>
+              <option value="250">250 gms</option>
+              <option value="320">320 gms</option>
+              <option value="500">500 gms</option>
+              <option value="750">750 gms</option>
+              <option value="1000">1000 gms</option>
+              <option value="1500">1500 gms</option>
+              <option value="2000">2000 gms</option>
+              <option value="custom">Custom weight</option>
+            </select>
+          </label>
+          <label class="bakery-custom-wrap" style="display:none">Weight (gms)
+            <input class="bakery-custom" type="number" min="1" value="250" oninput="updateBakeryPrice(this)">
+          </label>
+        </div>
+        <p class="menu-price bakery-live-price">Price: <strong>₹100</strong></p>
+        <button class="mini-order" onclick="orderBakeryItem('Butter Salt Biscuits')">Order this item →</button>
+      </div>
+    </article>
+
+    <!-- Milk Cake -->
+    <article class="mini-card menu-card bakery-product-card" data-bakery="Milk Cake" data-kind="weight">
+      <img src="images/milk_cake.jpg" alt="Milk Cake">
+      <div class="menu-card-body">
+        <h3>Milk Cake</h3>
+        <div class="bakery-choice">
+          <label>Size / Weight
+            <select class="bakery-size" onchange="updateBakeryPrice(this)">
+              <option value="100">100 gms</option>
+              <option value="200">200 gms</option>
+              <option value="250" selected>250 gms</option>
+              <option value="320">320 gms</option>
+              <option value="500">500 gms</option>
+              <option value="750">750 gms</option>
+              <option value="1000">1000 gms</option>
+              <option value="1500">1500 gms</option>
+              <option value="2000">2000 gms</option>
+              <option value="custom">Custom weight</option>
+            </select>
+          </label>
+          <label class="bakery-custom-wrap" style="display:none">Weight (gms)
+            <input class="bakery-custom" type="number" min="1" value="250" oninput="updateBakeryPrice(this)">
+          </label>
+        </div>
+        <p class="menu-price bakery-live-price">Price: <strong>₹100</strong></p>
+        <button class="mini-order" onclick="orderBakeryItem('Milk Cake')">Order this item →</button>
+      </div>
+    </article>
+
+    <!-- Plum Cake -->
+    <article class="mini-card menu-card bakery-product-card" data-bakery="Plum Cake" data-kind="weight">
+      <img src="images/plum_cake.jpg" alt="Plum Cake">
+      <div class="menu-card-body">
+        <h3>Plum Cake</h3>
+        <div class="bakery-choice">
+          <label>Size / Weight
+            <select class="bakery-size" onchange="updateBakeryPrice(this)">
+              <option value="100">100 gms</option>
+              <option value="200">200 gms</option>
+              <option value="250" selected>250 gms</option>
+              <option value="320">320 gms</option>
+              <option value="500">500 gms</option>
+              <option value="750">750 gms</option>
+              <option value="1000">1000 gms</option>
+              <option value="1500">1500 gms</option>
+              <option value="2000">2000 gms</option>
+              <option value="custom">Custom weight</option>
+            </select>
+          </label>
+          <label class="bakery-custom-wrap" style="display:none">Weight (gms)
+            <input class="bakery-custom" type="number" min="1" value="250" oninput="updateBakeryPrice(this)">
+          </label>
+        </div>
+        <p class="menu-price bakery-live-price">Price: <strong>₹150</strong></p>
+        <button class="mini-order" onclick="orderBakeryItem('Plum Cake')">Order this item →</button>
+      </div>
+    </article>
+
+    <!-- Sponge Cake -->
+    <article class="mini-card menu-card bakery-product-card" data-bakery="Sponge Cake" data-kind="weight">
+      <img src="images/sponge_cake.jpg" alt="Sponge Cake">
+      <div class="menu-card-body">
+        <h3>Sponge Cake</h3>
+        <div class="bakery-choice">
+          <label>Size / Weight
+            <select class="bakery-size" onchange="updateBakeryPrice(this)">
+              <option value="100">100 gms</option>
+              <option value="200">200 gms</option>
+              <option value="250" selected>250 gms</option>
+              <option value="320">320 gms</option>
+              <option value="500">500 gms</option>
+              <option value="750">750 gms</option>
+              <option value="1000">1000 gms</option>
+              <option value="1500">1500 gms</option>
+              <option value="2000">2000 gms</option>
+              <option value="custom">Custom weight</option>
+            </select>
+          </label>
+          <label class="bakery-custom-wrap" style="display:none">Weight (gms)
+            <input class="bakery-custom" type="number" min="1" value="250" oninput="updateBakeryPrice(this)">
+          </label>
+        </div>
+        <p class="menu-price bakery-live-price">Price: <strong>₹70</strong></p>
+        <button class="mini-order" onclick="orderBakeryItem('Sponge Cake')">Order this item →</button>
+      </div>
+    </article>
+
+    <!-- Cup Cakes -->
+    <article class="mini-card menu-card bakery-product-card" data-bakery="Cup Cakes" data-kind="cupcake">
+      <img src="images/cup_cakes.jpg" alt="Cup Cakes">
+      <div class="menu-card-body">
+        <h3>Cup Cakes</h3>
+        <div class="bakery-choice">
+          <label>Quantity
+            <select class="bakery-size" onchange="updateBakeryPrice(this)">
+              <option value="6">6 pieces</option>
+              <option value="12">12 pieces</option>
+              <option value="18">18 pieces</option>
+              <option value="24">24 pieces</option>
+              <option value="custom">Custom</option>
+            </select>
+          </label>
+          <label class="bakery-custom-wrap" style="display:none">Pieces
+            <input class="bakery-custom" type="number" min="1" value="6" oninput="updateBakeryPrice(this)">
+          </label>
+        </div>
+        <p class="menu-price bakery-live-price">Price: <strong>₹60</strong></p>
+        <button class="mini-order" onclick="orderBakeryItem('Cup Cakes')">Order this item →</button>
+      </div>
+    </article>
+
+    <!-- Bread -->
+    <article class="mini-card menu-card bakery-product-card" data-bakery="Bread" data-kind="bread">
+      <img src="images/bread.jpg" alt="Bread">
+      <div class="menu-card-body">
+        <h3>Bread</h3>
+        <div class="bakery-choice">
+          <label>Size / Weight
+            <select class="bakery-size" onchange="updateBakeryPrice(this)">
+              <option value="100">100 gms</option>
+              <option value="200">200 gms</option>
+              <option value="250">250 gms</option>
+              <option value="320" selected>320 gms</option>
+              <option value="500">500 gms</option>
+              <option value="750">750 gms</option>
+              <option value="1000">1000 gms</option>
+              <option value="1500">1500 gms</option>
+              <option value="2000">2000 gms</option>
+              <option value="custom">Custom weight</option>
+            </select>
+          </label>
+          <label class="bakery-custom-wrap" style="display:none">Weight (gms)
+            <input class="bakery-custom" type="number" min="1" value="250" oninput="updateBakeryPrice(this)">
+          </label>
+        </div>
+        <p class="menu-price bakery-live-price">Price: <strong>₹50</strong></p>
+        <button class="mini-order" onclick="orderBakeryItem('Bread')">Order this item →</button>
+      </div>
+    </article>
+
+    <!-- Rusk -->
+    <article class="mini-card menu-card bakery-product-card" data-bakery="Rusk (Toast)" data-kind="weight">
+      <img src="images/rusk_toast.jpg" alt="Rusk Toast">
+      <div class="menu-card-body">
+        <h3>Rusk (Toast)</h3>
+        <div class="bakery-choice">
+          <label>Size / Weight
+            <select class="bakery-size" onchange="updateBakeryPrice(this)">
+              <option value="100">100 gms</option>
+              <option value="200">200 gms</option>
+              <option value="250" selected>250 gms</option>
+              <option value="320">320 gms</option>
+              <option value="500">500 gms</option>
+              <option value="750">750 gms</option>
+              <option value="1000">1000 gms</option>
+              <option value="1500">1500 gms</option>
+              <option value="2000">2000 gms</option>
+              <option value="custom">Custom weight</option>
+            </select>
+          </label>
+          <label class="bakery-custom-wrap" style="display:none">Weight (gms)
+            <input class="bakery-custom" type="number" min="1" value="250" oninput="updateBakeryPrice(this)">
+          </label>
+        </div>
+        <p class="menu-price bakery-live-price">Price: <strong>₹50</strong></p>
+        <button class="mini-order" onclick="orderBakeryItem('Rusk (Toast)')">Order this item →</button>
+      </div>
+    </article>
+
+    <!-- Cream Buns -->
+    <article class="mini-card menu-card bakery-product-card" data-bakery="Cream Buns" data-kind="piece">
+      <img src="images/cream_buns.jpg" alt="Cream Buns">
+      <div class="menu-card-body">
+        <h3>Cream Buns</h3>
+        <div class="bakery-choice">
+          <label>Quantity
+            <select class="bakery-size" onchange="updateBakeryPrice(this)">
+              <option value="1">1 piece</option>
+              <option value="2">2 pieces</option>
+              <option value="3">3 pieces</option>
+              <option value="4">4 pieces</option>
+              <option value="5">5 pieces</option>
+              <option value="6">6 pieces</option>
+              <option value="10">10 pieces</option>
+              <option value="custom">Custom</option>
+            </select>
+          </label>
+          <label class="bakery-custom-wrap" style="display:none">Pieces
+            <input class="bakery-custom" type="number" min="1" value="1" oninput="updateBakeryPrice(this)">
+          </label>
+        </div>
+        <p class="menu-price bakery-live-price">Price: <strong>₹20</strong></p>
+        <button class="mini-order" onclick="orderBakeryItem('Cream Buns')">Order this item →</button>
+      </div>
+    </article>
+
+    <!-- Fruit Buns -->
+    <article class="mini-card menu-card bakery-product-card" data-bakery="Fruit Buns" data-kind="piece">
+      <img src="images/fruit_buns.jpg" alt="Fruit Buns">
+      <div class="menu-card-body">
+        <h3>Fruit Buns</h3>
+        <div class="bakery-choice">
+          <label>Quantity
+            <select class="bakery-size" onchange="updateBakeryPrice(this)">
+              <option value="1">1 piece</option>
+              <option value="2">2 pieces</option>
+              <option value="3">3 pieces</option>
+              <option value="4">4 pieces</option>
+              <option value="5">5 pieces</option>
+              <option value="6">6 pieces</option>
+              <option value="10">10 pieces</option>
+              <option value="custom">Custom</option>
+            </select>
+          </label>
+          <label class="bakery-custom-wrap" style="display:none">Pieces
+            <input class="bakery-custom" type="number" min="1" value="1" oninput="updateBakeryPrice(this)">
+          </label>
+        </div>
+        <p class="menu-price bakery-live-price">Price: <strong>₹20</strong></p>
+        <button class="mini-order" onclick="orderBakeryItem('Fruit Buns')">Order this item →</button>
+      </div>
+    </article>
+
+    <!-- Jam Buns -->
+    <article class="mini-card menu-card bakery-product-card" data-bakery="Jam Buns" data-kind="piece">
+      <img src="images/jam_buns.jpg" alt="Jam Buns">
+      <div class="menu-card-body">
+        <h3>Jam Buns</h3>
+        <div class="bakery-choice">
+          <label>Quantity
+            <select class="bakery-size" onchange="updateBakeryPrice(this)">
+              <option value="1">1 piece</option>
+              <option value="2">2 pieces</option>
+              <option value="3">3 pieces</option>
+              <option value="4">4 pieces</option>
+              <option value="5">5 pieces</option>
+              <option value="6">6 pieces</option>
+              <option value="10">10 pieces</option>
+              <option value="custom">Custom</option>
+            </select>
+          </label>
+          <label class="bakery-custom-wrap" style="display:none">Pieces
+            <input class="bakery-custom" type="number" min="1" value="1" oninput="updateBakeryPrice(this)">
+          </label>
+        </div>
+        <p class="menu-price bakery-live-price">Price: <strong>₹20</strong></p>
+        <button class="mini-order" onclick="orderBakeryItem('Jam Buns')">Order this item →</button>
+      </div>
+    </article>
+
+  </div>
+</section><section class="section order-section" id="order">
+<div class="order-copy">
+<p class="eyebrow">ORDER REQUEST</p>
+<h2>Tell us what you want.</h2>
+<p>Select your items, add the required details, and send your order request on WhatsApp.</p>
+<div class="order-note"><span>💡</span><p><b>Tip:</b> Big or customized cakes should be requested at least 2 days in advance.</p></div>
+</div>
+<form class="order-form" id="orderForm">
+<div class="form-section-title full-field"><span>01</span><div><b>Customer details</b><small>How can the bakery contact you?</small></div></div>
+<label>Your name<input id="name" placeholder="Enter your name" required=""/></label>
+<label>Phone number<input id="phone" inputmode="tel" placeholder="Enter phone number" required=""/></label>
+<div class="form-section-title full-field">
+<span>02</span>
+<div>
+<b>What would you like?</b>
+<small>Add one or more items to your order</small>
+</div>
+</div>
+<div class="full-field" id="orderItems">
+<!-- Item 1 -->
+<div class="order-item" data-item="1">
+<div class="item-header">
+<b>Item 1</b>
+</div>
+<label>
+      Order category
+      <select class="item-category" onchange="toggleOrderItem(this)" required="">
+<option value="">Select category</option>
+<option value="cake">Cake</option>
+<option value="bakery">Bakery Item</option>
+</select>
+</label>
+<label>
+      Quantity
+      <input class="item-quantity" min="1" onchange="updateOrderItemQuantity(this)" type="number" value="1"/>
+</label>
+<label>
+      Required date
+      <input class="item-date" type="date"/>
+</label>
+<div class="item-details"></div>
+</div>
+</div>
+<button class="btn secondary full-field" onclick="addAnotherOrderItem()" type="button">
+  ➕ Add Another Item
+</button>
+<div class="subform full-field" id="cakeOrderFields" style="display:none">
+<div class="subform-grid">
+<label>Cake type<select id="cakeType" onchange="toggleCustomCakeType()">
+<option value="">Select cake type</option>
+<option>Birthday Cake</option><option>Photo Cake</option><option>Designer Cake</option>
+<option>Heart Shape Cake</option><option>Steps Cake</option><option>Cool Cake</option>
+<option>Egg</option><option>Eggless</option><option value="custom">Other / Custom Cake Type</option>
+</select></label>
+<label class="custom-field" id="customCakeWrap" style="display:none">Type your cake type<input id="customCakeType" placeholder="e.g. Anniversary Cake"/></label>
+<label>Flavour<select id="flavour" onchange="toggleCustomFlavour()">
+<option value="">Select flavour</option>
+<option>Milky Vanilla</option><option>Butterscotch</option><option>Strawberry</option>
+<option>Blueberry</option><option>Roseberry</option><option>Black Currant</option>
+<option>Pineapple</option><option>Red Velvet</option><option>Milky Butterscotch</option>
+<option>Milky Badam</option><option>Honey Almond</option><option>Pista</option><option>Black Forest</option>
+<option>Chocolate</option><option>Chocochips</option><option>Roast Cause Chocolate</option>
+<option>Double Chocolate</option><option>Caramel Nuts</option><option>Oreo Chocolate</option>
+<option value="custom">Other / Custom Flavour</option>
+</select></label>
+<label class="custom-field" id="customFlavourWrap" style="display:none">Type your flavour<input id="customFlavour" placeholder="e.g. Mango, Coffee, etc."/></label>
+<label>Size<input id="size" placeholder="e.g. 1 kg, 2 kg"/></label>
+</div>
+</div>
+<div class="form-section-title full-field">
+<span>03</span>
+<div>
+<b>Delivery &amp; customization</b>
+<small>Give the bakery the details needed to confirm your request</small>
+</div>
+</div>
+<div class="owner-location full-field">
+<h3>📍 My Home Bakery Location</h3>
+<p>
+<b>Shop/House No:</b> 11-11-6/2
+          </p>
+<p>
+<b>Address:</b> Ramarao Peta, Nukalamma Thalli Temple Road,
+            opposite Vivekananda Park Bus Shelter
+          </p>
+<p>
+<b>PIN Code:</b> 533004
+          </p>
+<a class="btn secondary" href="https://maps.app.goo.gl/NDArQ8fsKCuHmzQQA?g_st=aw" rel="noopener" target="_blank">
+            📍 View on Google Maps
+          </a>
+</div>
+<div class="delivery-location full-field">
+<h3>📍 Delivery Location</h3>
+<label>
+            🚚 Delivery Type
+            <select id="deliveryType" onchange="toggleDeliveryType()" required="">
+<option value="">Select delivery type</option>
+<option value="home_delivery">🏠 Home Delivery</option>
+<option value="pickup">🏪 Pickup / Self Collection</option>
+</select>
+</label>
+<p>
+            Enter the area where you want your order delivered.
+          </p>
+<label>
+            Area / Locality
+            <input id="area" placeholder="e.g. Ramarao Peta, Kakinada" required="" type="text"/>
+</label>
+<label>
+            Full Delivery Address
+            <textarea id="deliveryAddress" placeholder="Enter house no, street name, landmark..." required="" rows="3"></textarea>
+</label>
+<div class="location-picker">
+<button class="btn secondary" onclick="getCustomerLocation()" type="button">
+              📍 Use My Location
+            </button>
+<p id="locationStatus">
+              Your location will be used only to calculate delivery distance.
+            </p>
+<input id="customerLatitude" type="hidden"/>
+<input id="customerLongitude" type="hidden"/>
+<div class="distance-result" id="distanceResult" style="display:none;">
+              📏 Distance from My Home Bakery:
+              <strong id="customerDistance">Calculating...</strong>
+</div>
+</div>
+</div>
+<!-- ORDER PRICE SUMMARY -->
+<div class="order-price-summary full-field">
+
+  <h3>💰 Order Summary</h3>
+
+  <div class="price-row">
+    <span>Order Subtotal</span>
+    <strong id="orderSubtotal">₹0</strong>
+  </div>
+
+  <div class="price-row">
+    <span>🚚 Delivery Charge</span>
+    <strong id="deliveryCharge">₹0</strong>
+  </div>
+
+  <div class="price-row total-row">
+    <span>Total</span>
+    <strong id="orderTotal">₹0</strong>
+  </div>
+
+</div>
+<label class="full-field">
+          Customization / Message
+          <textarea id="custom" placeholder="Design idea..." rows="4"></textarea>
+</label>
+<div class="full-field">
+<label>
+            Reference Image
+            <small>Choose a cake design from your gallery or take a new photo</small>
+</label>
+<label class="btn secondary" for="referenceImage">
+            🖼️ Choose from Gallery
+          </label>
+<input accept="image/*" id="referenceImage" onchange="previewReferenceImage(event)" style="display:none;" type="file"/>
+<label class="btn primary" for="cameraImage">
+            📷 Take a Photo
+          </label>
+<input accept="image/*" capture="environment" id="cameraImage" onchange="previewReferenceImage(event)" style="display:none;" type="file"/>
+<img alt="Reference image preview" id="referencePreview" style="display:none; max-width:220px; margin-top:10px; border-radius:10px;"/>
+</div>
+<div class="form-bottom-note full-field">
+<span>🚚</span>
+<p>
+<b>Delivery:</b> around 20 km depending on area
+     • 
+    <b>Payment:</b> Cash on delivery
+  </p>
+</div>
+<button class="btn primary full-field" type="submit">
+  Send Order Request on WhatsApp ↗
+</button>
+</form>
+<div class="delivery-information">
+<h2>Delivery Information</h2>
+<p>Choose home delivery or pickup based on your location.</p>
+<div class="delivery-info-card">
+<h3>🏠 Home Delivery</h3>
+<p>
+      Your order can be delivered to your selected delivery location.
+    </p>
+<ul>
+<li>📍 Delivery area will be collected during ordering.</li>
+<li>📏 Home delivery is available within 20 km from My Home Bakery.</li>
+<li>🎂 For locations more than 20 km away, home delivery is available only when the order contains a cake of 3 kg or above.</li>
+<li>🏪 If the above condition is not satisfied, Pickup / Self Collection is available.</li>
+<li>🚚 Delivery tracking is available when the order is out for delivery.</li>
+<li>📦 You can track your order using your Track ID.</li>
+</ul>
+</div>
+<div class="delivery-info-card">
+<h3>🏪 Pickup / Self Collection</h3>
+<p>
+      You can also collect your order directly from My Home Bakery.
+    </p>
+<p>
+      📍 <strong>My Home Bakery</strong><br/>
+      Ramarao Peta, Nukalamma Thalli Temple Road,<br/>
+      Opposite Vivekananda Park Bus Shelter,<br/>
+      Kakinada – 533004
+    </p>
+<a class="btn secondary" href="https://maps.app.goo.gl/NDArQ8fsKCuHmzQQA?g_st=aw" rel="noopener" target="_blank">
+      📍 View Bakery Location
+    </a>
+</div>
+</div>
+</section><section class="track-order-section">
+<h2>📦 Track Your Order</h2>
+<p>
+      Enter your Track ID to check your order status.
+    </p>
+<label>
+      Track ID
+      <input id="trackIdInput" placeholder="Enter your Track ID" type="text"/>
+</label>
+<button class="btn primary" onclick="trackOrder()" type="button">
+      🔍 Track Order
+    </button>
+<div id="trackingResult" style="display: none;">
+<p id="trackingStatus"></p>
+<div class="tracking-timeline">
+<div class="tracking-step">
+<span>📥</span>
+<p>Order Received</p>
+</div>
+<div class="tracking-step">
+<span>✅</span>
+<p>Order Confirmed</p>
+</div>
+<div class="tracking-step">
+<span>👩‍🍳</span>
+<p>Preparing</p>
+</div>
+<div class="tracking-step">
+<span>📦</span>
+<p>Ready for Delivery</p>
+</div>
+<div class="tracking-step">
+<span>🚚</span>
+<p>Out for Delivery</p>
+</div>
+<div class="tracking-step">
+<span>🏠</span>
+<p>Delivered</p>
+</div>
+</div>
+</div>
+<!-- CUSTOMER NOTIFICATIONS -->
+<div class="customer-notifications">
+
+  <h3>🔔 Notifications</h3>
+
+  <div id="customerNotifications">
+    <p>No new notifications.</p>
+  </div>
+
+</div>
+<!-- CUSTOMER DELIVERY TRACKING -->
+<div class="delivery-tracking-card" id="deliveryTracking" style="display: none;">
+<h3>🚚 Live Delivery Tracking</h3>
+<p id="deliveryDistanceText">
+    Delivery person location is being updated...
+  </p>
+<div id="customerDistance"></div>
+<div id="customerDeliveryMap" style="width: 100%; height: 300px; border-radius: 12px; overflow: hidden;">
+</div>
+</div>
+</section></main>
+<section class="customer-reviews-section">
+<h2>⭐ What Our Customers Say</h2>
+<div class="overall-rating">
+<div id="averageRating">0.0 ⭐</div>
+<div id="averageStars">☆☆☆☆☆</div>
+<p id="reviewCount">Based on 0 reviews</p>
+</div>
+<div id="customerReviewsList">
+<p>Loading customer reviews...</p>
+</div>
+</section><section class="review-section">
+<h2>⭐ Rate Your Experience</h2>
+<p>
+    Thank you for ordering from My Home Bakery!
+    Please share your experience.
+  </p>
+<label>
+    Track ID
+    <input id="reviewTrackId" placeholder="Enter your Track ID" required="" type="text"/>
+</label>
+<label>
+    Your Name
+    <input id="reviewName" placeholder="Enter your name" required="" type="text"/>
+</label>
+<label>
+    Rating
+    <select id="reviewRating" required="">
+<option value="">Select rating</option>
+<option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+<option value="4">⭐⭐⭐⭐ Very Good</option>
+<option value="3">⭐⭐⭐ Good</option>
+<option value="2">⭐⭐ Needs Improvement</option>
+<option value="1">⭐ Poor</option>
+</select>
+</label>
+<label>
+    Review
+    <textarea id="reviewText" placeholder="Tell us about your experience..." required="" rows="4"></textarea>
+</label>
+<button class="btn primary" onclick="submitReview()" type="button">
+    ⭐ Submit Review
+  </button>
+<p id="reviewMessage"></p>
+</section>
+
+<section id="my-orders" class="section">
+  <div class="container">
+
+    <div class="section-heading">
+      <h2>📦 My Orders</h2>
+      <p>View your previous orders and order your favourite items again.</p>
+    </div>
+
+    <div id="myOrdersList" class="my-orders-list">
+
+      <div class="empty-orders">
+        <div class="empty-orders-icon">🛍️</div>
+
+        <h3>No Orders Yet</h3>
+
+        <p>
+          Your previous orders will appear here.
+        </p>
+
+        <button
+          type="button"
+          class="btn primary"
+          onclick="document.getElementById('order')?.scrollIntoView({behavior:'smooth'})"
+        >
+          Start Ordering
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<footer>
+<div><strong>BakeFlow</strong> — Your Cake, Your Way</div>
+<div><strong>BakeFlow</strong> — Your Cake, Your Way</div>
+<div>My Home Bakery • Kakinada</div>
+<div class="social-links">
+<a href="https://www.instagram.com/my_home_bakery_kakinada/" target="_blank">
+      📷 Instagram
+    </a>
+<a href="https://wa.me/917780476392" target="_blank">
+      💬 WhatsApp
+    </a>
+</div>
+</footer>
+<div class="chat" id="chat">
+<div class="chat-head"><strong>BakeFlow Assistant</strong><button onclick="toggleChat()">×</button></div>
+<div class="messages" id="messages">
+<div class="bot msg">Hi! 👋 I’m the BakeFlow assistant for My Home Bakery. Ask me about cakes, flavours, sizes, customization, delivery, timings or ordering.</div>
+</div>
+<div class="quick-questions">
+<button onclick="ask('What cake types are available?')">Cake types</button>
+<button onclick="ask('What flavours are available?')">Flavours</button>
+<button onclick="ask('Do you deliver?')">Delivery</button>
+<button onclick="ask('What are your timings?')">Timings</button>
+</div>
+<div class="chat-input">
+<input id="chatInput" onkeydown="if(event.key==='Enter') sendChat()" placeholder="Ask a question..."/>
+<button onclick="sendChat()">Send</button>
+</div>
+</div>
+
+<!-- CUSTOMER REVIEWS DISPLAY -->
+<!-- RATING & REVIEW -->
+
+<script src="script.js?v=2"></script>
+</body>
+</html>
