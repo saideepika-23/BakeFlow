@@ -294,143 +294,130 @@
 </style>
 </head>
 <body>
+
 <header class="navbar">
 <div class="brand">
 <div class="logo">
 <img alt="My Home Bakery Logo" src="images/my-home-bakery-logo.png.jpeg"/>
 </div>
 <div>
-<h1>BakeFlow - My Home Bakery</h1>
-<p>Your Cake, Your Way</p>
+<p data-en="Your Cake, Your Way" data-te="యువర్ కేక్, యువర్ వే">Your Cake, Your Way</p>
 </div>
 </div>
 <button aria-label="Open menu" class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
 <nav id="mainNav">
-<a href="#home">Home</a>
-<a href="#dashboard">Dashboard</a>
-<a href="#cakes">Cakes</a>
-<a href="#bakery">Bakery</a>
-<a href="#order">Order</a>
-<a href="#my-orders">My Orders</a>
-<button class="chat-open" onclick="toggleChat()">Ask BakeFlow 🤖</button>
+<a href="#home" data-en="Home" data-te="హోమ్">Home</a>
+<a href="#dashboard" data-en="Dashboard" data-te="డాష్‌బోర్డ్">Dashboard</a>
+<a href="#cakes" data-en="Cakes" data-te="కేక్స్">Cakes</a>
+<a href="#bakery" data-en="Bakery" data-te="బేకరీ">Bakery</a>
+<a href="#order" data-en="Order" data-te="ఆర్డర్">Order</a>
+<a href="#my-orders" data-en="My Orders" data-te="నా ఆర్డర్లు">My Orders</a>
+
+<button class="chat-open" onclick="toggleChat()" data-en="Ask BakeFlow 🤖" data-te="ఆస్క్ బేక్‌ఫ్లో 🤖">Ask BakeFlow 🤖</button>
 </nav>
 </header>
 <main>
 <!-- CUSTOMER TRACK ORDER -->
+
 <section class="hero" id="home">
 <div class="hero-text">
-<span class="pill">My Home Bakery • Kakinada</span>
-<h2>Your Cake,<br/><span>Your Way.</span></h2>
-<p>Explore cakes, flavours and bakery items from My Home Bakery. Customize your order and send an order request easily.</p>
+<span class="pill" data-en="My Home Bakery • Kakinada" data-te="మై హోమ్ బేకరీ • కాకినాడ">My Home Bakery • Kakinada</span>
+<h2><span data-en="Your Cake," data-te="యువర్ కేక్,">Your Cake,</span><br/><span data-en="Your Way." data-te="యువర్ వే.">Your Way.</span></h2>
+<p data-en="Explore cakes, flavours and bakery items from My Home Bakery. Customize your order and send an order request easily." data-te="మై హోమ్ బేకరీ నుంచి కేక్స్, ఫ్లేవర్స్ అండ్ బేకరీ ఐటమ్స్ ఎక్స్‌ప్లోర్ చేయండి. మీ ఆర్డర్‌ను కస్టమైజ్ చేసి ఆర్డర్ రిక్వెస్ట్ ఈజీగా పంపండి.">Explore cakes, flavours and bakery items from My Home Bakery. Customize your order and send an order request easily.</p>
 <div class="hero-buttons">
-<a class="btn primary" href="#cakes">Explore Cakes</a>
-<a class="btn secondary" href="#order">Order Now</a>
+<a class="btn primary" href="#cakes" data-en="Explore Cakes" data-te="ఎక్స్‌ప్లోర్ కేక్స్">Explore Cakes</a>
+<a class="btn secondary" href="#order" data-en="Order Now" data-te="ఆర్డర్ నౌ">Order Now</a>
 </div>
 <div class="quick-info">
-<span>🚚 Home delivery up to 20 km</span>
-<span>🕘 9:00 AM – 10:00 PM</span>
-<span>💵 Cash on delivery</span>
+<span data-en="🚚 Home delivery up to 20 km" data-te="🚚 హోమ్ డెలివరీ అప్ టు 20 కి.మీ.">🚚 Home delivery up to 20 km</span>
+<span data-en="🕘 9:00 AM – 10:00 PM" data-te="🕘 ఉదయం 9 – రాత్రి 10">🕘 9:00 AM – 10:00 PM</span>
+<span data-en="💵 Cash on delivery" data-te="💵 క్యాష్ ఆన్ డెలివరీ">💵 Cash on delivery</span>
 </div>
 </div>
 <div class="hero-photo hero-cake-photo">
 <img alt="My Home Bakery cake design" src="images/cake_1.jpg"/>
-<div class="hero-photo-badge">✨ Freshly designed cakes</div>
+<div class="hero-photo-badge" data-en="✨ Freshly designed cakes" data-te="✨ ఫ్రెష్‌గా డిజైన్ చేసిన కేక్స్">✨ Freshly designed cakes</div>
 </div>
-</section><section class="section dashboard-section" id="dashboard">
+</section>
+<section class="section dashboard-section" id="dashboard">
 <div class="dashboard-top">
 <div>
-<p class="eyebrow">BAKEFLOW DASHBOARD</p>
-<h2>A smarter bakery experience</h2>
-<p class="dashboard-lead">A clean customer-facing dashboard that brings cakes, flavours, customization, ordering and the smart assistant together in one place.</p>
+
+<p class="eyebrow" data-en="BAKEFLOW DASHBOARD" data-te="బేక్‌ఫ్లో డాష్‌బోర్డ్">BAKEFLOW DASHBOARD</p>
+<h2 data-en="A smarter bakery experience" data-te="ఎ స్మార్టర్ బేకరీ ఎక్స్‌పీరియన్స్">A smarter bakery experience</h2>
+<p class="dashboard-lead" data-en="A clean customer-facing dashboard that brings cakes, flavours, customization, ordering and the smart assistant together in one place." data-te="కేక్స్, ఫ్లేవర్స్, కస్టమైజేషన్, ఆర్డరింగ్ అండ్ స్మార్ట్ అసిస్టెంట్ అన్నీ ఒకే ప్లేస్‌లో చూపించే కస్టమర్ డాష్‌బోర్డ్.">A clean customer-facing dashboard that brings cakes, flavours, customization, ordering and the smart assistant together in one place.</p>
 </div>
-<div class="dashboard-badge"><span class="live-dot"></span> Ready for customer enquiries</div>
+<div class="dashboard-badge"><span class="live-dot"></span> <span data-en="Ready for customer enquiries" data-te="కస్టమర్ ఎంక్వైరీస్‌కి రెడీ">Ready for customer enquiries</span></div>
 </div>
 <div class="dash-stats">
-<div class="stat-card"><span>🍰</span><div><strong id="cakeTypeCount">0</strong><small>listed cake types</small></div><em>+ custom option</em></div>
-<div class="stat-card"><span>🍓</span><div><strong id="flavourCount">0</strong><small>listed flavours</small></div><em>+ custom option</em></div>
-<div class="stat-card"><span>📸</span><div><strong>44</strong><small>real cake designs</small></div><em>from bakery</em></div>
-<div class="stat-card"><span>🥐</span><div><strong>14</strong><small>bakery items</small></div><em>orderable online</em></div>
-<div class="stat-card"><span>🚚</span><div><strong>20 km</strong><small>home delivery</small></div><em>around Kakinada</em></div>
+<div class="stat-card" onclick="openCakeGallery()" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openCakeGallery();}"><span>📸</span><div><strong>44</strong><small data-en="real cake designs" data-te="రియల్ కేక్ డిజైన్స్">real cake designs</small></div><em data-en="from bakery" data-te="ఫ్రమ్ బేకరీ">from bakery</em></div>
+<div class="stat-card" onclick="document.getElementById('bakery').scrollIntoView({ behavior: 'smooth' })" role="button" tabindex="0"><span>🥐</span><div><strong>14</strong><small data-en="bakery items" data-te="బేకరీ ఐటమ్స్">bakery items</small></div><em data-en="orderable online" data-te="ఆన్‌లైన్‌లో ఆర్డర్ చేయవచ్చు">orderable online</em></div>
+<div class="stat-card" onclick="document.getElementById('deliveryInfoSection').hidden=false; document.getElementById('deliveryInfoSection').scrollIntoView({ behavior: 'smooth', block: 'start' })" role="button" tabindex="0"><span>🚚</span><div><strong>20 km</strong><small data-en="home delivery" data-te="హోమ్ డెలివరీ">home delivery</small></div><em data-en="around Kakinada" data-te="కాకినాడ పరిసర ప్రాంతాల్లో">around Kakinada</em></div>
 </div>
 <div class="dashboard-main-grid">
-<div class="dash-panel catalogue-panel">
-<div class="panel-title">
-<div><span class="panel-kicker">QUICK ORDER BUILDER</span><h3>Pick an option or type your own</h3></div>
-<span class="soft-tag">Flexible</span>
-</div>
-<div class="quick-builder">
-<label>Cake type=<select id="dashCakeType" onchange="syncDashboardChoice()"></select></label>
-<label>Flavour<select id="dashFlavour" onchange="syncDashboardChoice()"></select></label>
-</div>
-<div class="dashboard-custom-hint" id="dashboardCustomHint">✨ Don't see what you want? Select <b>Other / Custom</b> and type it in the order form.</div>
-<div class="option-preview">
-<div><span class="option-icon">🎂</span><div><b>Cake type</b><p>Listed options + custom cake type</p></div></div>
-<div><span class="option-icon">🍫</span><div><b>Flavour</b><p>Listed flavours + custom flavour</p></div></div>
-<div><span class="option-icon">🎨</span><div><b>Customization</b><p>Add your design, message or other request</p></div></div>
-</div>
-<a class="dashboard-action" href="#order">Continue to order form <span>→</span></a>
-</div>
 <div class="dash-panel assistant-card">
 <div class="assistant-icon">🤖</div>
-<span class="panel-kicker">SMART ASSISTANT</span>
-<h3>Ask BakeFlow</h3>
-<p>Get answers about cake types, flavours, sizes, customization, delivery, timings, payment and bakery items.</p>
-<div class="assistant-tags"><span>Real bakery data</span><span>No guessing</span></div>
-<button class="btn primary" onclick="toggleChat()">Open Chatbot</button>
+<span class="panel-kicker" data-en="SMART ASSISTANT" data-te="స్మార్ట్ అసిస్టెంట్">SMART ASSISTANT</span>
+<h3 data-en="Ask BakeFlow" data-te="ఆస్క్ బేక్‌ఫ్లో">Ask BakeFlow</h3>
+<p data-en="Get answers about cake types, flavours, sizes, customization, delivery, timings, payment and bakery items." data-te="కేక్ టైప్స్, ఫ్లేవర్స్, సైజెస్, కస్టమైజేషన్, డెలివరీ, టైమింగ్స్, పేమెంట్ అండ్ బేకరీ ఐటమ్స్ గురించి వివరాలు తెలుసుకోండి.">Get answers about cake types, flavours, sizes, customization, delivery, timings, payment and bakery items.</p>
+<div class="assistant-tags"><span data-en="Real bakery data" data-te="రియల్ బేకరీ డేటా">Real bakery data</span><span data-en="No guessing" data-te="నో గెస్సింగ్">No guessing</span></div>
+<button class="btn primary" onclick="toggleChat()" data-en="Open Chatbot" data-te="ఓపెన్ చాట్‌బాట్">Open Chatbot</button>
 </div>
 </div>
+
+
 <div class="dash-panel workflow-panel">
-<div class="panel-title"><div><span class="panel-kicker">ORDER FLOW</span><h3>From idea to order request</h3></div><a href="#order">Order form →</a></div>
+<div class="panel-title"><div><span class="panel-kicker" data-en="ORDER FLOW" data-te="ఆర్డర్ ఫ్లో">ORDER FLOW</span><h3 data-en="From idea to order request" data-te="ఫ్రమ్ ఐడియా టు ఆర్డర్ రిక్వెస్ట్">From idea to order request</h3></div><a href="#order" data-en="Order form →" data-te="ఆర్డర్ ఫారమ్ →">Order form →</a></div>
 <div class="workflow">
-<div><b>01</b><span>Choose a cake type</span></div>
+<div><b>01</b><span data-en="Choose a cake type" data-te="చూస్ ఎ కేక్ టైప్">Choose a cake type</span></div>
 <i>→</i>
-<div><b>02</b><span>Select or type a flavour</span></div>
+<div><b>02</b><span data-en="Select or type a flavour" data-te="సెలెక్ట్ ఆర్ టైప్ ఎ ఫ్లేవర్">Select or type a flavour</span></div>
 <i>→</i>
-<div><b>03</b><span>Add size &amp; customization</span></div>
+<div><b>03</b><span data-en="Add size &amp; customization" data-te="యాడ్ సైజ్ అండ్ కస్టమైజేషన్">Add size &amp; customization</span></div>
 <i>→</i>
-<div><b>04</b><span>Send request on WhatsApp</span></div>
+<div><b>04</b><span data-en="Send request on WhatsApp" data-te="సెండ్ రిక్వెస్ట్ ఆన్ వాట్సాప్">Send request on WhatsApp</span></div>
 </div>
 </div>
 <div class="business-strip">
-<div><span>🕘</span><b>9 AM – 10 PM</b><small>Timings depend on area</small></div>
-<div><span>🎨</span><b>Customization available</b><small>Big/custom cakes: order 2 days before</small></div>
-<div><span>💵</span><b>Cash on delivery</b><small>Price depends on flavour &amp; size</small></div>
+<div><span>🕘</span><b data-en="9 AM – 10 PM" data-te="ఉదయం 9 – రాత్రి 10">9 AM – 10 PM</b><small data-en="Timings depend on area" data-te="టైమింగ్స్ ఏరియాపై ఆధారపడతాయి">Timings depend on area</small></div>
+<div><span>🎨</span><b data-en="Customization available" data-te="కస్టమైజేషన్ అవైలబుల్">Customization available</b><small data-en="Big/custom cakes: order 2 days before" data-te="బిగ్ / కస్టమ్ కేక్స్: 2 డేస్ ముందుగా ఆర్డర్ చేయండి">Big/custom cakes: order 2 days before</small></div>
+<div><span>💵</span><b data-en="Cash on delivery" data-te="క్యాష్ ఆన్ డెలివరీ">Cash on delivery</b><small data-en="Price depends on flavour &amp; size" data-te="ప్రైస్ ఫ్లేవర్ అండ్ సైజ్‌పై ఆధారపడుతుంది">Price depends on flavour &amp; size</small></div>
 </div>
-</section><section class="section intro">
+</section>
+<section class="section intro">
 <div>
-<p class="eyebrow">ABOUT THE BAKERY</p>
-<h2>Fresh cakes &amp; bakery favourites</h2>
+<p class="eyebrow" data-en="ABOUT THE BAKERY" data-te="అబౌట్ ద బేకరీ">ABOUT THE BAKERY</p>
+<h2 data-en="Fresh cakes &amp; bakery favourites" data-te="ఫ్రెష్ కేక్స్ అండ్ బేకరీ ఫేవరెట్స్">Fresh cakes &amp; bakery favourites</h2>
 </div>
-<p>My Home Bakery offers different cake types, flavours and bakery products. Customization is available, and delivery is available around Kakinada within 20 km, depending on the area.</p>
-</section><section class="section" id="cakes">
+<p data-en="My Home Bakery offers different cake types, flavours and bakery products. Customization is available." data-te="మై హోమ్ బేకరీలో డిఫరెంట్ కేక్ టైప్స్, ఫ్లేవర్స్ అండ్ బేకరీ ప్రొడక్ట్స్ అందుబాటులో ఉన్నాయి. కస్టమైజేషన్ కూడా అవైలబుల్.">My Home Bakery offers different cake types, flavours and bakery products. Customization is available.</p>
+</section>
+  
+<section class="section" id="cakes">
 <div class="section-heading">
 <div>
-<p class="eyebrow">CAKES</p>
-<h2>Choose your cake</h2>
+<p class="eyebrow" data-en="CAKES" data-te="కేక్స్">CAKES</p>
+<h2 data-en="Choose your cake" data-te="చూస్ యువర్ కేక్">Choose your cake</h2>
 </div>
-<p>Choose your flavour, cake type and size.</p>
+<p data-en="Choose your flavour, cake type and size." data-te="మీ ఫ్లేవర్, కేక్ టైప్ అండ్ సైజ్ ఎంచుకోండి.">Choose your flavour, cake type and size.</p>
 </div>
 <div class="cake-grid">
-
-
-
-
-
 <article class="cake-card">
 <img alt="Milky Vanilla Cake" src="images/milky vanilla.jpeg"/>
-<h3>Milky Vanilla</h3>
-<p id="milkyVanillaPrice">Price: ₹300</p>
+
+<h3 data-en="Milky Vanilla" data-te="మిల్కీ వెనిల్లా">Milky Vanilla</h3>
+<p id="milkyVanillaPrice" data-en="Price: ₹300" data-te="ప్రైస్: ₹300">Price: ₹300</p>
 <select id="milkyVanillaType">
-<option value="Cool">Cool</option>
-<option value="Normal">Normal</option>
+<option value="Cool" data-en="Cool" data-te="కూల్">Cool</option>
+<option value="Normal" data-en="Normal" data-te="నార్మల్">Normal</option>
 </select>
-<label for="milkyVanillaEgg">Cake Type</label>
+<label for="milkyVanillaEgg" data-en="Cake Type" data-te="కేక్ టైప్">Cake Type</label>
 <select id="milkyVanillaEgg">
-<option value="Egg">Egg</option>
-<option value="Eggless">Eggless</option>
+<option value="Egg" data-en="Egg" data-te="ఎగ్">Egg</option>
+<option value="Eggless" data-en="Eggless" data-te="ఎగ్‌లెస్">Eggless</option>
 </select>
-<label for="milkyVanillaSize">Cake Size</label>
-<input id="milkyVanillaSize" list="cakeSizes" min="0.5" name="milkyVanillaSize" placeholder="Enter size in kg" step="0.5" type="number"/>
+<label for="milkyVanillaSize" data-en="Cake Size" data-te="కేక్ సైజ్">Cake Size</label>
+<input id="milkyVanillaSize" list="cakeSizes" min="0.5" name="milkyVanillaSize" placeholder="Enter size in kg" data-en-placeholder="Enter size in kg" data-te-placeholder="సైజ్ కేజీలలో ఎంటర్ చేయండి" step="0.5" type="number"/>
+
 <datalist id="cakeSizes">
 <option label="500 grams" value="0.5"></option>
 <option label="1 kg" value="1"></option>
@@ -446,7 +433,8 @@
 <option label="9 kg" value="9"></option>
 <option label="10 kg" value="10"></option>
 </datalist>
-<button class="mini-order" onclick="selectFixedCakeForOrder(
+
+<button class="mini-order" data-en="Order this cake →" data-te="ఈ కేక్ ఆర్డర్ చేయండి →" onclick="selectFixedCakeForOrder(
     'Milky Vanilla',
     document.getElementById('milkyVanillaSize').value,
     document.getElementById('milkyVanillaType').value,
@@ -455,291 +443,321 @@
   Order this cake →
 </button>
 </article><article class="cake-card">
+  
 <img alt="Butterscotch Cake" src="images/butterscotch.jpeg"/>
-<h3>Butterscotch</h3>
-<p id="butterscotchPrice">Price: ₹350</p>
+<h3 data-en="Butterscotch" data-te="బటర్‌స్కాచ్">Butterscotch</h3>
+<p id="butterscotchPrice" data-en="Price: ₹350" data-te="ప్రైస్: ₹350">Price: ₹350</p>
 <select id="butterscotchType">
-<option value="Cool">Cool</option>
-<option value="Normal">Normal</option>
+<option value="Cool" data-en="Cool" data-te="కూల్">Cool</option>
+<option value="Normal" data-en="Normal" data-te="నార్మల్">Normal</option>
 </select>
-<label for="butterscotchEgg">Egg or Eggless</label>
+<label for="butterscotchEgg" data-en="Egg or Eggless" data-te="ఎగ్ ఆర్ ఎగ్‌లెస్">Egg or Eggless</label>
 <select id="butterscotchEgg">
-<option value="Egg">Egg</option>
-<option value="Eggless">Eggless</option>
+<option value="Egg" data-en="Egg" data-te="ఎగ్">Egg</option>
+<option value="Eggless" data-en="Eggless" data-te="ఎగ్‌లెస్">Eggless</option>
 </select>
-<label for="butterscotchSize">Cake Size</label>
-<input id="butterscotchSize" list="cakeSizes" min="0.5" name="butterscotchSize" placeholder="Enter size in kg" step="0.5" type="number"/>
-<button class="mini-order" onclick="selectFixedCakeForOrder('Butterscotch', document.getElementById('butterscotchSize').value, document.getElementById('butterscotchType').value, document.getElementById('butterscotchEgg').value)">Order this cake →</button>
-</article><article class="cake-card">
-<img alt="Strawberry Cake" src="images/strawberry.jpeg"/>
-<h3>Strawberry</h3>
-<p id="strawberryPrice">Price: ₹350</p>
-<select id="strawberryType">
-<option value="Cool">Cool</option>
-<option value="Normal">Normal</option>
-</select>
-<label for="strawberryEgg">Cake Type</label>
-<select id="strawberryEgg">
-<option value="Egg">Egg</option>
-<option value="Eggless">Eggless</option>
-</select>
-<label for="strawberrySize">Cake Size</label>
-<input id="strawberrySize" list="cakeSizes" min="0.5" name="strawberrySize" placeholder="Enter size in kg" step="0.5" type="number"/>
-<button class="mini-order" onclick="selectFixedCakeForOrder('Strawberry', document.getElementById('strawberrySize').value, document.getElementById('strawberryType').value, document.getElementById('strawberryEgg').value)">Order this cake →</button>
-</article><article class="cake-card">
-<img alt="Blueberry Cake" src="images/blueberry.jpeg"/>
-<h3>Blueberry</h3>
-<p id="blueberryPrice">Price: ₹400</p>
-<select id="blueberryType">
-<option value="Cool">Cool</option>
-<option value="Normal">Normal</option>
-</select>
-<label for="blueberryEgg">Cake Type</label>
-<select id="blueberryEgg">
-<option value="Egg">Egg</option>
-<option value="Eggless">Eggless</option>
-</select>
-<label for="blueberrySize">Cake Size</label>
-<input id="blueberrySize" list="cakeSizes" min="0.5" name="blueberrySize" placeholder="Enter size in kg" step="0.5" type="number"/>
-<button class="mini-order" onclick="selectFixedCakeForOrder('Blueberry', document.getElementById('blueberrySize').value, document.getElementById('blueberryType').value, document.getElementById('blueberryEgg').value)">Order this cake →</button>
-</article><article class="cake-card">
+<label for="butterscotchSize" data-en="Cake Size" data-te="కేక్ సైజ్">Cake Size</label>
+<input id="butterscotchSize" list="cakeSizes" min="0.5" name="butterscotchSize" placeholder="Enter size in kg" data-en-placeholder="Enter size in kg" data-te-placeholder="సైజ్ కేజీలలో ఎంటర్ చేయండి" step="0.5" type="number"/>
+<button class="mini-order" data-en="Order this cake →" data-te="ఈ కేక్ ఆర్డర్ చేయండి →" onclick="selectFixedCakeForOrder('Butterscotch', document.getElementById('butterscotchSize').value, document.getElementById('butterscotchType').value, document.getElementById('butterscotchEgg').value)">Order this cake →</button>
+</article>
+
+<article class="cake-card">
+  <img alt="Strawberry Cake" src="images/strawberry.jpeg"/>
+  <h3 data-en="Strawberry" data-te="స్ట్రాబెర్రీ">Strawberry</h3>
+  <p id="strawberryPrice" data-en="Price: ₹350" data-te="ప్రైస్: ₹350">Price: ₹350</p>
+
+  <select id="strawberryType">
+    <option value="Cool" data-en="Cool" data-te="కూల్">Cool</option>
+    <option value="Normal" data-en="Normal" data-te="నార్మల్">Normal</option>
+  </select>
+
+  <label for="strawberryEgg" data-en="Cake Type" data-te="కేక్ టైప్">Cake Type</label>
+  <select id="strawberryEgg">
+    <option value="Egg" data-en="Egg" data-te="ఎగ్">Egg</option>
+    <option value="Eggless" data-en="Eggless" data-te="ఎగ్‌లెస్">Eggless</option>
+  </select>
+
+  <label for="strawberrySize" data-en="Cake Size" data-te="కేక్ సైజ్">Cake Size</label>
+  <input id="strawberrySize" list="cakeSizes" min="0.5" name="strawberrySize"
+    placeholder="Enter size in kg"
+    data-en-placeholder="Enter size in kg"
+    data-te-placeholder="సైజ్ కేజీలలో ఎంటర్ చేయండి"
+    step="0.5" type="number"/>
+
+  <button class="mini-order"
+    data-en="Order this cake →"
+    data-te="ఈ కేక్ ఆర్డర్ చేయండి →"
+    onclick="selectFixedCakeForOrder('Strawberry', document.getElementById('strawberrySize').value, document.getElementById('strawberryType').value, document.getElementById('strawberryEgg').value)">Order this cake →</button>
+</article>
+
+<article class="cake-card">
+  <img alt="Blueberry Cake" src="images/blueberry.jpeg"/>
+  <h3 data-en="Blueberry" data-te="బ్లూబెర్రీ">Blueberry</h3>
+  <p id="blueberryPrice" data-en="Price: ₹400" data-te="ప్రైస్: ₹400">Price: ₹400</p>
+
+  <select id="blueberryType">
+    <option value="Cool" data-en="Cool" data-te="కూల్">Cool</option>
+    <option value="Normal" data-en="Normal" data-te="నార్మల్">Normal</option>
+  </select>
+
+  <label for="blueberryEgg" data-en="Cake Type" data-te="కేక్ టైప్">Cake Type</label>
+  <select id="blueberryEgg">
+    <option value="Egg" data-en="Egg" data-te="ఎగ్">Egg</option>
+    <option value="Eggless" data-en="Eggless" data-te="ఎగ్‌లెస్">Eggless</option>
+  </select>
+
+  <label for="blueberrySize" data-en="Cake Size" data-te="కేక్ సైజ్">Cake Size</label>
+  <input id="blueberrySize" list="cakeSizes" min="0.5" name="blueberrySize"
+    placeholder="Enter size in kg"
+    data-en-placeholder="Enter size in kg"
+    data-te-placeholder="సైజ్ కేజీలలో ఎంటర్ చేయండి"
+    step="0.5" type="number"/>
+
+  <button class="mini-order"
+    data-en="Order this cake →"
+    data-te="ఈ కేక్ ఆర్డర్ చేయండి →"
+    onclick="selectFixedCakeForOrder('Blueberry', document.getElementById('blueberrySize').value, document.getElementById('blueberryType').value, document.getElementById('blueberryEgg').value)">Order this cake →</button>
+</article>
+
+<article class="cake-card">
 <img alt="Mango Cake" src="images/mango.jpeg"/>
-<h3>Mango</h3>
-<p id="mangoPrice">Price: ₹350</p>
+<h3 data-en="Mango" data-te="మ్యాంగో">Mango</h3>
+<p id="mangoPrice" data-en="Price: ₹350" data-te="ప్రైస్: ₹350">Price: ₹350</p>
 <select id="mangoType">
-<option value="Cool">Cool</option>
-<option value="Normal">Normal</option>
+<option value="Cool" data-en="Cool" data-te="కూల్">Cool</option>
+<option value="Normal" data-en="Normal" data-te="నార్మల్">Normal</option>
 </select>
-<label for="mangoEgg">Cake Type</label>
+<label for="mangoEgg" data-en="Cake Type" data-te="కేక్ టైప్">Cake Type</label>
 <select id="mangoEgg">
-<option value="Egg">Egg</option>
-<option value="Eggless">Eggless</option>
+<option value="Egg" data-en="Egg" data-te="ఎగ్">Egg</option>
+<option value="Eggless" data-en="Eggless" data-te="ఎగ్‌లెస్">Eggless</option>
 </select>
-<label for="mangoSize">Cake Size</label>
-<input id="mangoSize" list="cakeSizes" min="0.5" name="mangoSize" placeholder="Enter size in kg" step="0.5" type="number"/>
-<button class="mini-order" onclick="selectFixedCakeForOrder('Mango', document.getElementById('mangoSize').value, document.getElementById('mangoType').value, document.getElementById('mangoEgg').value)">Order this cake →</button>
-</article><article class="cake-card">
+<label for="mangoSize" data-en="Cake Size" data-te="కేక్ సైజ్">Cake Size</label>
+<input id="mangoSize" list="cakeSizes" min="0.5" name="mangoSize" placeholder="Enter size in kg" data-en-placeholder="Enter size in kg" data-te-placeholder="సైజ్ కేజీలలో ఎంటర్ చేయండి" step="0.5" type="number"/>
+<button class="mini-order" data-en="Order this cake →" data-te="ఈ కేక్ ఆర్డర్ చేయండి →" onclick="selectFixedCakeForOrder('Mango', document.getElementById('mangoSize').value, document.getElementById('mangoType').value, document.getElementById('mangoEgg').value)">Order this cake →</button>
+</article>
+
+<article class="cake-card">
 <img alt="Red Velvet Cake" src="images/red velvet.jpeg"/>
-<h3>Red Velvet</h3>
-<p id="redVelvetPrice">Price: ₹300</p>
-<label for="redVelvetType">Cake Type</label>
+<h3 data-en="Red Velvet" data-te="రెడ్ వెల్వెట్">Red Velvet</h3>
+<p id="redVelvetPrice" data-en="Price: ₹300" data-te="ప్రైస్: ₹300">Price: ₹300</p>
+<label for="redVelvetType" data-en="Cake Type" data-te="కేక్ టైప్">Cake Type</label>
 <select id="redVelvetType">
-<option value="Cool">Cool</option>
-<option value="Normal">Normal</option>
+<option value="Cool" data-en="Cool" data-te="కూల్">Cool</option>
+<option value="Normal" data-en="Normal" data-te="నార్మల్">Normal</option>
 </select>
-<label for="redVelvetEgg">Cake Type</label>
+<label for="redVelvetEgg" data-en="Cake Type" data-te="కేక్ టైప్">Cake Type</label>
 <select id="redVelvetEgg">
-<option value="Egg">Egg</option>
-<option value="Eggless">Eggless</option>
+<option value="Egg" data-en="Egg" data-te="ఎగ్">Egg</option>
+<option value="Eggless" data-en="Eggless" data-te="ఎగ్‌లెస్">Eggless</option>
 </select>
-<label for="redVelvetSize">Cake Size</label>
-<input id="redVelvetSize" list="cakeSizes" min="0.5" name="redVelvetSize" placeholder="Enter size in kg" step="0.5" type="number"/>
-<button class="mini-order" onclick="selectFixedCakeForOrder('Red Velvet', document.getElementById('redVelvetSize').value, document.getElementById('redVelvetType').value, document.getElementById('redVelvetEgg').value)">
-  Order this cake →
-</button>
-</article><article class="cake-card">
+<label for="redVelvetSize" data-en="Cake Size" data-te="కేక్ సైజ్">Cake Size</label>
+<input id="redVelvetSize" list="cakeSizes" min="0.5" name="redVelvetSize" placeholder="Enter size in kg" data-en-placeholder="Enter size in kg" data-te-placeholder="సైజ్ కేజీలలో ఎంటర్ చేయండి" step="0.5" type="number"/>
+<button class="mini-order" data-en="Order this cake →" data-te="ఈ కేక్ ఆర్డర్ చేయండి →" onclick="selectFixedCakeForOrder('Red Velvet', document.getElementById('redVelvetSize').value, document.getElementById('redVelvetType').value, document.getElementById('redVelvetEgg').value)">Order this cake →</button>
+</article>
+
+<article class="cake-card">
 <img alt="Pista Cake" src="images/pista.jpeg"/>
-<h3>Pista</h3>
-<p id="pistaPrice">Price: ₹300</p>
-<label for="pistaType">Cake Type</label>
+<h3 data-en="Pista" data-te="పిస్తా">Pista</h3>
+<p id="pistaPrice" data-en="Price: ₹300" data-te="ప్రైస్: ₹300">Price: ₹300</p>
+<label for="pistaType" data-en="Cake Type" data-te="కేక్ టైప్">Cake Type</label>
 <select id="pistaType">
-<option value="Cool">Cool</option>
-<option value="Normal">Normal</option>
+<option value="Cool" data-en="Cool" data-te="కూల్">Cool</option>
+<option value="Normal" data-en="Normal" data-te="నార్మల్">Normal</option>
 </select>
-<label for="pistaEgg">Cake Type</label>
+<label for="pistaEgg" data-en="Cake Type" data-te="కేక్ టైప్">Cake Type</label>
 <select id="pistaEgg">
-<option value="Egg">Egg</option>
-<option value="Eggless">Eggless</option>
+<option value="Egg" data-en="Egg" data-te="ఎగ్">Egg</option>
+<option value="Eggless" data-en="Eggless" data-te="ఎగ్‌లెస్">Eggless</option>
 </select>
-<label for="pistaSize">Cake Size</label>
-<input id="pistaSize" list="cakeSizes" min="0.5" name="pistaSize" placeholder="Enter size in kg" step="0.5" type="number"/>
-<button class="mini-order" onclick="selectFixedCakeForOrder('Pista', document.getElementById('pistaSize').value, document.getElementById('pistaType').value, document.getElementById('pistaEgg').value)">
-  Order this cake →
-</button>
-</article><article class="cake-card">
+<label for="pistaSize" data-en="Cake Size" data-te="కేక్ సైజ్">Cake Size</label>
+<input id="pistaSize" list="cakeSizes" min="0.5" name="pistaSize" placeholder="Enter size in kg" data-en-placeholder="Enter size in kg" data-te-placeholder="సైజ్ కేజీలలో ఎంటర్ చేయండి" step="0.5" type="number"/>
+<button class="mini-order" data-en="Order this cake →" data-te="ఈ కేక్ ఆర్డర్ చేయండి →" onclick="selectFixedCakeForOrder('Pista', document.getElementById('pistaSize').value, document.getElementById('pistaType').value, document.getElementById('pistaEgg').value)">Order this cake →</button>
+</article>
+
+<article class="cake-card">
 <img alt="Milky Badam Cake" src="images/milky badam.jpeg"/>
-<h3>Milky Badam</h3>
-<p id="milkyBadamPrice">Price: ₹300</p>
-<label for="milkyBadamType">Cake Type</label>
+<h3 data-en="Milky Badam" data-te="మిల్కీ బాదం">Milky Badam</h3>
+<p id="milkyBadamPrice" data-en="Price: ₹300" data-te="ప్రైస్: ₹300">Price: ₹300</p>
+<label for="milkyBadamType" data-en="Cake Type" data-te="కేక్ టైప్">Cake Type</label>
 <select id="milkyBadamType">
-<option value="Cool">Cool</option>
-<option value="Normal">Normal</option>
+<option value="Cool" data-en="Cool" data-te="కూల్">Cool</option>
+<option value="Normal" data-en="Normal" data-te="నార్మల్">Normal</option>
 </select>
-<label for="milkyBadamEgg">Cake Type</label>
+<label for="milkyBadamEgg" data-en="Cake Type" data-te="కేక్ టైప్">Cake Type</label>
 <select id="milkyBadamEgg">
-<option value="Egg">Egg</option>
-<option value="Eggless">Eggless</option>
+<option value="Egg" data-en="Egg" data-te="ఎగ్">Egg</option>
+<option value="Eggless" data-en="Eggless" data-te="ఎగ్‌లెస్">Eggless</option>
 </select>
-<label for="milkyBadamSize">Cake Size</label>
-<input id="milkyBadamSize" list="cakeSizes" min="0.5" name="milkyBadamSize" placeholder="Enter size in kg" step="0.5" type="number"/>
-<button class="mini-order" onclick="selectFixedCakeForOrder('Milky Badam', document.getElementById('milkyBadamSize').value, document.getElementById('milkyBadamType').value, document.getElementById('milkyBadamEgg').value)">
-  Order this cake →
-</button>
-</article><article class="cake-card">
+<label for="milkyBadamSize" data-en="Cake Size" data-te="కేక్ సైజ్">Cake Size</label>
+<input id="milkyBadamSize" list="cakeSizes" min="0.5" name="milkyBadamSize" placeholder="Enter size in kg" data-en-placeholder="Enter size in kg" data-te-placeholder="సైజ్ కేజీలలో ఎంటర్ చేయండి" step="0.5" type="number"/>
+<button class="mini-order" data-en="Order this cake →" data-te="ఈ కేక్ ఆర్డర్ చేయండి →" onclick="selectFixedCakeForOrder('Milky Badam', document.getElementById('milkyBadamSize').value, document.getElementById('milkyBadamType').value, document.getElementById('milkyBadamEgg').value)">Order this cake →</button>
+</article>
+
+<article class="cake-card">
 <img alt="Milky Butterscotch Cake" src="images/milky butterscotch.jpeg"/>
-<h3>Milky Butterscotch</h3>
-<p id="milkyButterscotchPrice">Price: ₹300</p>
-<label for="milkyButterscotchType">Cake Type</label>
+<h3 data-en="Milky Butterscotch" data-te="మిల్కీ బటర్‌స్కాచ్">Milky Butterscotch</h3>
+<p id="milkyButterscotchPrice" data-en="Price: ₹300" data-te="ప్రైస్: ₹300">Price: ₹300</p>
+<label for="milkyButterscotchType" data-en="Cake Type" data-te="కేక్ టైప్">Cake Type</label>
 <select id="milkyButterscotchType">
-<option value="Cool">Cool</option>
-<option value="Normal">Normal</option>
+<option value="Cool" data-en="Cool" data-te="కూల్">Cool</option>
+<option value="Normal" data-en="Normal" data-te="నార్మల్">Normal</option>
 </select>
-<label for="milkyButterscotchEgg">Cake Type</label>
+<label for="milkyButterscotchEgg" data-en="Cake Type" data-te="కేక్ టైప్">Cake Type</label>
 <select id="milkyButterscotchEgg">
-<option value="Egg">Egg</option>
-<option value="Eggless">Eggless</option>
+<option value="Egg" data-en="Egg" data-te="ఎగ్">Egg</option>
+<option value="Eggless" data-en="Eggless" data-te="ఎగ్‌లెస్">Eggless</option>
 </select>
-<label for="milkyButterscotchSize">Cake Size</label>
-<input id="milkyButterscotchSize" list="cakeSizes" min="0.5" placeholder="Enter size in kg" step="0.5" type="number"/>
-<button class="mini-order" onclick="selectFixedCakeForOrder('Milky Butterscotch', document.getElementById('milkyButterscotchSize').value, document.getElementById('milkyButterscotchType').value, document.getElementById('milkyButterscotchEgg').value)">
-  Order this cake →
-</button>
-</article><article class="cake-card">
+<label for="milkyButterscotchSize" data-en="Cake Size" data-te="కేక్ సైజ్">Cake Size</label>
+<input id="milkyButterscotchSize" list="cakeSizes" min="0.5" placeholder="Enter size in kg" data-en-placeholder="Enter size in kg" data-te-placeholder="సైజ్ కేజీలలో ఎంటర్ చేయండి" step="0.5" type="number"/>
+<button class="mini-order" data-en="Order this cake →" data-te="ఈ కేక్ ఆర్డర్ చేయండి →" onclick="selectFixedCakeForOrder('Milky Butterscotch', document.getElementById('milkyButterscotchSize').value, document.getElementById('milkyButterscotchType').value, document.getElementById('milkyButterscotchEgg').value)">Order this cake →</button>
+</article>
+
+<article class="cake-card">
 <img alt="Honey Almond Cake" src="images/honey almond.jpeg"/>
-<h3>Honey Almond</h3>
-<p id="honeyAlmondPrice">Price: ₹500</p>
-<label for="honeyAlmondType">Cake Type</label>
+<h3 data-en="Honey Almond" data-te="హనీ ఆల్మండ్">Honey Almond</h3>
+<p id="honeyAlmondPrice" data-en="Price: ₹500" data-te="ప్రైస్: ₹500">Price: ₹500</p>
+<label for="honeyAlmondType" data-en="Cake Type" data-te="కేక్ టైప్">Cake Type</label>
 <select id="honeyAlmondType">
-<option value="Cool">Cool</option>
-<option value="Normal">Normal</option>
+<option value="Cool" data-en="Cool" data-te="కూల్">Cool</option>
+<option value="Normal" data-en="Normal" data-te="నార్మల్">Normal</option>
 </select>
-<label for="honeyAlmondEgg">Cake Type</label>
+<label for="honeyAlmondEgg" data-en="Cake Type" data-te="కేక్ టైప్">Cake Type</label>
 <select id="honeyAlmondEgg">
-<option value="Egg">Egg</option>
-<option value="Eggless">Eggless</option>
+<option value="Egg" data-en="Egg" data-te="ఎగ్">Egg</option>
+<option value="Eggless" data-en="Eggless" data-te="ఎగ్‌లెస్">Eggless</option>
 </select>
-<label for="honeyAlmondSize">Cake Size</label>
-<input id="honeyAlmondSize" list="cakeSizes" min="0.5" placeholder="Enter size in kg" step="0.5" type="number"/>
-<button class="mini-order" onclick="selectFixedCakeForOrder('Honey Almond', document.getElementById('honeyAlmondSize').value, document.getElementById('honeyAlmondType').value, document.getElementById('honeyAlmondEgg').value)">
-  Order this cake →
-</button>
-</article><article class="cake-card">
+<label for="honeyAlmondSize" data-en="Cake Size" data-te="కేక్ సైజ్">Cake Size</label>
+<input id="honeyAlmondSize" list="cakeSizes" min="0.5" placeholder="Enter size in kg" data-en-placeholder="Enter size in kg" data-te-placeholder="సైజ్ కేజీలలో ఎంటర్ చేయండి" step="0.5" type="number"/>
+<button class="mini-order" data-en="Order this cake →" data-te="ఈ కేక్ ఆర్డర్ చేయండి →" onclick="selectFixedCakeForOrder('Honey Almond', document.getElementById('honeyAlmondSize').value, document.getElementById('honeyAlmondType').value, document.getElementById('honeyAlmondEgg').value)">Order this cake →</button>
+</article>
+
+<article class="cake-card">
 <img alt="Caramel Nuts Cake" src="images/caramel nuts.jpeg"/>
-<h3>Caramel Nuts</h3>
-<p id="caramelNutsPrice">Price: ₹300</p>
-<label for="caramelNutsType">Cake Type</label>
+<h3 data-en="Caramel Nuts" data-te="క్యారమెల్ నట్స్">Caramel Nuts</h3>
+<p id="caramelNutsPrice" data-en="Price: ₹300" data-te="ప్రైస్: ₹300">Price: ₹300</p>
+<label for="caramelNutsType" data-en="Cake Type" data-te="కేక్ టైప్">Cake Type</label>
 <select id="caramelNutsType">
-<option value="Cool">Cool</option>
-<option value="Normal">Normal</option>
+<option value="Cool" data-en="Cool" data-te="కూల్">Cool</option>
+<option value="Normal" data-en="Normal" data-te="నార్మల్">Normal</option>
 </select>
-<label for="caramelNutsEgg">Cake Type</label>
+<label for="caramelNutsEgg" data-en="Cake Type" data-te="కేక్ టైప్">Cake Type</label>
 <select id="caramelNutsEgg">
-<option value="Egg">Egg</option>
-<option value="Eggless">Eggless</option>
+<option value="Egg" data-en="Egg" data-te="ఎగ్">Egg</option>
+<option value="Eggless" data-en="Eggless" data-te="ఎగ్‌లెస్">Eggless</option>
 </select>
-<label for="caramelNutsSize">Cake Size</label>
-<input id="caramelNutsSize" list="cakeSizes" min="0.5" placeholder="Enter size in kg" step="0.5" type="number"/>
-<button class="mini-order" onclick="selectFixedCakeForOrder('Caramel Nuts', document.getElementById('caramelNutsSize').value, document.getElementById('caramelNutsType').value, document.getElementById('caramelNutsEgg').value)">
-  Order this cake →
-</button>
-</article><article class="cake-card">
+<label for="caramelNutsSize" data-en="Cake Size" data-te="కేక్ సైజ్">Cake Size</label>
+<input id="caramelNutsSize" list="cakeSizes" min="0.5" placeholder="Enter size in kg" data-en-placeholder="Enter size in kg" data-te-placeholder="సైజ్ కేజీలలో ఎంటర్ చేయండి" step="0.5" type="number"/>
+<button class="mini-order" data-en="Order this cake →" data-te="ఈ కేక్ ఆర్డర్ చేయండి →" onclick="selectFixedCakeForOrder('Caramel Nuts', document.getElementById('caramelNutsSize').value, document.getElementById('caramelNutsType').value, document.getElementById('caramelNutsEgg').value)">Order this cake →</button>
+</article>
+
+<article class="cake-card">
 <img alt="Oreo Cake" src="images/oreo.jpeg"/>
-<h3>Oreo</h3>
-<p id="oreoPrice">Price: ₹300 </p>
-<label for="oreoType">Cake Type</label>
+<h3 data-en="Oreo" data-te="ఓరియో">Oreo</h3>
+<p id="oreoPrice" data-en="Price: ₹300" data-te="ప్రైస్: ₹300">Price: ₹300</p>
+<label for="oreoType" data-en="Cake Type" data-te="కేక్ టైప్">Cake Type</label>
 <select id="oreoType">
-<option value="Cool">Cool</option>
-<option value="Normal">Normal</option>
+<option value="Cool" data-en="Cool" data-te="కూల్">Cool</option>
+<option value="Normal" data-en="Normal" data-te="నార్మల్">Normal</option>
 </select>
-<label for="oreoEgg">Cake Type</label>
+<label for="oreoEgg" data-en="Cake Type" data-te="కేక్ టైప్">Cake Type</label>
 <select id="oreoEgg">
-<option value="Egg">Egg</option>
-<option value="Eggless">Eggless</option>
+<option value="Egg" data-en="Egg" data-te="ఎగ్">Egg</option>
+<option value="Eggless" data-en="Eggless" data-te="ఎగ్‌లెస్">Eggless</option>
 </select>
-<label for="oreoSize">Cake Size</label>
-<input id="oreoSize" list="cakeSizes" min="0.5" placeholder="Enter size in kg" step="0.5" type="number"/>
-<button class="mini-order" onclick="selectFixedCakeForOrder('Oreo', document.getElementById('oreoSize').value, document.getElementById('oreoType').value, document.getElementById('oreoEgg').value)">
-  Order this cake →
-</button>
-</article><article class="cake-card">
+<label for="oreoSize" data-en="Cake Size" data-te="కేక్ సైజ్">Cake Size</label>
+<input id="oreoSize" list="cakeSizes" min="0.5" placeholder="Enter size in kg" data-en-placeholder="Enter size in kg" data-te-placeholder="సైజ్ కేజీలలో ఎంటర్ చేయండి" step="0.5" type="number"/>
+<button class="mini-order" data-en="Order this cake →" data-te="ఈ కేక్ ఆర్డర్ చేయండి →" onclick="selectFixedCakeForOrder('Oreo', document.getElementById('oreoSize').value, document.getElementById('oreoType').value, document.getElementById('oreoEgg').value)">Order this cake →</button>
+</article>
+
+<article class="cake-card">
 <img alt="Chocolate Cake" src="images/chocolate.jpeg"/>
-<h3>Chocolate</h3>
-<p id="oreoPrice">Price:₹250</p>
-<label for="chocolateType">Cake Type</label>
+<h3 data-en="Chocolate" data-te="చాక్లెట్">Chocolate</h3>
+<p id="chocolatePrice" data-en="Price: ₹250" data-te="ప్రైస్: ₹250">Price: ₹250</p>
+<label for="chocolateType" data-en="Cake Type" data-te="కేక్ టైప్">Cake Type</label>
 <select id="chocolateType">
-<option value="Cool">Cool</option>
-<option value="Normal">Normal</option>
+<option value="Cool" data-en="Cool" data-te="కూల్">Cool</option>
+<option value="Normal" data-en="Normal" data-te="నార్మల్">Normal</option>
 </select>
-<label for="chocolateEgg">Cake Type</label>
+<label for="chocolateEgg" data-en="Cake Type" data-te="కేక్ టైప్">Cake Type</label>
 <select id="chocolateEgg">
-<option value="Egg">Egg</option>
-<option value="Eggless">Eggless</option>
+<option value="Egg" data-en="Egg" data-te="ఎగ్">Egg</option>
+<option value="Eggless" data-en="Eggless" data-te="ఎగ్‌లెస్">Eggless</option>
 </select>
-<label for="chocolateSize">Cake Size</label>
-<input id="chocolateSize" list="cakeSizes" min="0.5" placeholder="Enter size in kg" step="0.5" type="number"/>
-<button class="mini-order" onclick="selectFixedCakeForOrder('Chocolate', document.getElementById('chocolateSize').value, document.getElementById('chocolateType').value, document.getElementById('chocolateEgg').value)">
-  Order this cake →
-</button>
-</article><article class="cake-card">
+<label for="chocolateSize" data-en="Cake Size" data-te="కేక్ సైజ్">Cake Size</label>
+<input id="chocolateSize" list="cakeSizes" min="0.5" placeholder="Enter size in kg" data-en-placeholder="Enter size in kg" data-te-placeholder="సైజ్ కేజీలలో ఎంటర్ చేయండి" step="0.5" type="number"/>
+<button class="mini-order" data-en="Order this cake →" data-te="ఈ కేక్ ఆర్డర్ చేయండి →" onclick="selectFixedCakeForOrder('Chocolate', document.getElementById('chocolateSize').value, document.getElementById('chocolateType').value, document.getElementById('chocolateEgg').value)">Order this cake →</button>
+</article>
+
+<article class="cake-card">
 <img alt="Chocochips Cake" src="images/chocochips.jpeg"/>
-<h3>Chocochips</h3>
-<p id="chocochipsPrice">Price:₹300</p>
-<label for="chocochipsType">Cake Type</label>
+<h3 data-en="Chocochips" data-te="చోకోచిప్స్">Chocochips</h3>
+<p id="chocochipsPrice" data-en="Price: ₹300" data-te="ప్రైస్: ₹300">Price:₹300</p>
+<label for="chocochipsType" data-en="Cake Type" data-te="కేక్ టైప్">Cake Type</label>
 <select id="chocochipsType">
-<option value="Cool">Cool</option>
-<option value="Normal">Normal</option>
+<option value="Cool" data-en="Cool" data-te="కూల్">Cool</option>
+<option value="Normal" data-en="Normal" data-te="నార్మల్">Normal</option>
 </select>
-<label for="chocochipsEgg">Cake Type</label>
+<label for="chocochipsEgg" data-en="Cake Type" data-te="కేక్ టైప్">Cake Type</label>
 <select id="chocochipsEgg">
-<option value="Egg">Egg</option>
-<option value="Eggless">Eggless</option>
+<option value="Egg" data-en="Egg" data-te="ఎగ్">Egg</option>
+<option value="Eggless" data-en="Eggless" data-te="ఎగ్‌లెస్">Eggless</option>
 </select>
-<label for="chocochipsSize">Cake Size</label>
-<input id="chocochipsSize" list="cakeSizes" min="0.5" placeholder="Enter size in kg" step="0.5" type="number"/>
-<button class="mini-order" onclick="selectFixedCakeForOrder('Chocochips', document.getElementById('chocochipsSize').value, document.getElementById('chocochipsType').value, document.getElementById('chocochipsEgg').value)">
-  Order this cake →
-</button>
-</article><article class="cake-card">
+<label for="chocochipsSize" data-en="Cake Size" data-te="కేక్ సైజ్">Cake Size</label>
+<input id="chocochipsSize" list="cakeSizes" min="0.5" placeholder="Enter size in kg" data-en-placeholder="Enter size in kg" data-te-placeholder="సైజ్ కేజీలలో ఎంటర్ చేయండి" step="0.5" type="number"/>
+<button class="mini-order" data-en="Order this cake →" data-te="ఈ కేక్ ఆర్డర్ చేయండి →" onclick="selectFixedCakeForOrder('Chocochips', document.getElementById('chocochipsSize').value, document.getElementById('chocochipsType').value, document.getElementById('chocochipsEgg').value)">Order this cake →</button>
+</article>
+
+<article class="cake-card">
 <img alt="Roast Cause Chocolate Cake" src="images/roast cause chocolate.jpeg"/>
-<h3>Roast Cause Chocolate</h3>
-<p id="roastCauseChocolatePrice">Price:₹300</p>
-<label for="roastCauseChocolateType">Cake Type</label>
+<h3 data-en="Roast Cause Chocolate" data-te="రోస్ట్ కాజ్ చాక్లెట్">Roast Cause Chocolate</h3>
+<p id="roastCauseChocolatePrice" data-en="Price: ₹300" data-te="ప్రైస్: ₹300">Price:₹300</p>
+<label for="roastCauseChocolateType" data-en="Cake Type" data-te="కేక్ టైప్">Cake Type</label>
 <select id="roastCauseChocolateType">
-<option value="Cool">Cool</option>
-<option value="Normal">Normal</option>
+<option value="Cool" data-en="Cool" data-te="కూల్">Cool</option>
+<option value="Normal" data-en="Normal" data-te="నార్మల్">Normal</option>
 </select>
-<label for="roastCauseChocolateEgg">Cake Type</label>
+<label for="roastCauseChocolateEgg" data-en="Cake Type" data-te="కేక్ టైప్">Cake Type</label>
 <select id="roastCauseChocolateEgg">
-<option value="Egg">Egg</option>
-<option value="Eggless">Eggless</option>
+<option value="Egg" data-en="Egg" data-te="ఎగ్">Egg</option>
+<option value="Eggless" data-en="Eggless" data-te="ఎగ్‌లెస్">Eggless</option>
 </select>
-<label for="roastCauseChocolateSize">Cake Size</label>
-<input id="roastCauseChocolateSize" list="cakeSizes" min="0.5" placeholder="Enter size in kg" step="0.5" type="number"/>
-<button class="mini-order" onclick="selectFixedCakeForOrder('Roast Cause Chocolate', document.getElementById('roastCauseChocolateSize').value, document.getElementById('roastCauseChocolateType').value, document.getElementById('roastCauseChocolateEgg').value)">
-  Order this cake →
-</button>
-</article><article class="cake-card">
+<label for="roastCauseChocolateSize" data-en="Cake Size" data-te="కేక్ సైజ్">Cake Size</label>
+<input id="roastCauseChocolateSize" list="cakeSizes" min="0.5" placeholder="Enter size in kg" data-en-placeholder="Enter size in kg" data-te-placeholder="సైజ్ కేజీలలో ఎంటర్ చేయండి" step="0.5" type="number"/>
+<button class="mini-order" data-en="Order this cake →" data-te="ఈ కేక్ ఆర్డర్ చేయండి →" onclick="selectFixedCakeForOrder('Roast Cause Chocolate', document.getElementById('roastCauseChocolateSize').value, document.getElementById('roastCauseChocolateType').value, document.getElementById('roastCauseChocolateEgg').value)">Order this cake →</button>
+</article>
+
+<article class="cake-card">
 <img alt="Black Forest Cake" src="images/black forest.jpeg"/>
-<h3>Black Forest</h3>
-<p id="blackForestPrice">Price:₹250</p>
-<label for="blackForestType">Cake Type</label>
+<h3 data-en="Black Forest" data-te="బ్లాక్ ఫారెస్ట్">Black Forest</h3>
+<p id="blackForestPrice" data-en="Price: ₹250" data-te="ప్రైస్: ₹250">Price:₹250</p>
+<label for="blackForestType" data-en="Cake Type" data-te="కేక్ టైప్">Cake Type</label>
 <select id="blackForestType">
-<option value="Cool">Cool</option>
-<option value="Normal">Normal</option>
+<option value="Cool" data-en="Cool" data-te="కూల్">Cool</option>
+<option value="Normal" data-en="Normal" data-te="నార్మల్">Normal</option>
 </select>
-<label for="blackForestEgg">Cake Type</label>
+<label for="blackForestEgg" data-en="Cake Type" data-te="కేక్ టైప్">Cake Type</label>
 <select id="blackForestEgg">
-<option value="Egg">Egg</option>
-<option value="Eggless">Eggless</option>
+<option value="Egg" data-en="Egg" data-te="ఎగ్">Egg</option>
+<option value="Eggless" data-en="Eggless" data-te="ఎగ్‌లెస్">Eggless</option>
 </select>
-<label for="blackForestSize">Cake Size</label>
-<input id="blackForestSize" list="cakeSizes" min="0.5" placeholder="Enter size in kg" step="0.5" type="number"/>
-<button class="mini-order" onclick="selectFixedCakeForOrder('Black Forest', document.getElementById('blackForestSize').value, document.getElementById('blackForestType').value, document.getElementById('blackForestEgg').value)">
-  Order this cake →
-</button>
-</article></div>
+<label for="blackForestSize" data-en="Cake Size" data-te="కేక్ సైజ్">Cake Size</label>
+<input id="blackForestSize" list="cakeSizes" min="0.5" placeholder="Enter size in kg" data-en-placeholder="Enter size in kg" data-te-placeholder="సైజ్ కేజీలలో ఎంటర్ చేయండి" step="0.5" type="number"/>
+<button class="mini-order" data-en="Order this cake →" data-te="ఈ కేక్ ఆర్డర్ చేయండి →" onclick="selectFixedCakeForOrder('Black Forest', document.getElementById('blackForestSize').value, document.getElementById('blackForestType').value, document.getElementById('blackForestEgg').value)">Order this cake →</button>
+</article>
+</div>
 <section class="section bakery-section" id="bakery">
   <div class="section-heading">
     <div>
-      <p class="eyebrow">BAKERY MENU</p>
-      <h2>More from My Home Bakery</h2>
+      <p class="eyebrow" data-en="BAKERY MENU" data-te="బేకరీ మెనూ">BAKERY MENU</p>
+<h2 data-en="More from My Home Bakery" data-te="మోర్ ఫ్రమ్ మై హోమ్ బేకరీ">More from My Home Bakery</h2>
     </div>
-    <p>Choose quantity or weight and see the price instantly.</p>
+    <p data-en="Choose quantity or weight and see the price instantly." data-te="క్వాంటిటీ లేదా వెయిట్ ఎంచుకోండి, ప్రైస్ వెంటనే చూడండి.">Choose quantity or weight and see the price instantly.</p>
   </div>
 
   <div class="menu-note">
     <span>ℹ️</span>
-    <p>Select the quantity/weight you need. The price updates automatically.</p>
+    <p data-en="Select the quantity/weight you need. The price updates automatically." data-te="మీకు కావాల్సిన క్వాంటిటీ లేదా వెయిట్ ఎంచుకోండి. ప్రైస్ ఆటోమేటిక్‌గా అప్‌డేట్ అవుతుంది.">Select the quantity/weight you need. The price updates automatically.</p>
   </div>
 
   <div class="grid bakery-grid">
@@ -748,26 +766,26 @@
     <article class="mini-card menu-card bakery-product-card" data-bakery="Brownie" data-kind="piece">
       <img src="images/brownie.jpg" alt="Brownie">
       <div class="menu-card-body">
-        <h3>Brownie</h3>
+        <h3 data-en="Brownie" data-te="బ్రౌనీ">Brownie</h3>
         <div class="bakery-choice">
-          <label>Quantity
-            <select class="bakery-size" onchange="updateBakeryPrice(this)">
-              <option value="1">1 piece</option>
-              <option value="2">2 pieces</option>
-              <option value="3">3 pieces</option>
-              <option value="4">4 pieces</option>
-              <option value="5">5 pieces</option>
-              <option value="6">6 pieces</option>
-              <option value="10">10 pieces</option>
-              <option value="custom">Custom</option>
+          <label><span data-en="Quantity" data-te="క్వాంటిటీ">Quantity</span>
+  <select class="bakery-size" onchange="updateBakeryPrice(this)">s
+              <option value="1" data-en="1 piece" data-te="1 పీస్">1 piece</option>
+<option value="2" data-en="2 pieces" data-te="2 పీసెస్">2 pieces</option>
+<option value="3" data-en="3 pieces" data-te="3 పీసెస్">3 pieces</option>
+<option value="4" data-en="4 pieces" data-te="4 పీసెస్">4 pieces</option>
+<option value="5" data-en="5 pieces" data-te="5 పీసెస్">5 pieces</option>
+<option value="6" data-en="6 pieces" data-te="6 పీసెస్">6 pieces</option>
+<option value="10" data-en="10 pieces" data-te="10 పీసెస్">10 pieces</option>
+<option value="custom" data-en="Custom" data-te="కస్టమ్">Custom</option>
             </select>
           </label>
-          <label class="bakery-custom-wrap" style="display:none">Pieces
+          <label class="bakery-custom-wrap" style="display:none"><span data-en="Pieces" data-te="పీసెస్">Pieces</span>
             <input class="bakery-custom" type="number" min="1" value="1" oninput="updateBakeryPrice(this)">
           </label>
         </div>
         <p class="menu-price bakery-live-price">Price: <strong>₹50</strong></p>
-        <button class="mini-order" onclick="orderBakeryItem('Brownie')">Order this item →</button>
+        <button class="mini-order" onclick="orderBakeryItem('Brownie')" data-en="Order this item →" data-te="ఈ ఐటమ్ ఆర్డర్ చేయండి →">Order this item →</button>
       </div>
     </article>
 
@@ -775,26 +793,26 @@
     <article class="mini-card menu-card bakery-product-card" data-bakery="Chocolava" data-kind="piece">
       <img src="images/chocolava.jpg" alt="Chocolava">
       <div class="menu-card-body">
-        <h3>Chocolava</h3>
+        <h3 data-en="Chocolava" data-te="చాకోలావా">Chocolava</h3>
         <div class="bakery-choice">
-          <label>Quantity
+          <label><span data-en="Quantity" data-te="క్వాంటిటీ">Quantity</span>
             <select class="bakery-size" onchange="updateBakeryPrice(this)">
-              <option value="1">1 piece</option>
-              <option value="2">2 pieces</option>
-              <option value="3">3 pieces</option>
-              <option value="4">4 pieces</option>
-              <option value="5">5 pieces</option>
-              <option value="6">6 pieces</option>
-              <option value="10">10 pieces</option>
-              <option value="custom">Custom</option>
+              <option value="1" data-en="1 piece" data-te="1 పీస్">1 piece</option>
+              <option value="2" data-en="2 pieces" data-te="2 పీసెస్">2 pieces</option>
+              <option value="3" data-en="3 pieces" data-te="3 పీసెస్">3 pieces</option>
+              <option value="4" data-en="4 pieces" data-te="4 పీసెస్">4 pieces</option>
+              <option value="5" data-en="5 pieces" data-te="5 పీసెస్">5 pieces</option>
+              <option value="6" data-en="6 pieces" data-te="6 పీసెస్">6 pieces</option>
+              <option value="10" data-en="10 pieces" data-te="10 పీసెస్">10 pieces</option>
+              <option value="custom" data-en="Custom" data-te="కస్టమ్">Custom</option>
             </select>
           </label>
-          <label class="bakery-custom-wrap" style="display:none">Pieces
+          <label class="bakery-custom-wrap" style="display:none"><span data-en="Pieces" data-te="పీసెస్">Pieces</span>
             <input class="bakery-custom" type="number" min="1" value="1" oninput="updateBakeryPrice(this)">
           </label>
         </div>
-        <p class="menu-price bakery-live-price">Price: <strong>₹50</strong></p>
-        <button class="mini-order" onclick="orderBakeryItem('Chocolava')">Order this item →</button>
+        <p class="menu-price bakery-live-price"><span data-en="Price:" data-te="ప్రైస్:">Price:</span> <strong>₹50</strong></p>
+        <button class="mini-order" onclick="orderBakeryItem('Chocolava')" data-en="Order this item →" data-te="ఈ ఐటమ్ ఆర్డర్ చేయండి →">Order this item →</button>
       </div>
     </article>
 
@@ -802,26 +820,26 @@
     <article class="mini-card menu-card bakery-product-card" data-bakery="Donuts" data-kind="piece">
       <img src="images/donuts.jpg" alt="Donuts">
       <div class="menu-card-body">
-        <h3>Donuts</h3>
+        <h3 data-en="Donuts" data-te="డోనట్స్">Donuts</h3>
         <div class="bakery-choice">
-          <label>Quantity
+          <label><span data-en="Quantity" data-te="క్వాంటిటీ">Quantity</span>
             <select class="bakery-size" onchange="updateBakeryPrice(this)">
-              <option value="1">1 piece</option>
-              <option value="2">2 pieces</option>
-              <option value="3">3 pieces</option>
-              <option value="4">4 pieces</option>
-              <option value="5">5 pieces</option>
-              <option value="6">6 pieces</option>
-              <option value="10">10 pieces</option>
-              <option value="custom">Custom</option>
+              <option value="1" data-en="1 piece" data-te="1 పీస్">1 piece</option>
+              <option value="2" data-en="2 pieces" data-te="2 పీసెస్">2 pieces</option>
+              <option value="3" data-en="3 pieces" data-te="3 పీసెస్">3 pieces</option>
+              <option value="4" data-en="4 pieces" data-te="4 పీసెస్">4 pieces</option>
+              <option value="5" data-en="5 pieces" data-te="5 పీసెస్">5 pieces</option>
+              <option value="6" data-en="6 pieces" data-te="6 పీసెస్">6 pieces</option>
+              <option value="10" data-en="10 pieces" data-te="10 పీసెస్">10 pieces</option>
+              <option value="custom" data-en="Custom" data-te="కస్టమ్">Custom</option>
             </select>
           </label>
-          <label class="bakery-custom-wrap" style="display:none">Pieces
+          <label class="bakery-custom-wrap" style="display:none"><span data-en="Pieces" data-te="పీసెస్">Pieces</span>
             <input class="bakery-custom" type="number" min="1" value="1" oninput="updateBakeryPrice(this)">
           </label>
         </div>
-        <p class="menu-price bakery-live-price">Price: <strong>₹40</strong></p>
-        <button class="mini-order" onclick="orderBakeryItem('Donuts')">Order this item →</button>
+        <p class="menu-price bakery-live-price"><span data-en="Price:" data-te="ప్రైస్:">Price:</span> <strong>₹40</strong></p>
+        <button class="mini-order" onclick="orderBakeryItem('Donuts')" data-en="Order this item →" data-te="ఈ ఐటమ్ ఆర్డర్ చేయండి →">Order this item →</button>
       </div>
     </article>
 
@@ -829,28 +847,28 @@
     <article class="mini-card menu-card bakery-product-card" data-bakery="Dry Fruit Butter Biscuits" data-kind="weight">
       <img src="images/dryfruit_butter_biscuits.jpg" alt="Dry Fruit Butter Biscuits" onerror="this.onerror=null;this.src='images/butter_salt_biscuits.jpg';">
       <div class="menu-card-body">
-        <h3>Dry Fruit Butter Biscuits</h3>
+        <h3 data-en="Dry Fruit Butter Biscuits" data-te="డ్రై ఫ్రూట్ బటర్ బిస్కెట్స్">Dry Fruit Butter Biscuits</h3>
         <div class="bakery-choice">
-          <label>Size / Weight
+          <label><span data-en="Size / Weight" data-te="సైజ్ / వెయిట్">Size / Weight</span>
             <select class="bakery-size" onchange="updateBakeryPrice(this)">
-              <option value="100">100 gms</option>
-              <option value="200" selected>200 gms</option>
-              <option value="250">250 gms</option>
-              <option value="320">320 gms</option>
-              <option value="500">500 gms</option>
-              <option value="750">750 gms</option>
-              <option value="1000">1000 gms</option>
-              <option value="1500">1500 gms</option>
-              <option value="2000">2000 gms</option>
-              <option value="custom">Custom weight</option>
+              <option value="100" data-en="100 gms" data-te="100 గ్రామ్స్">100 gms</option>
+              <option value="200" selected data-en="200 gms" data-te="200 గ్రామ్స్">200 gms</option>
+              <option value="250" data-en="250 gms" data-te="250 గ్రామ్స్">250 gms</option>
+              <option value="320" data-en="320 gms" data-te="320 గ్రామ్స్">320 gms</option>
+              <option value="500" data-en="500 gms" data-te="500 గ్రామ్స్">500 gms</option>
+              <option value="750" data-en="750 gms" data-te="750 గ్రామ్స్">750 gms</option>
+              <option value="1000" data-en="1000 gms" data-te="1000 గ్రామ్స్">1000 gms</option>
+              <option value="1500" data-en="1500 gms" data-te="1500 గ్రామ్స్">1500 gms</option>
+              <option value="2000" data-en="2000 gms" data-te="2000 గ్రామ్స్">2000 gms</option>
+              <option value="custom" data-en="Custom weight" data-te="కస్టమ్ వెయిట్">Custom weight</option>
             </select>
           </label>
-          <label class="bakery-custom-wrap" style="display:none">Weight (gms)
+          <label class="bakery-custom-wrap" style="display:none"><span data-en="Weight (gms)" data-te="వెయిట్ (గ్రామ్స్)">Weight (gms)</span>
             <input class="bakery-custom" type="number" min="1" value="250" oninput="updateBakeryPrice(this)">
           </label>
         </div>
-        <p class="menu-price bakery-live-price">Price: <strong>₹120</strong></p>
-        <button class="mini-order" onclick="orderBakeryItem('Dry Fruit Butter Biscuits')">Order this item →</button>
+        <p class="menu-price bakery-live-price"><span data-en="Price:" data-te="ప్రైస్:">Price:</span> <strong>₹120</strong></p>
+        <button class="mini-order" onclick="orderBakeryItem('Dry Fruit Butter Biscuits')" data-en="Order this item →" data-te="ఈ ఐటమ్ ఆర్డర్ చేయండి →">Order this item →</button>
       </div>
     </article>
 
@@ -858,28 +876,28 @@
     <article class="mini-card menu-card bakery-product-card" data-bakery="Butter Salt Biscuits" data-kind="weight">
       <img src="images/butter_salt_biscuits.jpg" alt="Butter Salt Biscuits">
       <div class="menu-card-body">
-        <h3>Butter Salt Biscuits</h3>
+        <h3 data-en="Butter Salt Biscuits" data-te="బటర్ సాల్ట్ బిస్కెట్స్">Butter Salt Biscuits</h3>
         <div class="bakery-choice">
-          <label>Size / Weight
+          <label><span data-en="Size / Weight" data-te="సైజ్ / వెయిట్">Size / Weight</span>
             <select class="bakery-size" onchange="updateBakeryPrice(this)">
-              <option value="100">100 gms</option>
-              <option value="200" selected>200 gms</option>
-              <option value="250">250 gms</option>
-              <option value="320">320 gms</option>
-              <option value="500">500 gms</option>
-              <option value="750">750 gms</option>
-              <option value="1000">1000 gms</option>
-              <option value="1500">1500 gms</option>
-              <option value="2000">2000 gms</option>
-              <option value="custom">Custom weight</option>
+              <option value="100" data-en="100 gms" data-te="100 గ్రామ్స్">100 gms</option>
+              <option value="200" selected data-en="200 gms" data-te="200 గ్రామ్స్">200 gms</option>
+              <option value="250" data-en="250 gms" data-te="250 గ్రామ్స్">250 gms</option>
+              <option value="320" data-en="320 gms" data-te="320 గ్రామ్స్">320 gms</option>
+              <option value="500" data-en="500 gms" data-te="500 గ్రామ్స్">500 gms</option>
+              <option value="750" data-en="750 gms" data-te="750 గ్రామ్స్">750 gms</option>
+              <option value="1000" data-en="1000 gms" data-te="1000 గ్రామ్స్">1000 gms</option>
+              <option value="1500" data-en="1500 gms" data-te="1500 గ్రామ్స్">1500 gms</option>
+              <option value="2000" data-en="2000 gms" data-te="2000 గ్రామ్స్">2000 gms</option>
+              <option value="custom" data-en="Custom weight" data-te="కస్టమ్ వెయిట్">Custom weight</option>
             </select>
           </label>
-          <label class="bakery-custom-wrap" style="display:none">Weight (gms)
+          <label class="bakery-custom-wrap" style="display:none"><span data-en="Weight (gms)" data-te="వెయిట్ (గ్రామ్స్)">Weight (gms)</span>
             <input class="bakery-custom" type="number" min="1" value="250" oninput="updateBakeryPrice(this)">
           </label>
         </div>
-        <p class="menu-price bakery-live-price">Price: <strong>₹100</strong></p>
-        <button class="mini-order" onclick="orderBakeryItem('Butter Salt Biscuits')">Order this item →</button>
+        <p class="menu-price bakery-live-price"><span data-en="Price:" data-te="ప్రైస్:">Price:</span> <strong>₹100</strong></p>
+        <button class="mini-order" onclick="orderBakeryItem('Butter Salt Biscuits')" data-en="Order this item →" data-te="ఈ ఐటమ్ ఆర్డర్ చేయండి →">Order this item →</button>
       </div>
     </article>
 
@@ -887,28 +905,28 @@
     <article class="mini-card menu-card bakery-product-card" data-bakery="Milk Cake" data-kind="weight">
       <img src="images/milk_cake.jpg" alt="Milk Cake">
       <div class="menu-card-body">
-        <h3>Milk Cake</h3>
+        <h3 data-en="Milk Cake" data-te="మిల్క్ కేక్">Milk Cake</h3>
         <div class="bakery-choice">
-          <label>Size / Weight
+          <label><span data-en="Size / Weight" data-te="సైజ్ / వెయిట్">Size / Weight</span>
             <select class="bakery-size" onchange="updateBakeryPrice(this)">
-              <option value="100">100 gms</option>
-              <option value="200">200 gms</option>
-              <option value="250" selected>250 gms</option>
-              <option value="320">320 gms</option>
-              <option value="500">500 gms</option>
-              <option value="750">750 gms</option>
-              <option value="1000">1000 gms</option>
-              <option value="1500">1500 gms</option>
-              <option value="2000">2000 gms</option>
-              <option value="custom">Custom weight</option>
+              <option value="100" data-en="100 gms" data-te="100 గ్రామ్స్">100 gms</option>
+              <option value="200" data-en="200 gms" data-te="200 గ్రామ్స్">200 gms</option>
+              <option value="250" selected data-en="250 gms" data-te="250 గ్రామ్స్">250 gms</option>
+              <option value="320" data-en="320 gms" data-te="320 గ్రామ్స్">320 gms</option>
+              <option value="500" data-en="500 gms" data-te="500 గ్రామ్స్">500 gms</option>
+              <option value="750" data-en="750 gms" data-te="750 గ్రామ్స్">750 gms</option>
+              <option value="1000" data-en="1000 gms" data-te="1000 గ్రామ్స్">1000 gms</option>
+              <option value="1500" data-en="1500 gms" data-te="1500 గ్రామ్స్">1500 gms</option>
+              <option value="2000" data-en="2000 gms" data-te="2000 గ్రామ్స్">2000 gms</option>
+              <option value="custom" data-en="Custom weight" data-te="కస్టమ్ వెయిట్">Custom weight</option>
             </select>
           </label>
-          <label class="bakery-custom-wrap" style="display:none">Weight (gms)
+          <label class="bakery-custom-wrap" style="display:none"><span data-en="Weight (gms)" data-te="వెయిట్ (గ్రామ్స్)">Weight (gms)</span>
             <input class="bakery-custom" type="number" min="1" value="250" oninput="updateBakeryPrice(this)">
           </label>
         </div>
-        <p class="menu-price bakery-live-price">Price: <strong>₹100</strong></p>
-        <button class="mini-order" onclick="orderBakeryItem('Milk Cake')">Order this item →</button>
+        <p class="menu-price bakery-live-price"><span data-en="Price:" data-te="ప్రైస్:">Price:</span> <strong>₹100</strong></p>
+        <button class="mini-order" onclick="orderBakeryItem('Milk Cake')" data-en="Order this item →" data-te="ఈ ఐటమ్ ఆర్డర్ చేయండి →">Order this item →</button>
       </div>
     </article>
 
@@ -916,57 +934,57 @@
     <article class="mini-card menu-card bakery-product-card" data-bakery="Plum Cake" data-kind="weight">
       <img src="images/plum_cake.jpg" alt="Plum Cake">
       <div class="menu-card-body">
-        <h3>Plum Cake</h3>
+        <h3 data-en="Plum Cake" data-te="ప్లమ్ కేక్">Plum Cake</h3>
         <div class="bakery-choice">
-          <label>Size / Weight
+          <label><span data-en="Size / Weight" data-te="సైజ్ / వెయిట్">Size / Weight</span>
             <select class="bakery-size" onchange="updateBakeryPrice(this)">
-              <option value="100">100 gms</option>
-              <option value="200">200 gms</option>
-              <option value="250" selected>250 gms</option>
-              <option value="320">320 gms</option>
-              <option value="500">500 gms</option>
-              <option value="750">750 gms</option>
-              <option value="1000">1000 gms</option>
-              <option value="1500">1500 gms</option>
-              <option value="2000">2000 gms</option>
-              <option value="custom">Custom weight</option>
+              <option value="100" data-en="100 gms" data-te="100 గ్రామ్స్">100 gms</option>
+              <option value="200" data-en="200 gms" data-te="200 గ్రామ్స్">200 gms</option>
+              <option value="250" selected data-en="250 gms" data-te="250 గ్రామ్స్">250 gms</option>
+              <option value="320" data-en="320 gms" data-te="320 గ్రామ్స్">320 gms</option>
+              <option value="500" data-en="500 gms" data-te="500 గ్రామ్స్">500 gms</option>
+              <option value="750" data-en="750 gms" data-te="750 గ్రామ్స్">750 gms</option>
+              <option value="1000" data-en="1000 gms" data-te="1000 గ్రామ్స్">1000 gms</option>
+              <option value="1500" data-en="1500 gms" data-te="1500 గ్రామ్స్">1500 gms</option>
+              <option value="2000" data-en="2000 gms" data-te="2000 గ్రామ్స్">2000 gms</option>
+              <option value="custom" data-en="Custom weight" data-te="కస్టమ్ వెయిట్">Custom weight</option>
             </select>
           </label>
-          <label class="bakery-custom-wrap" style="display:none">Weight (gms)
+          <label class="bakery-custom-wrap" style="display:none"><span data-en="Weight (gms)" data-te="వెయిట్ (గ్రామ్స్)">Weight (gms)</span>
             <input class="bakery-custom" type="number" min="1" value="250" oninput="updateBakeryPrice(this)">
           </label>
         </div>
-        <p class="menu-price bakery-live-price">Price: <strong>₹150</strong></p>
-        <button class="mini-order" onclick="orderBakeryItem('Plum Cake')">Order this item →</button>
+        <p class="menu-price bakery-live-price"><span data-en="Price:" data-te="ప్రైస్:">Price:</span> <strong>₹150</strong></p>
+        <button class="mini-order" onclick="orderBakeryItem('Plum Cake')" data-en="Order this item →" data-te="ఈ ఐటమ్ ఆర్డర్ చేయండి →">Order this item →</button>
       </div>
     </article>
 
-    <!-- Sponge Cake -->
+     <!-- Sponge Cake -->
     <article class="mini-card menu-card bakery-product-card" data-bakery="Sponge Cake" data-kind="weight">
       <img src="images/sponge_cake.jpg" alt="Sponge Cake">
       <div class="menu-card-body">
-        <h3>Sponge Cake</h3>
+        <h3 data-en="Sponge Cake" data-te="స్పాంజ్ కేక్">Sponge Cake</h3>
         <div class="bakery-choice">
-          <label>Size / Weight
+          <label><span data-en="Size / Weight" data-te="సైజ్ / వెయిట్">Size / Weight</span>
             <select class="bakery-size" onchange="updateBakeryPrice(this)">
-              <option value="100">100 gms</option>
-              <option value="200">200 gms</option>
-              <option value="250" selected>250 gms</option>
-              <option value="320">320 gms</option>
-              <option value="500">500 gms</option>
-              <option value="750">750 gms</option>
-              <option value="1000">1000 gms</option>
-              <option value="1500">1500 gms</option>
-              <option value="2000">2000 gms</option>
-              <option value="custom">Custom weight</option>
+              <option value="100" data-en="100 gms" data-te="100 గ్రామ్స్">100 gms</option>
+              <option value="200" data-en="200 gms" data-te="200 గ్రామ్స్">200 gms</option>
+              <option value="250" selected data-en="250 gms" data-te="250 గ్రామ్స్">250 gms</option>
+              <option value="320" data-en="320 gms" data-te="320 గ్రామ్స్">320 gms</option>
+              <option value="500" data-en="500 gms" data-te="500 గ్రామ్స్">500 gms</option>
+              <option value="750" data-en="750 gms" data-te="750 గ్రామ్స్">750 gms</option>
+              <option value="1000" data-en="1000 gms" data-te="1000 గ్రామ్స్">1000 gms</option>
+              <option value="1500" data-en="1500 gms" data-te="1500 గ్రామ్స్">1500 gms</option>
+              <option value="2000" data-en="2000 gms" data-te="2000 గ్రామ్స్">2000 gms</option>
+              <option value="custom" data-en="Custom weight" data-te="కస్టమ్ వెయిట్">Custom weight</option>
             </select>
           </label>
-          <label class="bakery-custom-wrap" style="display:none">Weight (gms)
+          <label class="bakery-custom-wrap" style="display:none"><span data-en="Weight (gms)" data-te="వెయిట్ (గ్రామ్స్)">Weight (gms)</span>
             <input class="bakery-custom" type="number" min="1" value="250" oninput="updateBakeryPrice(this)">
           </label>
         </div>
-        <p class="menu-price bakery-live-price">Price: <strong>₹70</strong></p>
-        <button class="mini-order" onclick="orderBakeryItem('Sponge Cake')">Order this item →</button>
+        <p class="menu-price bakery-live-price"><span data-en="Price:" data-te="ప్రైస్:">Price:</span> <strong>₹70</strong></p>
+        <button class="mini-order" onclick="orderBakeryItem('Sponge Cake')" data-en="Order this item →" data-te="ఈ ఐటమ్ ఆర్డర్ చేయండి →">Order this item →</button>
       </div>
     </article>
 
@@ -974,23 +992,23 @@
     <article class="mini-card menu-card bakery-product-card" data-bakery="Cup Cakes" data-kind="cupcake">
       <img src="images/cup_cakes.jpg" alt="Cup Cakes">
       <div class="menu-card-body">
-        <h3>Cup Cakes</h3>
+        <h3 data-en="Cup Cakes" data-te="కప్ కేక్స్">Cup Cakes</h3>
         <div class="bakery-choice">
-          <label>Quantity
+          <label><span data-en="Quantity" data-te="క్వాంటిటీ">Quantity</span>
             <select class="bakery-size" onchange="updateBakeryPrice(this)">
-              <option value="6">6 pieces</option>
-              <option value="12">12 pieces</option>
-              <option value="18">18 pieces</option>
-              <option value="24">24 pieces</option>
-              <option value="custom">Custom</option>
+              <option value="6" data-en="6 pieces" data-te="6 పీసెస్">6 pieces</option>
+              <option value="12" data-en="12 pieces" data-te="12 పీసెస్">12 pieces</option>
+              <option value="18" data-en="18 pieces" data-te="18 పీసెస్">18 pieces</option>
+              <option value="24" data-en="24 pieces" data-te="24 పీసెస్">24 pieces</option>
+              <option value="custom" data-en="Custom" data-te="కస్టమ్">Custom</option>
             </select>
           </label>
-          <label class="bakery-custom-wrap" style="display:none">Pieces
+          <label class="bakery-custom-wrap" style="display:none"><span data-en="Pieces" data-te="పీసెస్">Pieces</span>
             <input class="bakery-custom" type="number" min="1" value="6" oninput="updateBakeryPrice(this)">
           </label>
         </div>
-        <p class="menu-price bakery-live-price">Price: <strong>₹60</strong></p>
-        <button class="mini-order" onclick="orderBakeryItem('Cup Cakes')">Order this item →</button>
+        <p class="menu-price bakery-live-price"><span data-en="Price:" data-te="ప్రైస్:">Price:</span> <strong>₹60</strong></p>
+        <button class="mini-order" onclick="orderBakeryItem('Cup Cakes')" data-en="Order this item →" data-te="ఈ ఐటమ్ ఆర్డర్ చేయండి →">Order this item →</button>
       </div>
     </article>
 
@@ -998,28 +1016,28 @@
     <article class="mini-card menu-card bakery-product-card" data-bakery="Bread" data-kind="bread">
       <img src="images/bread.jpg" alt="Bread">
       <div class="menu-card-body">
-        <h3>Bread</h3>
+        <h3 data-en="Bread" data-te="బ్రెడ్">Bread</h3>
         <div class="bakery-choice">
-          <label>Size / Weight
+          <label><span data-en="Size / Weight" data-te="సైజ్ / వెయిట్">Size / Weight</span>
             <select class="bakery-size" onchange="updateBakeryPrice(this)">
-              <option value="100">100 gms</option>
-              <option value="200">200 gms</option>
-              <option value="250">250 gms</option>
-              <option value="320" selected>320 gms</option>
-              <option value="500">500 gms</option>
-              <option value="750">750 gms</option>
-              <option value="1000">1000 gms</option>
-              <option value="1500">1500 gms</option>
-              <option value="2000">2000 gms</option>
-              <option value="custom">Custom weight</option>
+              <option value="100" data-en="100 gms" data-te="100 గ్రామ్స్">100 gms</option>
+              <option value="200" data-en="200 gms" data-te="200 గ్రామ్స్">200 gms</option>
+              <option value="250" data-en="250 gms" data-te="250 గ్రామ్స్">250 gms</option>
+              <option value="320" selected data-en="320 gms" data-te="320 గ్రామ్స్">320 gms</option>
+              <option value="500" data-en="500 gms" data-te="500 గ్రామ్స్">500 gms</option>
+              <option value="750" data-en="750 gms" data-te="750 గ్రామ్స్">750 gms</option>
+              <option value="1000" data-en="1000 gms" data-te="1000 గ్రామ్స్">1000 gms</option>
+              <option value="1500" data-en="1500 gms" data-te="1500 గ్రామ్స్">1500 gms</option>
+              <option value="2000" data-en="2000 gms" data-te="2000 గ్రామ్స్">2000 gms</option>
+              <option value="custom" data-en="Custom weight" data-te="కస్టమ్ వెయిట్">Custom weight</option>
             </select>
           </label>
-          <label class="bakery-custom-wrap" style="display:none">Weight (gms)
+          <label class="bakery-custom-wrap" style="display:none"><span data-en="Weight (gms)" data-te="వెయిట్ (గ్రామ్స్)">Weight (gms)</span>
             <input class="bakery-custom" type="number" min="1" value="250" oninput="updateBakeryPrice(this)">
           </label>
         </div>
-        <p class="menu-price bakery-live-price">Price: <strong>₹50</strong></p>
-        <button class="mini-order" onclick="orderBakeryItem('Bread')">Order this item →</button>
+        <p class="menu-price bakery-live-price"><span data-en="Price:" data-te="ప్రైస్:">Price:</span> <strong>₹50</strong></p>
+        <button class="mini-order" onclick="orderBakeryItem('Bread')" data-en="Order this item →" data-te="ఈ ఐటమ్ ఆర్డర్ చేయండి →">Order this item →</button>
       </div>
     </article>
 
@@ -1027,28 +1045,28 @@
     <article class="mini-card menu-card bakery-product-card" data-bakery="Rusk (Toast)" data-kind="weight">
       <img src="images/rusk_toast.jpg" alt="Rusk Toast">
       <div class="menu-card-body">
-        <h3>Rusk (Toast)</h3>
+        <h3 data-en="Rusk (Toast)" data-te="రస్క్ (టోస్ట్)">Rusk (Toast)</h3>
         <div class="bakery-choice">
-          <label>Size / Weight
+          <label><span data-en="Size / Weight" data-te="సైజ్ / వెయిట్">Size / Weight</span>
             <select class="bakery-size" onchange="updateBakeryPrice(this)">
-              <option value="100">100 gms</option>
-              <option value="200">200 gms</option>
-              <option value="250" selected>250 gms</option>
-              <option value="320">320 gms</option>
-              <option value="500">500 gms</option>
-              <option value="750">750 gms</option>
-              <option value="1000">1000 gms</option>
-              <option value="1500">1500 gms</option>
-              <option value="2000">2000 gms</option>
-              <option value="custom">Custom weight</option>
+              <option value="100" data-en="100 gms" data-te="100 గ్రామ్స్">100 gms</option>
+              <option value="200" data-en="200 gms" data-te="200 గ్రామ్స్">200 gms</option>
+              <option value="250" selected data-en="250 gms" data-te="250 గ్రామ్స్">250 gms</option>
+              <option value="320" data-en="320 gms" data-te="320 గ్రామ్స్">320 gms</option>
+              <option value="500" data-en="500 gms" data-te="500 గ్రామ్స్">500 gms</option>
+              <option value="750" data-en="750 gms" data-te="750 గ్రామ్స్">750 gms</option>
+              <option value="1000" data-en="1000 gms" data-te="1000 గ్రామ్స్">1000 gms</option>
+              <option value="1500" data-en="1500 gms" data-te="1500 గ్రామ్స్">1500 gms</option>
+              <option value="2000" data-en="2000 gms" data-te="2000 గ్రామ్స్">2000 gms</option>
+              <option value="custom" data-en="Custom weight" data-te="కస్టమ్ వెయిట్">Custom weight</option>
             </select>
           </label>
-          <label class="bakery-custom-wrap" style="display:none">Weight (gms)
+          <label class="bakery-custom-wrap" style="display:none"><span data-en="Weight (gms)" data-te="వెయిట్ (గ్రామ్స్)">Weight (gms)</span>
             <input class="bakery-custom" type="number" min="1" value="250" oninput="updateBakeryPrice(this)">
           </label>
         </div>
-        <p class="menu-price bakery-live-price">Price: <strong>₹50</strong></p>
-        <button class="mini-order" onclick="orderBakeryItem('Rusk (Toast)')">Order this item →</button>
+        <p class="menu-price bakery-live-price"><span data-en="Price:" data-te="ప్రైస్:">Price:</span> <strong>₹50</strong></p>
+        <button class="mini-order" onclick="orderBakeryItem('Rusk (Toast)')" data-en="Order this item →" data-te="ఈ ఐటమ్ ఆర్డర్ చేయండి →">Order this item →</button>
       </div>
     </article>
 
@@ -1056,26 +1074,26 @@
     <article class="mini-card menu-card bakery-product-card" data-bakery="Cream Buns" data-kind="piece">
       <img src="images/cream_buns.jpg" alt="Cream Buns">
       <div class="menu-card-body">
-        <h3>Cream Buns</h3>
+        <h3 data-en="Cream Buns" data-te="క్రీమ్ బన్స్">Cream Buns</h3>
         <div class="bakery-choice">
-          <label>Quantity
+          <label><span data-en="Quantity" data-te="క్వాంటిటీ">Quantity</span>
             <select class="bakery-size" onchange="updateBakeryPrice(this)">
-              <option value="1">1 piece</option>
-              <option value="2">2 pieces</option>
-              <option value="3">3 pieces</option>
-              <option value="4">4 pieces</option>
-              <option value="5">5 pieces</option>
-              <option value="6">6 pieces</option>
-              <option value="10">10 pieces</option>
-              <option value="custom">Custom</option>
+              <option value="1" data-en="1 piece" data-te="1 పీస్">1 piece</option>
+              <option value="2" data-en="2 pieces" data-te="2 పీసెస్">2 pieces</option>
+              <option value="3" data-en="3 pieces" data-te="3 పీసెస్">3 pieces</option>
+              <option value="4" data-en="4 pieces" data-te="4 పీసెస్">4 pieces</option>
+              <option value="5" data-en="5 pieces" data-te="5 పీసెస్">5 pieces</option>
+              <option value="6" data-en="6 pieces" data-te="6 పీసెస్">6 pieces</option>
+              <option value="10" data-en="10 pieces" data-te="10 పీసెస్">10 pieces</option>
+              <option value="custom" data-en="Custom" data-te="కస్టమ్">Custom</option>
             </select>
           </label>
-          <label class="bakery-custom-wrap" style="display:none">Pieces
+          <label class="bakery-custom-wrap" style="display:none"><span data-en="Pieces" data-te="పీసెస్">Pieces</span>
             <input class="bakery-custom" type="number" min="1" value="1" oninput="updateBakeryPrice(this)">
           </label>
         </div>
-        <p class="menu-price bakery-live-price">Price: <strong>₹20</strong></p>
-        <button class="mini-order" onclick="orderBakeryItem('Cream Buns')">Order this item →</button>
+        <p class="menu-price bakery-live-price"><span data-en="Price:" data-te="ప్రైస్:">Price:</span> <strong>₹20</strong></p>
+        <button class="mini-order" onclick="orderBakeryItem('Cream Buns')" data-en="Order this item →" data-te="ఈ ఐటమ్ ఆర్డర్ చేయండి →">Order this item →</button>
       </div>
     </article>
 
@@ -1083,26 +1101,26 @@
     <article class="mini-card menu-card bakery-product-card" data-bakery="Fruit Buns" data-kind="piece">
       <img src="images/fruit_buns.jpg" alt="Fruit Buns">
       <div class="menu-card-body">
-        <h3>Fruit Buns</h3>
+        <h3 data-en="Fruit Buns" data-te="ఫ్రూట్ బన్స్">Fruit Buns</h3>
         <div class="bakery-choice">
-          <label>Quantity
+          <label><span data-en="Quantity" data-te="క్వాంటిటీ">Quantity</span>
             <select class="bakery-size" onchange="updateBakeryPrice(this)">
-              <option value="1">1 piece</option>
-              <option value="2">2 pieces</option>
-              <option value="3">3 pieces</option>
-              <option value="4">4 pieces</option>
-              <option value="5">5 pieces</option>
-              <option value="6">6 pieces</option>
-              <option value="10">10 pieces</option>
-              <option value="custom">Custom</option>
+              <option value="1" data-en="1 piece" data-te="1 పీస్">1 piece</option>
+              <option value="2" data-en="2 pieces" data-te="2 పీసెస్">2 pieces</option>
+              <option value="3" data-en="3 pieces" data-te="3 పీసెస్">3 pieces</option>
+              <option value="4" data-en="4 pieces" data-te="4 పీసెస్">4 pieces</option>
+              <option value="5" data-en="5 pieces" data-te="5 పీసెస్">5 pieces</option>
+              <option value="6" data-en="6 pieces" data-te="6 పీసెస్">6 pieces</option>
+              <option value="10" data-en="10 pieces" data-te="10 పీసెస్">10 pieces</option>
+              <option value="custom" data-en="Custom" data-te="కస్టమ్">Custom</option>
             </select>
           </label>
-          <label class="bakery-custom-wrap" style="display:none">Pieces
+          <label class="bakery-custom-wrap" style="display:none"><span data-en="Pieces" data-te="పీసెస్">Pieces</span>
             <input class="bakery-custom" type="number" min="1" value="1" oninput="updateBakeryPrice(this)">
           </label>
         </div>
-        <p class="menu-price bakery-live-price">Price: <strong>₹20</strong></p>
-        <button class="mini-order" onclick="orderBakeryItem('Fruit Buns')">Order this item →</button>
+        <p class="menu-price bakery-live-price"><span data-en="Price:" data-te="ప్రైస్:">Price:</span> <strong>₹20</strong></p>
+        <button class="mini-order" onclick="orderBakeryItem('Fruit Buns')" data-en="Order this item →" data-te="ఈ ఐటమ్ ఆర్డర్ చేయండి →">Order this item →</button>
       </div>
     </article>
 
@@ -1110,410 +1128,469 @@
     <article class="mini-card menu-card bakery-product-card" data-bakery="Jam Buns" data-kind="piece">
       <img src="images/jam_buns.jpg" alt="Jam Buns">
       <div class="menu-card-body">
-        <h3>Jam Buns</h3>
+        <h3 data-en="Jam Buns" data-te="జామ్ బన్స్">Jam Buns</h3>
         <div class="bakery-choice">
-          <label>Quantity
+          <label><span data-en="Quantity" data-te="క్వాంటిటీ">Quantity</span>
             <select class="bakery-size" onchange="updateBakeryPrice(this)">
-              <option value="1">1 piece</option>
-              <option value="2">2 pieces</option>
-              <option value="3">3 pieces</option>
-              <option value="4">4 pieces</option>
-              <option value="5">5 pieces</option>
-              <option value="6">6 pieces</option>
-              <option value="10">10 pieces</option>
-              <option value="custom">Custom</option>
+              <option value="1" data-en="1 piece" data-te="1 పీస్">1 piece</option>
+              <option value="2" data-en="2 pieces" data-te="2 పీసెస్">2 pieces</option>
+              <option value="3" data-en="3 pieces" data-te="3 పీసెస్">3 pieces</option>
+              <option value="4" data-en="4 pieces" data-te="4 పీసెస్">4 pieces</option>
+              <option value="5" data-en="5 pieces" data-te="5 పీసెస్">5 pieces</option>
+              <option value="6" data-en="6 pieces" data-te="6 పీసెస్">6 pieces</option>
+              <option value="10" data-en="10 pieces" data-te="10 పీసెస్">10 pieces</option>
+              <option value="custom" data-en="Custom" data-te="కస్టమ్">Custom</option>
             </select>
           </label>
-          <label class="bakery-custom-wrap" style="display:none">Pieces
+          <label class="bakery-custom-wrap" style="display:none"><span data-en="Pieces" data-te="పీసెస్">Pieces</span>
             <input class="bakery-custom" type="number" min="1" value="1" oninput="updateBakeryPrice(this)">
           </label>
         </div>
-        <p class="menu-price bakery-live-price">Price: <strong>₹20</strong></p>
-        <button class="mini-order" onclick="orderBakeryItem('Jam Buns')">Order this item →</button>
+        <p class="menu-price bakery-live-price"><span data-en="Price:" data-te="ప్రైస్:">Price:</span> <strong>₹20</strong></p>
+        <button class="mini-order" onclick="orderBakeryItem('Jam Buns')" data-en="Order this item →" data-te="ఈ ఐటమ్ ఆర్డర్ చేయండి →">Order this item →</button>
       </div>
     </article>
 
   </div>
+  
+
+<section class="section gallery-section" id="cakeGallery" hidden>
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow" data-en="REAL CAKE DESIGNS" data-te="రియల్ కేక్ డిజైన్స్">REAL CAKE DESIGNS</p>
+      <h2 data-en="Choose Your Cake Design" data-te="చూస్ యువర్ కేక్ డిజైన్">Choose Your Cake Design</h2>
+    </div>
+    <p data-en="Browse cake designs from My Home Bakery." data-te="మై హోమ్ బేకరీ కేక్ డిజైన్స్ చూడండి.">Browse cake designs from My Home Bakery.</p>
+  </div>
+  <div class="photo-grid" id="cakePhotoGrid"></div>
+</section>
+
 </section><section class="section order-section" id="order">
 <div class="order-copy">
-<p class="eyebrow">ORDER REQUEST</p>
-<h2>Tell us what you want.</h2>
-<p>Select your items, add the required details, and send your order request on WhatsApp.</p>
-<div class="order-note"><span>💡</span><p><b>Tip:</b> Big or customized cakes should be requested at least 2 days in advance.</p></div>
+
+<p class="eyebrow" data-en="ORDER REQUEST" data-te="ఆర్డర్ రిక్వెస్ట్">ORDER REQUEST</p>
+<h2 data-en="Tell us what you want." data-te="టెల్ అస్ వాట్ యు వాంట్.">Tell us what you want.</h2>
+<p data-en="Select your items, add the required details, and send your order request on WhatsApp." data-te="మీ ఐటమ్స్ ఎంచుకుని, కావాల్సిన డీటెయిల్స్ యాడ్ చేసి, మీ ఆర్డర్ రిక్వెస్ట్ వాట్సాప్‌లో పంపండి.">Select your items, add the required details, and send your order request on WhatsApp.</p>
+
+<div class="order-note"><span>💡</span><p>
+  <b data-en="Tip:" data-te="టిప్:">Tip:</b>
+  <span data-en="Big or customized cakes should be requested at least 2 days in advance."
+        data-te="పెద్ద కేక్స్ లేదా కస్టమైజ్డ్ కేక్స్ కనీసం 2 రోజుల ముందుగా ఆర్డర్ చేయాలి.">
+  </span>
+</p></div>
 </div>
 <form class="order-form" id="orderForm">
-<div class="form-section-title full-field"><span>01</span><div><b>Customer details</b><small>How can the bakery contact you?</small></div></div>
-<label>Your name<input id="name" placeholder="Enter your name" required=""/></label>
-<label>Phone number<input id="phone" inputmode="tel" placeholder="Enter phone number" required=""/></label>
+
+<div class="form-section-title full-field"><span>01</span><div><b data-en="Customer details" data-te="కస్టమర్ డీటెయిల్స్">Customer details</b><small data-en="How can the bakery contact you?" data-te="బేకరీ మిమ్మల్ని ఎలా కాంటాక్ట్ చేయాలి?">How can the bakery contact you?</small></div></div>
+
+
+<label><span data-en="Your name" data-te="యువర్ నేమ్">Your name</span><input id="name" placeholder="Enter your name" data-en-placeholder="Enter your name" data-te-placeholder="మీ పేరు ఎంటర్ చేయండి" required=""/></label>
+<label><span data-en="Phone number" data-te="ఫోన్ నంబర్">Phone number</span><input id="phone" inputmode="tel" placeholder="Enter phone number" data-en-placeholder="Enter phone number" data-te-placeholder="ఫోన్ నంబర్ ఎంటర్ చేయండి" required=""/></label>
+
+
 <div class="form-section-title full-field">
 <span>02</span>
 <div>
-<b>What would you like?</b>
-<small>Add one or more items to your order</small>
+<b data-en="What would you like?" data-te="వాట్ వుడ్ యు లైక్?">What would you like?</b>
+<small data-en="Add one or more items to your order" data-te="మీ ఆర్డర్‌లో ఒకటి లేదా అంతకంటే ఎక్కువ ఐటమ్స్ యాడ్ చేయండి">Add one or more items to your order</small>
 </div>
 </div>
+
 <div class="full-field" id="orderItems">
 <!-- Item 1 -->
 <div class="order-item" data-item="1">
 <div class="item-header">
 <b>Item 1</b>
 </div>
+
 <label>
-      Order category
-      <select class="item-category" onchange="toggleOrderItem(this)" required="">
-<option value="">Select category</option>
-<option value="cake">Cake</option>
-<option value="bakery">Bakery Item</option>
+<span data-en="Order category" data-te="ఆర్డర్ కేటగిరీ">Order category</span>
+<select class="item-category" onchange="toggleOrderItem(this)" required="">
+<option value="" data-en="Select category" data-te="సెలెక్ట్ కేటగిరీ">Select category</option>
+<option value="cake" data-en="Cake" data-te="కేక్">Cake</option>
+<option value="bakery" data-en="Bakery Item" data-te="బేకరీ ఐటమ్">Bakery Item</option>
 </select>
 </label>
 <label>
-      Quantity
-      <input class="item-quantity" min="1" onchange="updateOrderItemQuantity(this)" type="number" value="1"/>
+<span data-en="Quantity" data-te="క్వాంటిటీ">Quantity</span>
+<input class="item-quantity" min="1" onchange="updateOrderItemQuantity(this)" type="number" value="1"/>
 </label>
 <label>
-      Required date
-      <input class="item-date" type="date"/>
+<span data-en="Required date" data-te="రిక్వైర్డ్ డేట్">Required date</span>
+<input class="item-date" type="date"/>
 </label>
+
 <div class="item-details"></div>
 </div>
 </div>
 <button class="btn secondary full-field" onclick="addAnotherOrderItem()" type="button">
-  ➕ Add Another Item
+  <span data-en="➕ Add Another Item" data-te="➕ మరో ఐటమ్ యాడ్ చేయండి">➕ Add Another Item</span>
 </button>
 <div class="subform full-field" id="cakeOrderFields" style="display:none">
+
 <div class="subform-grid">
-<label>Cake type<select id="cakeType" onchange="toggleCustomCakeType()">
-<option value="">Select cake type</option>
-<option>Birthday Cake</option><option>Photo Cake</option><option>Designer Cake</option>
-<option>Heart Shape Cake</option><option>Steps Cake</option><option>Cool Cake</option>
-<option>Egg</option><option>Eggless</option><option value="custom">Other / Custom Cake Type</option>
-</select></label>
-<label class="custom-field" id="customCakeWrap" style="display:none">Type your cake type<input id="customCakeType" placeholder="e.g. Anniversary Cake"/></label>
-<label>Flavour<select id="flavour" onchange="toggleCustomFlavour()">
-<option value="">Select flavour</option>
-<option>Milky Vanilla</option><option>Butterscotch</option><option>Strawberry</option>
-<option>Blueberry</option><option>Roseberry</option><option>Black Currant</option>
-<option>Pineapple</option><option>Red Velvet</option><option>Milky Butterscotch</option>
-<option>Milky Badam</option><option>Honey Almond</option><option>Pista</option><option>Black Forest</option>
-<option>Chocolate</option><option>Chocochips</option><option>Roast Cause Chocolate</option>
-<option>Double Chocolate</option><option>Caramel Nuts</option><option>Oreo Chocolate</option>
-<option value="custom">Other / Custom Flavour</option>
-</select></label>
-<label class="custom-field" id="customFlavourWrap" style="display:none">Type your flavour<input id="customFlavour" placeholder="e.g. Mango, Coffee, etc."/></label>
-<label>Size<input id="size" placeholder="e.g. 1 kg, 2 kg"/></label>
+<label>
+<span data-en="Cake type" data-te="కేక్ టైప్">Cake type</span>
+<select id="cakeType" onchange="toggleCustomCakeType()">
+<option value="" data-en="Select cake type" data-te="సెలెక్ట్ కేక్ టైప్">Select cake type</option>
+<option data-en="Birthday Cake" data-te="బర్త్‌డే కేక్">Birthday Cake</option>
+<option data-en="Photo Cake" data-te="ఫోటో కేక్">Photo Cake</option>
+<option data-en="Designer Cake" data-te="డిజైనర్ కేక్">Designer Cake</option>
+<option data-en="Heart Shape Cake" data-te="హార్ట్ షేప్ కేక్">Heart Shape Cake</option>
+<option data-en="Steps Cake" data-te="స్టెప్స్ కేక్">Steps Cake</option>
+<option data-en="Cool Cake" data-te="కూల్ కేక్">Cool Cake</option>
+<option data-en="Egg" data-te="ఎగ్">Egg</option>
+<option data-en="Eggless" data-te="ఎగ్‌లెస్">Eggless</option>
+<option value="custom" data-en="Other / Custom Cake Type" data-te="అదర్ / కస్టమ్ కేక్ టైప్">Other / Custom Cake Type</option>
+</select>
+</label>
+
+<label class="custom-field" id="customCakeWrap" style="display:none">
+<span data-en="Type your cake type" data-te="మీ కేక్ టైప్ ఎంటర్ చేయండి">Type your cake type</span>
+<input id="customCakeType" placeholder="e.g. Anniversary Cake" data-en-placeholder="e.g. Anniversary Cake" data-te-placeholder="ఉదా. యానివర్సరీ కేక్"/>
+</label>
+
+<label>
+<span data-en="Flavour" data-te="ఫ్లేవర్">Flavour</span>
+<select id="flavour" onchange="toggleCustomFlavour()">
+<option value="" data-en="Select flavour" data-te="సెలెక్ట్ ఫ్లేవర్">Select flavour</option>
+<option data-en="Milky Vanilla" data-te="మిల్కీ వెనిల్లా">Milky Vanilla</option>
+<option data-en="Butterscotch" data-te="బటర్‌స్కాచ్">Butterscotch</option>
+<option data-en="Strawberry" data-te="స్ట్రాబెర్రీ">Strawberry</option>
+<option data-en="Blueberry" data-te="బ్లూబెర్రీ">Blueberry</option>
+<option data-en="Roseberry" data-te="రోజ్‌బెర్రీ">Roseberry</option>
+<option data-en="Black Currant" data-te="బ్లాక్ కరెంట్">Black Currant</option>
+<option data-en="Pineapple" data-te="పైన్‌యాపిల్">Pineapple</option>
+<option data-en="Red Velvet" data-te="రెడ్ వెల్వెట్">Red Velvet</option>
+<option data-en="Milky Butterscotch" data-te="మిల్కీ బటర్‌స్కాచ్">Milky Butterscotch</option>
+<option data-en="Milky Badam" data-te="మిల్కీ బాదం">Milky Badam</option>
+<option data-en="Honey Almond" data-te="హనీ ఆల్మండ్">Honey Almond</option>
+<option data-en="Pista" data-te="పిస్తా">Pista</option>
+<option data-en="Black Forest" data-te="బ్లాక్ ఫారెస్ట్">Black Forest</option>
+<option data-en="Chocolate" data-te="చాక్లెట్">Chocolate</option>
+<option data-en="Chocochips" data-te="చోకోచిప్స్">Chocochips</option>
+<option data-en="Roast Cause Chocolate" data-te="రోస్ట్ కాజ్ చాక్లెట్">Roast Cause Chocolate</option>
+<option data-en="Double Chocolate" data-te="డబుల్ చాక్లెట్">Double Chocolate</option>
+<option data-en="Caramel Nuts" data-te="కారమెల్ నట్స్">Caramel Nuts</option>
+<option data-en="Oreo Chocolate" data-te="ఓరియో చాక్లెట్">Oreo Chocolate</option>
+<option value="custom" data-en="Other / Custom Flavour" data-te="అదర్ / కస్టమ్ ఫ్లేవర్">Other / Custom Flavour</option>
+</select>
+</label>
+
+<label class="custom-field" id="customFlavourWrap" style="display:none">
+<span data-en="Type your flavour" data-te="మీ ఫ్లేవర్ ఎంటర్ చేయండి">Type your flavour</span>
+<input id="customFlavour" placeholder="e.g. Mango, Coffee, etc." data-en-placeholder="e.g. Mango, Coffee, etc." data-te-placeholder="ఉదా. మ్యాంగో, కాఫీ"/>
+</label>
+
+<label>
+<span data-en="Size" data-te="సైజ్">Size</span>
+<input id="size" placeholder="e.g. 1 kg, 2 kg" data-en-placeholder="e.g. 1 kg, 2 kg" data-te-placeholder="ఉదా. 1 కేజీ, 2 కేజీ"/>
+</label>
 </div>
+
 </div>
+
 <div class="form-section-title full-field">
 <span>03</span>
 <div>
-<b>Delivery &amp; customization</b>
-<small>Give the bakery the details needed to confirm your request</small>
+<b data-en="Delivery &amp; customization" data-te="డెలివరీ అండ్ కస్టమైజేషన్">Delivery &amp; customization</b>
+<small data-en="Give the bakery the details needed to confirm your request" data-te="మీ ఆర్డర్ కన్ఫర్మ్ చేయడానికి బేకరీకి అవసరమైన వివరాలు ఇవ్వండి">Give the bakery the details needed to confirm your request</small>
 </div>
 </div>
+
+
 <div class="owner-location full-field">
-<h3>📍 My Home Bakery Location</h3>
+<h3 data-en="📍 My Home Bakery Location" data-te="📍 మై హోమ్ బేకరీ లొకేషన్">📍 My Home Bakery Location</h3>
+<p><b data-en="Shop/House No:" data-te="షాప్/హౌస్ నంబర్:">Shop/House No:</b> 11-11-6/2</p>
 <p>
-<b>Shop/House No:</b> 11-11-6/2
-          </p>
-<p>
-<b>Address:</b> Ramarao Peta, Nukalamma Thalli Temple Road,
-            opposite Vivekananda Park Bus Shelter
-          </p>
-<p>
-<b>PIN Code:</b> 533004
-          </p>
-<a class="btn secondary" href="https://maps.app.goo.gl/NDArQ8fsKCuHmzQQA?g_st=aw" rel="noopener" target="_blank">
-            📍 View on Google Maps
-          </a>
+  <b data-en="Address:" data-te="అడ్రస్:">Address:</b>
+  <span data-en="Ramarao Peta, Nukalamma Thalli Temple Road, opposite Vivekananda Park Bus Shelter"
+        data-te="రామారావు పేట, నూకాలమ్మ తల్లి టెంపుల్ రోడ్, వివేకానంద పార్క్ బస్ షెల్టర్ ఎదురుగా">
+    Ramarao Peta, Nukalamma Thalli Temple Road, opposite Vivekananda Park Bus Shelter
+  </span>
+</p>
+<p><b data-en="PIN Code:" data-te="పిన్ కోడ్:">PIN Code:</b> 533004</p>
+<a class="btn secondary" href="https://maps.app.goo.gl/NDArQ8fsKCuHmzQQA?g_st=aw" rel="noopener" target="_blank" data-en="📍 View on Google Maps" data-te="📍 గూగుల్ మ్యాప్స్‌లో చూడండి">📍 View on Google Maps</a>
 </div>
+
+
 <div class="delivery-location full-field">
-<h3>📍 Delivery Location</h3>
+<h3 data-en="📍 Delivery Location" data-te="📍 డెలివరీ లొకేషన్">📍 Delivery Location</h3>
+
 <label>
-            🚚 Delivery Type
-            <select id="deliveryType" onchange="toggleDeliveryType()" required="">
-<option value="">Select delivery type</option>
-<option value="home_delivery">🏠 Home Delivery</option>
-<option value="pickup">🏪 Pickup / Self Collection</option>
+<span data-en="🚚 Delivery Type" data-te="🚚 డెలివరీ టైప్">🚚 Delivery Type</span>
+<select id="deliveryType" onchange="toggleDeliveryType()" required="">
+<option value="" data-en="Select delivery type" data-te="డెలివరీ టైప్ ఎంచుకోండి">Select delivery type</option>
+<option value="home_delivery" data-en="🏠 Home Delivery" data-te="🏠 హోమ్ డెలివరీ">🏠 Home Delivery</option>
+<option value="pickup" data-en="🏪 Pickup / Self Collection" data-te="🏪 పికప్ / సెల్ఫ్ కలెక్షన్">🏪 Pickup / Self Collection</option>
 </select>
 </label>
-<p>
-            Enter the area where you want your order delivered.
-          </p>
+
+<p data-en="Enter the area where you want your order delivered." data-te="మీ ఆర్డర్ డెలివరీ కావాల్సిన ఏరియా ఎంటర్ చేయండి.">Enter the area where you want your order delivered.</p>
+
 <label>
-            Area / Locality
-            <input id="area" placeholder="e.g. Ramarao Peta, Kakinada" required="" type="text"/>
+<span data-en="Area / Locality" data-te="ఏరియా / లొకాలిటీ">Area / Locality</span>
+<input id="area" placeholder="e.g. Ramarao Peta, Kakinada" data-en-placeholder="e.g. Ramarao Peta, Kakinada" data-te-placeholder="ఉదా. రామారావు పేట, కాకినాడ" required="" type="text"/>
 </label>
+
 <label>
-            Full Delivery Address
-            <textarea id="deliveryAddress" placeholder="Enter house no, street name, landmark..." required="" rows="3"></textarea>
+<span data-en="Full Delivery Address" data-te="ఫుల్ డెలివరీ అడ్రస్">Full Delivery Address</span>
+<textarea id="deliveryAddress" placeholder="Enter house no, street name, landmark..." data-en-placeholder="Enter house no, street name, landmark..." data-te-placeholder="హౌస్ నంబర్, స్ట్రీట్ పేరు, ల్యాండ్‌మార్క్ ఎంటర్ చేయండి..." required="" rows="3"></textarea>
 </label>
+
 <div class="location-picker">
-<button class="btn secondary" onclick="getCustomerLocation()" type="button">
-              📍 Use My Location
-            </button>
-<p id="locationStatus">
-              Your location will be used only to calculate delivery distance.
-            </p>
+<button class="btn secondary" onclick="getCustomerLocation()" type="button" data-en="📍 Use My Location" data-te="📍 నా లొకేషన్ ఉపయోగించండి">📍 Use My Location</button>
+
+<p id="locationStatus" data-en="Your location will be used only to calculate delivery distance." data-te="మీ లొకేషన్ డెలివరీ దూరాన్ని లెక్కించడానికి మాత్రమే ఉపయోగించబడుతుంది.">Your location will be used only to calculate delivery distance.</p>
+
 <input id="customerLatitude" type="hidden"/>
 <input id="customerLongitude" type="hidden"/>
+
 <div class="distance-result" id="distanceResult" style="display:none;">
-              📏 Distance from My Home Bakery:
-              <strong id="customerDistance">Calculating...</strong>
+<span data-en="📏 Distance from My Home Bakery:" data-te="📏 మై హోమ్ బేకరీ నుంచి దూరం:">📏 Distance from My Home Bakery:</span>
+<strong id="customerDistance">Calculating...</strong>
 </div>
 </div>
 </div>
+
+
 <!-- ORDER PRICE SUMMARY -->
 <div class="order-price-summary full-field">
-
-  <h3>💰 Order Summary</h3>
+  <h3 data-en="💰 Order Summary" data-te="💰 ఆర్డర్ సమ్మరీ">💰 Order Summary</h3>
 
   <div class="price-row">
-    <span>Order Subtotal</span>
+    <span data-en="Order Subtotal" data-te="ఆర్డర్ సబ్‌టోటల్">Order Subtotal</span>
     <strong id="orderSubtotal">₹0</strong>
   </div>
 
   <div class="price-row">
-    <span>🚚 Delivery Charge</span>
+    <span data-en="🚚 Delivery Charge" data-te="🚚 డెలివరీ ఛార్జ్">🚚 Delivery Charge</span>
     <strong id="deliveryCharge">₹0</strong>
   </div>
 
   <div class="price-row total-row">
-    <span>Total</span>
+    <span data-en="Total" data-te="టోటల్">Total</span>
     <strong id="orderTotal">₹0</strong>
   </div>
+</div>
 
-</div>
+
 <label class="full-field">
-          Customization / Message
-          <textarea id="custom" placeholder="Design idea..." rows="4"></textarea>
+  <span data-en="Customization / Message" data-te="కస్టమైజేషన్ / మెసేజ్">Customization / Message</span>
+  <textarea id="custom" placeholder="Design idea..." data-en-placeholder="Design idea..." data-te-placeholder="డిజైన్ ఐడియా..." rows="4"></textarea>
 </label>
+
+
 <div class="full-field">
-<label>
-            Reference Image
-            <small>Choose a cake design from your gallery or take a new photo</small>
-</label>
-<label class="btn secondary" for="referenceImage">
-            🖼️ Choose from Gallery
-          </label>
-<input accept="image/*" id="referenceImage" onchange="previewReferenceImage(event)" style="display:none;" type="file"/>
-<label class="btn primary" for="cameraImage">
-            📷 Take a Photo
-          </label>
-<input accept="image/*" capture="environment" id="cameraImage" onchange="previewReferenceImage(event)" style="display:none;" type="file"/>
-<img alt="Reference image preview" id="referencePreview" style="display:none; max-width:220px; margin-top:10px; border-radius:10px;"/>
+  <label>
+    <span data-en="Reference Image" data-te="రిఫరెన్స్ ఇమేజ్">Reference Image</span>
+    <small data-en="Choose a cake design from your gallery or take a new photo" data-te="గ్యాలరీ నుంచి కేక్ డిజైన్ ఎంచుకోండి లేదా కొత్త ఫోటో తీయండి">Choose a cake design from your gallery or take a new photo</small>
+  </label>
+
+  <label class="btn secondary" for="referenceImage" data-en="🖼️ Choose from Gallery" data-te="🖼️ గ్యాలరీ నుంచి ఎంచుకోండి">🖼️ Choose from Gallery</label>
+  <input accept="image/*" id="referenceImage" onchange="previewReferenceImage(event)" style="display:none;" type="file"/>
+
+  <label class="btn primary" for="cameraImage" data-en="📷 Take a Photo" data-te="📷 ఫోటో తీయండి">📷 Take a Photo</label>
+  <input accept="image/*" capture="environment" id="cameraImage" onchange="previewReferenceImage(event)" style="display:none;" type="file"/>
+
+  <img alt="Reference image preview" id="referencePreview" style="display:none; max-width:220px; margin-top:10px; border-radius:10px;"/>
 </div>
+
+
 <div class="form-bottom-note full-field">
-<span>🚚</span>
-<p>
-<b>Delivery:</b> around 20 km depending on area
-     • 
-    <b>Payment:</b> Cash on delivery
+  <span>🚚</span>
+  <p>
+    <b data-en="Delivery:" data-te="డెలివరీ:">Delivery:</b> <span data-en="around 20 km depending on area" data-te="ఏరియాను బట్టి సుమారు 20 కి.మీ.">around 20 km depending on area</span>
+    •
+    <b data-en="Payment:" data-te="పేమెంట్:">Payment:</b> <span data-en="Cash on delivery" data-te="క్యాష్ ఆన్ డెలివరీ">Cash on delivery</span>
   </p>
 </div>
-<button class="btn primary full-field" type="submit">
+
+<button class="btn primary full-field" type="submit" data-en="Send Order Request on WhatsApp ↗" data-te="వాట్సాప్‌లో ఆర్డర్ రిక్వెస్ట్ పంపండి ↗">
   Send Order Request on WhatsApp ↗
 </button>
+
 </form>
-<div class="delivery-information">
-<h2>Delivery Information</h2>
-<p>Choose home delivery or pickup based on your location.</p>
+
+<div class="delivery-information" id="deliveryInfoSection" hidden>
+<h2 id="deliveryInformation" data-en="Delivery Information" data-te="డెలివరీ ఇన్ఫర్మేషన్">Delivery Information</h2>
+<p data-en="Choose home delivery or pickup based on your location." data-te="మీ లొకేషన్‌ను బట్టి హోమ్ డెలివరీ లేదా పికప్ ఎంచుకోండి.">Choose home delivery or pickup based on your location.</p>
+
 <div class="delivery-info-card">
-<h3>🏠 Home Delivery</h3>
-<p>
-      Your order can be delivered to your selected delivery location.
-    </p>
+<h3 data-en="🏠 Home Delivery" data-te="🏠 హోమ్ డెలివరీ">🏠 Home Delivery</h3>
+<p data-en="Your order can be delivered to your selected delivery location." data-te="మీరు ఎంచుకున్న లొకేషన్‌కు మీ ఆర్డర్ డెలివరీ చేయవచ్చు.">Your order can be delivered to your selected delivery location.</p>
 <ul>
-<li>📍 Delivery area will be collected during ordering.</li>
-<li>📏 Home delivery is available within 20 km from My Home Bakery.</li>
-<li>🎂 For locations more than 20 km away, home delivery is available only when the order contains a cake of 3 kg or above.</li>
-<li>🏪 If the above condition is not satisfied, Pickup / Self Collection is available.</li>
-<li>🚚 Delivery tracking is available when the order is out for delivery.</li>
-<li>📦 You can track your order using your Track ID.</li>
+<li data-en="📍 Delivery area will be collected during ordering." data-te="📍 ఆర్డర్ చేసే సమయంలో డెలివరీ ఏరియా తీసుకోబడుతుంది.">📍 Delivery area will be collected during ordering.</li>
+<li data-en="📏 Home delivery is available within 20 km from My Home Bakery." data-te="📏 మై హోమ్ బేకరీ నుంచి 20 కి.మీ. లోపు హోమ్ డెలివరీ అందుబాటులో ఉంటుంది.">📏 Home delivery is available within 20 km from My Home Bakery.</li>
+<li data-en="🎂 For locations more than 20 km away, home delivery is available only when the order contains a cake of 3 kg or above." data-te="🎂 20 కి.మీ. కంటే ఎక్కువ దూరంలో ఉన్న ప్రాంతాలకు, ఆర్డర్‌లో 3 కేజీలు లేదా అంతకంటే ఎక్కువ కేక్ ఉంటేనే హోమ్ డెలివరీ అందుబాటులో ఉంటుంది.">🎂 For locations more than 20 km away, home delivery is available only when the order contains a cake of 3 kg or above.</li>
+<li data-en="🏪 If the above condition is not satisfied, Pickup / Self Collection is available." data-te="🏪 పై నిబంధన సరిపోకపోతే పికప్ / సెల్ఫ్ కలెక్షన్ అందుబాటులో ఉంటుంది.">🏪 If the above condition is not satisfied, Pickup / Self Collection is available.</li>
+<li data-en="🚚 Delivery tracking is available when the order is out for delivery." data-te="🚚 ఆర్డర్ డెలివరీకి బయలుదేరినప్పుడు ట్రాకింగ్ అందుబాటులో ఉంటుంది.">🚚 Delivery tracking is available when the order is out for delivery.</li>
+<li data-en="📦 You can track your order using your Track ID." data-te="📦 మీ ట్రాక్ ఐడీ ఉపయోగించి ఆర్డర్‌ను ట్రాక్ చేయవచ్చు.">📦 You can track your order using your Track ID.</li>
 </ul>
 </div>
+
 <div class="delivery-info-card">
-<h3>🏪 Pickup / Self Collection</h3>
+<h3 data-en="🏪 Pickup / Self Collection" data-te="🏪 పికప్ / సెల్ఫ్ కలెక్షన్">🏪 Pickup / Self Collection</h3>
+<p data-en="You can also collect your order directly from My Home Bakery." data-te="మీరు మీ ఆర్డర్‌ను నేరుగా మై హోమ్ బేకరీ నుంచి తీసుకోవచ్చు.">You can also collect your order directly from My Home Bakery.</p>
 <p>
-      You can also collect your order directly from My Home Bakery.
-    </p>
-<p>
-      📍 <strong>My Home Bakery</strong><br/>
-      Ramarao Peta, Nukalamma Thalli Temple Road,<br/>
-      Opposite Vivekananda Park Bus Shelter,<br/>
-      Kakinada – 533004
-    </p>
-<a class="btn secondary" href="https://maps.app.goo.gl/NDArQ8fsKCuHmzQQA?g_st=aw" rel="noopener" target="_blank">
-      📍 View Bakery Location
-    </a>
+📍 <strong>My Home Bakery</strong><br/>
+<span data-en="Ramarao Peta, Nukalamma Thalli Temple Road,"
+      data-te="రామారావు పేట, నూకాలమ్మ తల్లి టెంపుల్ రోడ్,">Ramarao Peta, Nukalamma Thalli Temple Road,</span><br/>
+<span data-en="Opposite Vivekananda Park Bus Shelter,"
+      data-te="వివేకానంద పార్క్ బస్ షెల్టర్ ఎదురుగా,">Opposite Vivekananda Park Bus Shelter,</span><br/>
+<span data-en="Kakinada – 533004"
+      data-te="కాకినాడ – 533004">Kakinada – 533004</span>
+</p>
+<a class="btn secondary" href="https://maps.app.goo.gl/NDArQ8fsKCuHmzQQA?g_st=aw" rel="noopener" target="_blank" data-en="📍 View Bakery Location" data-te="📍 బేకరీ లొకేషన్ చూడండి">📍 View Bakery Location</a>
 </div>
 </div>
-</section><section class="track-order-section">
-<h2>📦 Track Your Order</h2>
-<p>
-      Enter your Track ID to check your order status.
-    </p>
+
+
+
+<section class="track-order-section">
+<h2 data-en="📦 Track Your Order" data-te="📦 మీ ఆర్డర్ ట్రాక్ చేయండి">📦 Track Your Order</h2>
+<p data-en="Enter your Track ID to check your order status." data-te="మీ ఆర్డర్ స్టేటస్ తెలుసుకోవడానికి ట్రాక్ ఐడీ ఎంటర్ చేయండి.">Enter your Track ID to check your order status.</p>
+
 <label>
-      Track ID
-      <input id="trackIdInput" placeholder="Enter your Track ID" type="text"/>
+<span data-en="Track ID" data-te="ట్రాక్ ఐడీ">Track ID</span>
+<input id="trackIdInput" placeholder="Enter your Track ID" data-en-placeholder="Enter your Track ID" data-te-placeholder="మీ ట్రాక్ ఐడీ ఎంటర్ చేయండి" type="text"/>
 </label>
-<button class="btn primary" onclick="trackOrder()" type="button">
-      🔍 Track Order
-    </button>
+
+<button class="btn primary" onclick="trackOrder()" type="button" data-en="🔍 Track Order" data-te="🔍 ఆర్డర్ ట్రాక్ చేయండి">🔍 Track Order</button>
+
 <div id="trackingResult" style="display: none;">
 <p id="trackingStatus"></p>
 <div class="tracking-timeline">
-<div class="tracking-step">
-<span>📥</span>
-<p>Order Received</p>
-</div>
-<div class="tracking-step">
-<span>✅</span>
-<p>Order Confirmed</p>
-</div>
-<div class="tracking-step">
-<span>👩‍🍳</span>
-<p>Preparing</p>
-</div>
-<div class="tracking-step">
-<span>📦</span>
-<p>Ready for Delivery</p>
-</div>
-<div class="tracking-step">
-<span>🚚</span>
-<p>Out for Delivery</p>
-</div>
-<div class="tracking-step">
-<span>🏠</span>
-<p>Delivered</p>
+<div class="tracking-step"><span>📥</span><p data-en="Order Received" data-te="ఆర్డర్ అందింది">Order Received</p></div>
+<div class="tracking-step"><span>✅</span><p data-en="Order Confirmed" data-te="ఆర్డర్ కన్ఫర్మ్ అయింది">Order Confirmed</p></div>
+<div class="tracking-step"><span>👩‍🍳</span><p data-en="Preparing" data-te="ప్రిపేర్ చేస్తున్నారు">Preparing</p></div>
+<div class="tracking-step"><span>📦</span><p data-en="Ready for Delivery" data-te="డెలివరీకి సిద్ధంగా ఉంది">Ready for Delivery</p></div>
+<div class="tracking-step"><span>🚚</span><p data-en="Out for Delivery" data-te="డెలివరీకి బయలుదేరింది">Out for Delivery</p></div>
+<div class="tracking-step"><span>🏠</span><p data-en="Delivered" data-te="డెలివరీ అయింది">Delivered</p></div>
 </div>
 </div>
-</div>
+
 <!-- CUSTOMER NOTIFICATIONS -->
 <div class="customer-notifications">
-
-  <h3>🔔 Notifications</h3>
-
-  <div id="customerNotifications">
-    <p>No new notifications.</p>
-  </div>
-
+<h3 data-en="🔔 Notifications" data-te="🔔 నోటిఫికేషన్స్">🔔 Notifications</h3>
+<div id="customerNotifications">
+<p data-en="No new notifications." data-te="కొత్త నోటిఫికేషన్స్ లేవు.">No new notifications.</p>
 </div>
+</div>
+
 <!-- CUSTOMER DELIVERY TRACKING -->
 <div class="delivery-tracking-card" id="deliveryTracking" style="display: none;">
-<h3>🚚 Live Delivery Tracking</h3>
-<p id="deliveryDistanceText">
-    Delivery person location is being updated...
-  </p>
+<h3 data-en="🚚 Live Delivery Tracking" data-te="🚚 లైవ్ డెలివరీ ట్రాకింగ్">🚚 Live Delivery Tracking</h3>
+<p id="deliveryDistanceText" data-en="Delivery person location is being updated..." data-te="డెలివరీ పర్సన్ లొకేషన్ అప్‌డేట్ అవుతోంది...">Delivery person location is being updated...</p>
 <div id="customerDistance"></div>
-<div id="customerDeliveryMap" style="width: 100%; height: 300px; border-radius: 12px; overflow: hidden;">
+<div id="customerDeliveryMap" style="width: 100%; height: 300px; border-radius: 12px; overflow: hidden;"></div>
 </div>
-</div>
-</section></main>
+</section>
+</main>
+
 <section class="customer-reviews-section">
-<h2>⭐ What Our Customers Say</h2>
+<h2 data-en="⭐ What Our Customers Say" data-te="⭐ మా కస్టమర్లు ఏమంటున్నారు">⭐ What Our Customers Say</h2>
 <div class="overall-rating">
 <div id="averageRating">0.0 ⭐</div>
 <div id="averageStars">☆☆☆☆☆</div>
-<p id="reviewCount">Based on 0 reviews</p>
+<p id="reviewCount" data-en="Based on 0 reviews" data-te="0 రివ్యూస్ ఆధారంగా">Based on 0 reviews</p>
 </div>
 <div id="customerReviewsList">
-<p>Loading customer reviews...</p>
+<p data-en="Loading customer reviews..." data-te="కస్టమర్ రివ్యూస్ లోడ్ అవుతున్నాయి...">Loading customer reviews...</p>
 </div>
-</section><section class="review-section">
-<h2>⭐ Rate Your Experience</h2>
-<p>
-    Thank you for ordering from My Home Bakery!
-    Please share your experience.
-  </p>
+</section>
+
+<section class="review-section">
+<h2 data-en="⭐ Rate Your Experience" data-te="⭐ మీ అనుభవానికి రేటింగ్ ఇవ్వండి">⭐ Rate Your Experience</h2>
+<p data-en="Thank you for ordering from My Home Bakery! Please share your experience." data-te="మై హోమ్ బేకరీ నుంచి ఆర్డర్ చేసినందుకు ధన్యవాదాలు! మీ అనుభవాన్ని షేర్ చేయండి.">
+Thank you for ordering from My Home Bakery! Please share your experience.
+</p>
+
 <label>
-    Track ID
-    <input id="reviewTrackId" placeholder="Enter your Track ID" required="" type="text"/>
+<span data-en="Track ID" data-te="ట్రాక్ ఐడీ">Track ID</span>
+<input id="reviewTrackId" placeholder="Enter your Track ID" data-en-placeholder="Enter your Track ID" data-te-placeholder="మీ ట్రాక్ ఐడీ ఎంటర్ చేయండి" required="" type="text"/>
 </label>
+
 <label>
-    Your Name
-    <input id="reviewName" placeholder="Enter your name" required="" type="text"/>
+<span data-en="Your Name" data-te="మీ పేరు">Your Name</span>
+<input id="reviewName" placeholder="Enter your name" data-en-placeholder="Enter your name" data-te-placeholder="మీ పేరు ఎంటర్ చేయండి" required="" type="text"/>
 </label>
+
 <label>
-    Rating
-    <select id="reviewRating" required="">
-<option value="">Select rating</option>
-<option value="5">⭐⭐⭐⭐⭐ Excellent</option>
-<option value="4">⭐⭐⭐⭐ Very Good</option>
-<option value="3">⭐⭐⭐ Good</option>
-<option value="2">⭐⭐ Needs Improvement</option>
-<option value="1">⭐ Poor</option>
+<span data-en="Rating" data-te="రేటింగ్">Rating</span>
+<select id="reviewRating" required="">
+<option value="" data-en="Select rating" data-te="రేటింగ్ ఎంచుకోండి">Select rating</option>
+<option value="5" data-en="⭐⭐⭐⭐⭐ Excellent" data-te="⭐⭐⭐⭐⭐ ఎక్సలెంట్">⭐⭐⭐⭐⭐ Excellent</option>
+<option value="4" data-en="⭐⭐⭐⭐ Very Good" data-te="⭐⭐⭐⭐ వెరీ గుడ్">⭐⭐⭐⭐ Very Good</option>
+<option value="3" data-en="⭐⭐⭐ Good" data-te="⭐⭐⭐ గుడ్">⭐⭐⭐ Good</option>
+<option value="2" data-en="⭐⭐ Needs Improvement" data-te="⭐⭐ ఇంప్రూవ్‌మెంట్ అవసరం">⭐⭐ Needs Improvement</option>
+<option value="1" data-en="⭐ Poor" data-te="⭐ పూర్">⭐ Poor</option>
 </select>
 </label>
+
 <label>
-    Review
-    <textarea id="reviewText" placeholder="Tell us about your experience..." required="" rows="4"></textarea>
+<span data-en="Review" data-te="రివ్యూ">Review</span>
+<textarea id="reviewText" placeholder="Tell us about your experience..." data-en-placeholder="Tell us about your experience..." data-te-placeholder="మీ అనుభవం గురించి చెప్పండి..." required="" rows="4"></textarea>
 </label>
-<button class="btn primary" onclick="submitReview()" type="button">
-    ⭐ Submit Review
-  </button>
+
+<button class="btn primary" onclick="submitReview()" type="button" data-en="⭐ Submit Review" data-te="⭐ రివ్యూ సబ్మిట్ చేయండి">⭐ Submit Review</button>
 <p id="reviewMessage"></p>
 </section>
 
+
 <section id="my-orders" class="section">
   <div class="container">
-
     <div class="section-heading">
-      <h2>📦 My Orders</h2>
-      <p>View your previous orders and order your favourite items again.</p>
+      <h2 data-en="📦 My Orders" data-te="📦 నా ఆర్డర్లు">📦 My Orders</h2>
+      <p data-en="View your previous orders and order your favourite items again." data-te="మీ పాత ఆర్డర్లు చూడండి, మీకు ఇష్టమైన ఐటమ్స్ మళ్లీ ఆర్డర్ చేయండి.">View your previous orders and order your favourite items again.</p>
     </div>
 
     <div id="myOrdersList" class="my-orders-list">
-
       <div class="empty-orders">
         <div class="empty-orders-icon">🛍️</div>
-
-        <h3>No Orders Yet</h3>
-
-        <p>
-          Your previous orders will appear here.
-        </p>
-
-        <button
-          type="button"
-          class="btn primary"
-          onclick="document.getElementById('order')?.scrollIntoView({behavior:'smooth'})"
-        >
-          Start Ordering
-        </button>
+        <h3 data-en="No Orders Yet" data-te="ఇంకా ఆర్డర్లు లేవు">No Orders Yet</h3>
+        <p data-en="Your previous orders will appear here." data-te="మీ పాత ఆర్డర్లు ఇక్కడ కనిపిస్తాయి.">Your previous orders will appear here.</p>
+        <button type="button" class="btn primary" onclick="document.getElementById('order')?.scrollIntoView({behavior:'smooth'})" data-en="Start Ordering" data-te="ఆర్డర్ చేయడం ప్రారంభించండి">Start Ordering</button>
       </div>
-
     </div>
-
   </div>
 </section>
 
+
+
 <footer>
-<div><strong>BakeFlow</strong> — Your Cake, Your Way</div>
-<div><strong>BakeFlow</strong> — Your Cake, Your Way</div>
-<div>My Home Bakery • Kakinada</div>
+<div><strong>BakeFlow</strong> — <span data-en="Your Cake, Your Way" data-te="యువర్ కేక్, యువర్ వే">Your Cake, Your Way</span></div>
+<div data-en="My Home Bakery • Kakinada" data-te="మై హోమ్ బేకరీ • కాకినాడ">My Home Bakery • Kakinada</div>
 <div class="social-links">
-<a href="https://www.instagram.com/my_home_bakery_kakinada/" target="_blank">
+<a href="https://www.instagram.com/my_home_bakery_kakinada/" target="_blank" data-en="📷 Instagram" data-te="📷 ఇన్‌స్టాగ్రామ్">
       📷 Instagram
-    </a>
-<a href="https://wa.me/917780476392" target="_blank">
+</a>
+<a href="https://wa.me/917780476392" target="_blank" data-en="💬 WhatsApp" data-te="💬 వాట్సాప్">
       💬 WhatsApp
-    </a>
+</a>
 </div>
 </footer>
+
 <div class="chat" id="chat">
-<div class="chat-head"><strong>BakeFlow Assistant</strong><button onclick="toggleChat()">×</button></div>
+<div class="chat-head">
+<strong data-en="BakeFlow Assistant" data-te="బేక్‌ఫ్లో అసిస్టెంట్">BakeFlow Assistant</strong>
+<button onclick="toggleChat()">×</button>
+</div>
+
 <div class="messages" id="messages">
-<div class="bot msg">Hi! 👋 I’m the BakeFlow assistant for My Home Bakery. Ask me about cakes, flavours, sizes, customization, delivery, timings or ordering.</div>
+<div class="bot msg" data-en="Hi! 👋 I’m the BakeFlow assistant for My Home Bakery. Ask me about cakes, flavours, sizes, customization, delivery, timings or ordering." data-te="హాయ్! 👋 నేను మై హోమ్ బేకరీ బేక్‌ఫ్లో అసిస్టెంట్‌ని. కేక్స్, ఫ్లేవర్స్, సైజెస్, కస్టమైజేషన్, డెలివరీ, టైమింగ్స్ లేదా ఆర్డరింగ్ గురించి అడగండి.">Hi! 👋 I’m the BakeFlow assistant for My Home Bakery. Ask me about cakes, flavours, sizes, customization, delivery, timings or ordering.</div>
 </div>
+
 <div class="quick-questions">
-<button onclick="ask('What cake types are available?')">Cake types</button>
-<button onclick="ask('What flavours are available?')">Flavours</button>
-<button onclick="ask('Do you deliver?')">Delivery</button>
-<button onclick="ask('What are your timings?')">Timings</button>
+<button onclick="ask('What cake types are available?')" data-en="Cake types" data-te="కేక్ టైప్స్">Cake types</button>
+<button onclick="ask('What flavours are available?')" data-en="Flavours" data-te="ఫ్లేవర్స్">Flavours</button>
+<button onclick="ask('Do you deliver?')" data-en="Delivery" data-te="డెలివరీ">Delivery</button>
+<button onclick="ask('What are your timings?')" data-en="Timings" data-te="టైమింగ్స్">Timings</button>
 </div>
+
 <div class="chat-input">
-<input id="chatInput" onkeydown="if(event.key==='Enter') sendChat()" placeholder="Ask a question..."/>
-<button onclick="sendChat()">Send</button>
+<input id="chatInput" onkeydown="if(event.key==='Enter') sendChat()" placeholder="Ask a question..." data-en-placeholder="Ask a question..." data-te-placeholder="ఒక ప్రశ్న అడగండి..."/>
+<button onclick="sendChat()" data-en="Send" data-te="పంపండి">Send</button>
 </div>
 </div>
 
