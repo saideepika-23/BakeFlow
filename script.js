@@ -52,6 +52,15 @@ function toggleOrderItem(selectElement) {
       parseInt(quantityInput?.value || "1", 10)
     );
 
+    const isGalleryCake = galleryCakeSelected === true;
+
+if (isGalleryCake && selectElement.value === "cake") {
+  details.innerHTML = "";
+  details.style.display = "none";
+  return;
+}
+
+details.style.display = "";
     if (selectElement.value === "cake") {
 
       details.innerHTML = `
@@ -318,7 +327,13 @@ function selectFixedCakeForOrder(
     const requestedSize = Number(selectedSize);
 
     if (availableStock <= 0) {
-      alert(`❌ ${flavour} is currently Out of Stock.`);
+      const currentLanguage = localStorage.getItem("language") || "en";
+
+alert(
+  currentLanguage === "te"
+    ? `❌ ${flavour} ప్రస్తుతం స్టాక్‌లో లేదు.`
+    : `❌ ${flavour} is currently Out of Stock.`
+);
       return;
     }
 
@@ -1901,6 +1916,43 @@ updateDashboardCounts();
 populateDashboardChoices();
 fillBakeryItems();
 syncDashboardChoice();
+
+
+function setLanguage(language) {
+  // Keep the website in English
+  localStorage.setItem("language", "en");
+  document.documentElement.lang = "en";
+
+  const languageSelect = document.getElementById("languageSelect");
+  if (languageSelect) {
+    languageSelect.value = "en";
+  }
+
+  document.querySelectorAll("[data-en]").forEach(element => {
+    element.textContent = element.getAttribute("data-en");
+  });
+
+  document.querySelectorAll("[data-en-placeholder]").forEach(element => {
+    element.placeholder = element.getAttribute("data-en-placeholder");
+  });
+
+  const englishTranslations = {
+    "#mainNav a[href='#home']": "Home",
+    "#mainNav a[href='#dashboard']": "Dashboard",
+    "#mainNav a[href='#cakes']": "Cakes",
+    "#mainNav a[href='#bakery']": "Bakery",
+    "#mainNav a[href='#order']": "Order",
+    "#mainNav a[href='#my-orders']": "My Orders",
+    "#mainNav .chat-open": "Ask BakeFlow 🤖"
+  };
+
+  Object.entries(englishTranslations).forEach(([selector, text]) => {
+    const element = document.querySelector(selector);
+    if (element) element.textContent = text;
+  });
+}
+
+setLanguage("en");
 
 function toggleMobileMenu(){
   document.getElementById("mainNav")?.classList.toggle("mobile-open");
@@ -3963,12 +4015,16 @@ async function loadOwnerCustomerReviews() {
 
     const reviews = await response.json();
 
-    if (!reviews || reviews.length === 0) {
-      reviewsList.innerHTML = `
-        <p>⭐ No customer reviews found.</p>
-      `;
-      return;
-    }
+if (!reviews || reviews.length === 0) {
+  const currentLanguage = localStorage.getItem("language") || "en";
+
+  reviewsList.innerHTML = `
+    <p>${currentLanguage === "te"
+      ? "⭐ కస్టమర్ రివ్యూస్ ఇంకా లేవు."
+      : "⭐ No customer reviews found."}</p>
+  `;
+  return;
+}
 
     reviewsList.innerHTML = reviews.map(item => {
 
@@ -6259,8 +6315,11 @@ function renderOwnerStock() {
 
     }).join("");
 }
+
 function updateBakeryStockStatus() {
   const bakeryCards = document.querySelectorAll(".bakery-product-card");
+  const currentLanguage = localStorage.getItem("language") || "en";
+  const isTelugu = currentLanguage === "te";
 
   bakeryCards.forEach(card => {
     const itemName = (card.dataset.bakery || "").trim();
@@ -6269,17 +6328,25 @@ function updateBakeryStockStatus() {
       (item.name || "").trim().toLowerCase() === itemName.toLowerCase()
     );
 
-    let statusText = "🟢 Available";
-    
+    let statusText = isTelugu
+      ? "🟢 అందుబాటులో ఉంది"
+      : "🟢 Available";
+
     if (stockItem) {
       const quantity = Number(stockItem.quantity);
 
       if (quantity === 0) {
-        statusText = "❌ Out of Stock";
+        statusText = isTelugu
+          ? "❌ స్టాక్ లేదు"
+          : "❌ Out of Stock";
       } else if (quantity <= 5) {
-        statusText = `⚠️ Low Stock — ${quantity} ${stockItem.unit} available`;
+        statusText = isTelugu
+          ? `⚠️ తక్కువ స్టాక్ — ${quantity} ${stockItem.unit} అందుబాటులో ఉన్నాయి`
+          : `⚠️ Low Stock — ${quantity} ${stockItem.unit} available`;
       } else {
-        statusText = `🟢 Available — ${quantity} ${stockItem.unit}`;
+        statusText = isTelugu
+          ? `🟢 అందుబాటులో ఉన్నాయి — ${quantity} ${stockItem.unit}`
+          : `🟢 Available — ${quantity} ${stockItem.unit}`;
       }
     }
 
@@ -6301,7 +6368,8 @@ function updateBakeryStockStatus() {
 
     statusElement.textContent = statusText;
   });
-}function deleteStockItem(id) {
+}
+function deleteStockItem(id) {
 
   ownerStockData =
     ownerStockData.filter(item =>
@@ -6400,45 +6468,50 @@ function updateCakeStockStatus() {
       }
     }
 
+    
+    // Get selected language
+    const isTelugu = localStorage.getItem("language") === "te";
+
     // No stock entry
     if (cakeStocks.length === 0) {
       statusElement.innerHTML = `
-        <p>🟢 Available</p>
+        <p>${isTelugu ? "🟢 అందుబాటులో ఉంది" : "🟢 Available"}</p>
       `;
       return;
     }
 
     // Show Cool and Normal separately
     statusElement.innerHTML = cakeStocks.map(stock => {
-
       const quantity = Number(stock.quantity) || 0;
       const type = stock.cakeType || "General";
 
+      let statusText = "";
+
       if (quantity === 0) {
-        return `
-          <p>
-            ❌ <strong>${type}</strong> — Out of Stock
-          </p>
-        `;
+        statusText = isTelugu ? "స్టాక్ లేదు" : "Out of Stock";
+      } else if (quantity <= 5) {
+        statusText = isTelugu ? "తక్కువ స్టాక్" : "Low Stock";
+      } else {
+        statusText = isTelugu ? "అందుబాటులో ఉన్నాయి" : "available";
       }
 
-      if (quantity <= 5) {
+      if (quantity > 0) {
         return `
           <p>
-            ⚠️ <strong>${type}</strong> — Low Stock —
-            ${quantity} ${stock.unit} available
+            ${quantity <= 5 ? "⚠️" : "🟢"} <strong>${type}</strong> —
+            ${statusText} — ${quantity} ${stock.unit}
           </p>
         `;
       }
 
       return `
         <p>
-          🟢 <strong>${type}</strong> —
-          ${quantity} ${stock.unit} available
+          ❌ <strong>${type}</strong> — ${statusText}
         </p>
       `;
-
     }).join("");
+
+
   });
 }
 // =========================================
@@ -6607,3 +6680,115 @@ window.filterOrderHistory = filterOrderHistory;
 window.filterOwnerCustomers = filterOwnerCustomers;
 window.selectOwnerOrder = selectOwnerOrder;
 window.calculateOwnerProfitLoss = calculateOwnerProfitLoss;
+
+
+function openCakeGallery() {
+  const section = document.getElementById("cakeGallery");
+
+  if (!section) {
+    alert("Cake gallery section not found!");
+    return;
+  }
+
+  section.hidden = false;
+  buildCakeGallery();
+  section.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+}
+
+let galleryCakeSelected = false;
+function buildCakeGallery() {
+  const grid = document.getElementById("cakePhotoGrid");
+
+  if (!grid || grid.dataset.ready === "true") return;
+
+  const fragment = document.createDocumentFragment();
+
+  for (let i = 1; i <= 44; i++) {
+    const figure = document.createElement("figure");
+    figure.className = "gallery-item";
+
+    const img = document.createElement("img");
+    img.src = `images/cake_${i}.jpg`;
+    img.alt = `Cake Design ${i}`;
+    img.loading = "lazy";
+    img.style.cursor = "pointer";
+
+    img.onerror = function () {
+      this.closest("figure")?.remove();
+    };
+
+    const caption = document.createElement("figcaption");
+    caption.textContent = `Cake Design ${i}`;
+
+    const orderButton = document.createElement("button");
+    orderButton.type = "button";
+    orderButton.className = "order-this-cake";
+    orderButton.textContent = "Order This Cake";
+    orderButton.style.marginTop = "10px";
+
+    orderButton.addEventListener("click", () => {
+      const customField = document.getElementById("custom");
+      const preview = document.getElementById("referencePreview");
+      const orderSection = document.getElementById("order");
+
+      toggleGalleryCakeFields(true);
+      galleryCakeSelected = true;
+
+      if (customField) {
+        customField.value =
+          `I want this cake exactly like the selected reference image (Cake Design ${i}).`;
+      }
+
+      if (preview) {
+        preview.src = img.src;
+        preview.style.display = "block";
+      }
+
+      if (orderSection) {
+        orderSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }
+    });
+
+    figure.append(img, caption, orderButton);
+    fragment.appendChild(figure);
+  }
+
+  grid.appendChild(fragment);
+  grid.dataset.ready = "true";
+}
+
+
+function toggleGalleryCakeFields(isGalleryCake) {
+  const cakeFields = document.getElementById("cakeOrderFields");
+
+  if (cakeFields) {
+    cakeFields.style.display = isGalleryCake ? "none" : "";
+  }
+
+  const orderItems = document.getElementById("orderItems");
+
+  if (orderItems) {
+    orderItems.dataset.galleryCake = isGalleryCake ? "true" : "false";
+  }
+
+  document.querySelectorAll(".order-item").forEach((item) => {
+    const category = item.querySelector(".item-category");
+    const details = item.querySelector(".item-details");
+
+    if (
+      isGalleryCake &&
+      category?.value === "cake" &&
+      details
+    ) {
+      details.style.display = "none";
+    } else if (details) {
+      details.style.display = "";
+    }
+  });
+}
